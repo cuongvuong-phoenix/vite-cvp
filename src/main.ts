@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import 'focus-visible/dist/focus-visible.min.js';
 
 import App from './App.vue';
 import { setupRouter } from './routes';

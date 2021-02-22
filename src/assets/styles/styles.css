@@ -3,3 +3,16 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
+
+button,
+a,
+input,
+select {
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:focus-visible {
+    @apply ring ring-green-500;
+  }
+}
