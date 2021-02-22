@@ -1,0 +1,4 @@
+nav:
+  home: 'Home'
+  about: 'About'
+hello: 'Hello, this is Vite-template!'
