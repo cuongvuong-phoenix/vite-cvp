@@ -1,4 +1,5 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "volar.tsPlugin": true
+  "volar.tsPlugin": true,
+  "editor.tabSize": 2
 }
