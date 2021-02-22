@@ -1,3 +1,3 @@
 <template>
-  <div>About here</div>
+  <div>Lazy Loaded here</div>
 </template>
