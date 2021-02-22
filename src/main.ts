@@ -1,21 +1,25 @@
 import { createApp } from 'vue';
 
 import App from './App.vue';
-import { router } from './routes';
+import { setupRouter } from './routes';
 import { store, key } from './store';
-import { createI18n } from 'vue-i18n';
-import messages from '@intlify/vite-plugin-vue-i18n/messages';
+import { setupI18n } from './i18n';
+import en from './locales/en.yaml';
 import './assets/styles/styles.css';
 
 const app = createApp(App);
 
-const i18n = createI18n({
+const i18n = setupI18n({
   legacy: false,
-  locale: 'vi',
+  locale: 'en',
   fallbackLocale: 'en',
-  messages,
+  messages: {
+    en,
+  },
   missingWarn: false,
   fallbackWarn: false,
 });
+
+const router = setupRouter(i18n);
 
 app.use(router).use(store, key).use(i18n).mount('#app');
