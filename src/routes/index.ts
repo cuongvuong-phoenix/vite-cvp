@@ -34,7 +34,7 @@ export const setupRouter = (i18n: I18n) => {
     const paramsLocale = to.params.locale as string;
 
     // Check if got the right locales.
-    if (!LOCALES.includes(paramsLocale)) {
+    if (!LOCALES.map((locale) => locale.code).includes(paramsLocale)) {
       return next(`/${locale}`);
     }
 

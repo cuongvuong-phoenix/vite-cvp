@@ -2,7 +2,7 @@
   <div>
     <h1 class="text-4xl font-bold">Vite-template</h1>
 
-    <h2 class="mt-8 text-xl">{{ msg }}</h2>
+    <h2 class="mt-8 text-lg">{{ msg }}</h2>
 
     <button
       type="button"

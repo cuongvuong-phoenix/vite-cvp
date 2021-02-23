@@ -19,8 +19,7 @@
         id="locale"
         class="px-3 py-2 bg-transparent border border-current rounded-lg"
       >
-        <option value="en">English</option>
-        <option value="vi">Tiếng Việt</option>
+        <option v-for="locale in LOCALES" :value="locale.code">{{ locale.name }}</option>
       </select>
     </div>
 
@@ -32,6 +31,7 @@
   import { watch } from 'vue';
   import { useI18n } from 'vue-i18n';
   import { useRouter } from 'vue-router';
+  import { LOCALES } from './i18n';
 
   const router = useRouter();
   const { t, locale } = useI18n();
@@ -46,7 +46,7 @@
 
 <style lang="postcss" scoped>
   .router-link {
-    @apply flex items-center space-x-2 text-lg;
+    @apply flex items-center space-x-2;
 
     &:hover {
       @apply text-green-500;

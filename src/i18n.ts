@@ -1,7 +1,10 @@
 import { nextTick } from 'vue';
 import { createI18n, I18nOptions, I18n, Composer } from 'vue-i18n';
 
-export const LOCALES = ['en', 'vi'];
+export const LOCALES: { code: string; name: string }[] = [
+  { code: 'en', name: 'English' },
+  { code: 'vi', name: 'Tiếng Việt' },
+];
 
 export const setupI18n = (options: I18nOptions = { locale: 'en' }) => {
   const i18n = createI18n(options) as I18n;
