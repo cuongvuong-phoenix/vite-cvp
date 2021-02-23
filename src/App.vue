@@ -31,12 +31,15 @@
   const router = useRouter();
   const { t, locale } = useI18n();
 
+  // Clone to avoid double-changing global `locale`.
   const currentLocale = ref(locale.value);
 
+  // Sync with routes.
   watch(router.currentRoute, (route) => {
     currentLocale.value = route.params.locale as string;
   });
 
+  // Sync with template changes.
   watch(currentLocale, (val) => {
     router.push({
       name: router.currentRoute.value.name!,
