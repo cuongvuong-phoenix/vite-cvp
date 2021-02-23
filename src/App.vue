@@ -50,11 +50,11 @@
     @apply flex items-center space-x-2;
 
     &:hover {
-      @apply text-green-500;
+      @apply text-teal-500;
     }
   }
 
   .router-link-active {
-    @apply text-green-700;
+    @apply text-teal-700;
   }
 </style>

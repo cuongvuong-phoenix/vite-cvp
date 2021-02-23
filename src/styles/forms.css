@@ -1,0 +1,18 @@
+button,
+a {
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:focus-visible {
+    @apply border-teal-500 ring-1 ring-teal-500;
+  }
+}
+
+select {
+  @apply rounded-lg;
+
+  &:focus {
+    @apply border-teal-500 ring-1 ring-teal-500;
+  }
+}

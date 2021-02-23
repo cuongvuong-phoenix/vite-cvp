@@ -4,21 +4,4 @@
 
 @import 'tailwindcss/utilities';
 
-button,
-a {
-  &:focus {
-    @apply outline-none;
-  }
-
-  &:focus-visible {
-    @apply border-green-500 ring-1 ring-green-500;
-  }
-}
-
-select {
-  @apply rounded-lg;
-
-  &:focus {
-    @apply border-green-500 ring-1 ring-green-500;
-  }
-}
+@import './forms.css';
