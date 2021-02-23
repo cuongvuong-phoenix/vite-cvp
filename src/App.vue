@@ -13,13 +13,8 @@
     </nav>
 
     <div class="flex items-center justify-center mt-2 mb-8">
-      <select
-        v-model="locale"
-        name="locale"
-        id="locale"
-        class="px-3 py-2 bg-transparent border border-current rounded-lg"
-      >
-        <option v-for="locale in LOCALES" :value="locale.code">{{ locale.name }}</option>
+      <select v-model="currentLocale" class="">
+        <option v-for="locale in LOCALES" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
       </select>
     </div>
 
@@ -28,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-  import { watch } from 'vue';
+  import { ref, watch } from 'vue';
   import { useI18n } from 'vue-i18n';
   import { useRouter } from 'vue-router';
   import { LOCALES } from './i18n';
@@ -36,7 +31,13 @@
   const router = useRouter();
   const { t, locale } = useI18n();
 
-  watch(locale, (val) => {
+  const currentLocale = ref(locale.value);
+
+  watch(router.currentRoute, (route) => {
+    currentLocale.value = route.params.locale as string;
+  });
+
+  watch(currentLocale, (val) => {
     router.push({
       name: router.currentRoute.value.name!,
       params: { locale: val },

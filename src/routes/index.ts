@@ -9,7 +9,7 @@ export const setupRouter = (i18n: I18n) => {
 
   const routes: RouteRecordRaw[] = [
     {
-      path: '/:locale',
+      path: '/:locale/',
       name: 'home',
       component: Home,
     },
@@ -34,8 +34,8 @@ export const setupRouter = (i18n: I18n) => {
     const paramsLocale = to.params.locale as string;
 
     // Check if got the right locales.
-    if (!LOCALES.map((locale) => locale.code).includes(paramsLocale)) {
-      return next(`/${locale}`);
+    if (!LOCALES.map((x) => x.code).includes(paramsLocale)) {
+      return next({ name: 'home', params: { locale } });
     }
 
     // Cancel loading if already loaded.
