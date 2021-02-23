@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">{{ t('about') }}</div>
+  <div class="text-center">{{ t('about-page') }}</div>
 </template>
 
 <script setup lang="ts">
@@ -10,7 +10,7 @@
 
 <i18n lang="yaml">
 en:
-  about: 'About Vite-template'
+  about-page: 'About page'
 vi:
-  about: 'Đôi chút về Vite-template'
+  about-page: 'Trang Thông tin'
 </i18n>

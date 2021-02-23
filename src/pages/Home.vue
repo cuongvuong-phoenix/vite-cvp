@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-4 text-center">
     <Hello :msg="t('hello')"></Hello>
-    <div>{{ t('current-counted') }}: {{ counter }}</div>
+    <div>{{ t('counter') }}: {{ counter }}</div>
   </div>
 </template>
 
@@ -19,7 +19,7 @@
 
 <i18n lang="yaml">
 en:
-  current-counted: 'Current counted'
+  counter: 'Counter'
 vi:
-  current-counted: 'Đã đếm được'
+  counter: 'Bộ đếm'
 </i18n>

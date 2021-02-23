@@ -9,7 +9,7 @@
       class="inline-flex items-center justify-center px-3 py-2 mt-16 border border-current rounded-lg hover:text-green-500"
       @click="increase()"
     >
-      {{ t('increase-button') }}
+      {{ t('increment-button') }}
     </button>
   </div>
 </template>
@@ -36,7 +36,7 @@
 
 <i18n lang="yaml">
 en:
-  increase-button: 'Increase Counter'
+  increment-button: 'Increase the Counter'
 vi:
-  increase-button: 'Tăng Bộ đếm'
+  increment-button: 'Tăng Bộ đếm'
 </i18n>
