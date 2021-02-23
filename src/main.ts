@@ -1,12 +1,11 @@
 import { createApp } from 'vue';
 import 'focus-visible/dist/focus-visible.min.js';
-
 import App from './App.vue';
 import { setupRouter } from './routes';
 import { store, key } from './store';
 import { setupI18n } from './i18n';
 import en from './locales/en.yaml';
-import './assets/styles/styles.css';
+import './styles/main.css';
 
 const app = createApp(App);
 
