@@ -5,14 +5,20 @@
 @import 'tailwindcss/utilities';
 
 button,
-a,
-input,
-select {
+a {
   &:focus {
     @apply outline-none;
   }
 
   &:focus-visible {
-    @apply ring ring-green-500;
+    @apply border-green-500 ring-1 ring-green-500;
+  }
+}
+
+select {
+  @apply rounded-lg;
+
+  &:focus {
+    @apply border-green-500 ring-1 ring-green-500;
   }
 }
