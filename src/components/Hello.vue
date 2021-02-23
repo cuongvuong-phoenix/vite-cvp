@@ -4,18 +4,32 @@
 
     <h2 class="mt-8 text-lg">{{ msg }}</h2>
 
-    <button
-      type="button"
-      class="inline-flex items-center justify-center px-3 py-2 mt-16 border border-current rounded-lg hover:text-teal-700"
-      @click="increase()"
-    >
-      {{ t('increment-button') }}
-    </button>
+    <div class="flex items-center justify-center mt-16 space-x-4">
+      <button
+        :title="t('button.decrease-counter', { n: amount })"
+        @click="decrease()"
+        type="button"
+        class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-teal-700"
+      >
+        <i-ion-minus></i-ion-minus>
+      </button>
+
+      <input v-model.number="amount" :title="t('input.amount')" type="number" class="w-24 text-center rounded-lg" />
+
+      <button
+        :title="t('button.increase-counter', { n: amount })"
+        @click="increase()"
+        type="button"
+        class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-teal-700"
+      >
+        <i-ion-plus></i-ion-plus>
+      </button>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { defineProps } from 'vue';
+  import { defineProps, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
   import { useStore } from '../store';
 
@@ -29,14 +43,13 @@
     },
   });
 
+  const amount = ref(1);
+
   const increase = () => {
-    store.commit('increment', 1);
+    store.commit('increaseCounter', amount.value);
+  };
+
+  const decrease = () => {
+    store.commit('decreaseCounter', amount.value);
   };
 </script>
-
-<i18n lang="yaml">
-en:
-  increment-button: 'Increase the Counter'
-vi:
-  increment-button: 'Tăng Bộ đếm'
-</i18n>

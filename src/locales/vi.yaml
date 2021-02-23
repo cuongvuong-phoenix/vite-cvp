@@ -2,3 +2,10 @@ nav:
   home: 'Trang chủ'
   about: 'Thông tin'
 hello: 'Xin chào, đây là Vite-template!'
+button:
+  increase-counter: 'Tăng Bộ đếm lên {n}'
+  decrease-counter: 'Giảm Bộ đếm xuống {n}'
+input:
+  amount: 'Số lượng'
+select:
+  change-languages: 'Thay đổi ngôn ngữ'

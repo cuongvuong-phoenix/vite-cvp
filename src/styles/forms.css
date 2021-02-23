@@ -1,18 +1,19 @@
-button,
 a {
   &:focus {
     @apply outline-none;
   }
 
   &:focus-visible {
-    @apply border-teal-500 ring-1 ring-teal-500;
+    @apply border-teal-500 ring ring-teal-500 ring-opacity-25;
   }
 }
 
-select {
+button,
+select,
+input[type='number'] {
   @apply rounded-lg;
 
   &:focus {
-    @apply border-teal-500 ring-1 ring-teal-500;
+    @apply border-teal-500 outline-none ring ring-teal-500 ring-opacity-25;
   }
 }

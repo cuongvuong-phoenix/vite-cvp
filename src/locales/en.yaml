@@ -2,3 +2,10 @@ nav:
   home: 'Home'
   about: 'About'
 hello: 'Hello, this is Vite-template!'
+button:
+  increase-counter: 'Increase the Counter by {n}'
+  decrease-counter: 'Decrease the Counter by {n}'
+input:
+  amount: 'Amount'
+select:
+  change-languages: 'Change languages'

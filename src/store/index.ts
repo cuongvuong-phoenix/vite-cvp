@@ -13,8 +13,11 @@ export const store = createStore<State>({
   },
 
   mutations: {
-    increment(state, n) {
+    increaseCounter(state, n) {
       state.counter += n;
+    },
+    decreaseCounter(state, n) {
+      state.counter -= n;
     },
   },
 });

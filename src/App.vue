@@ -1,19 +1,17 @@
 <template>
   <div class="container mx-auto">
     <nav class="flex items-center justify-center mt-8 space-x-4">
-      <router-link :to="{ name: 'home', params: { locale } }" class="router-link">
+      <router-link :to="{ name: 'home', params: { locale } }" :title="t('nav.home')" class="router-link">
         <i-ion-home-outline></i-ion-home-outline>
-        <span>{{ t('nav.home') }}</span>
       </router-link>
       <span>|</span>
-      <router-link :to="{ name: 'about', params: { locale } }" class="router-link">
-        <span>{{ t('nav.about') }}</span>
+      <router-link :to="{ name: 'about', params: { locale } }" :title="t('nav.about')" class="router-link">
         <i-ion-ios-information-circle-outline></i-ion-ios-information-circle-outline>
       </router-link>
     </nav>
 
-    <div class="flex items-center justify-center mt-2 mb-8">
-      <select v-model="currentLocale" class="">
+    <div class="flex items-center justify-center mt-4 mb-8">
+      <select v-model="currentLocale" :title="t('select.change-languages')">
         <option v-for="locale in LOCALES" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
       </select>
     </div>
@@ -50,7 +48,7 @@
 
 <style lang="postcss" scoped>
   .router-link {
-    @apply flex items-center space-x-2;
+    @apply flex items-center space-x-2 text-xl;
 
     &:hover {
       @apply text-teal-500;
