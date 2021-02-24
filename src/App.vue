@@ -1,6 +1,6 @@
 <template>
-  <div class="container px-4 mx-auto">
-    <nav class="flex items-center justify-center mt-8 space-x-4">
+  <div class="container px-4 mx-auto mt-8">
+    <nav class="flex items-center justify-center space-x-4">
       <router-link :to="{ name: 'home', params: { locale } }" :title="t('nav.home')" class="router-link">
         <i-ion-home-outline></i-ion-home-outline>
       </router-link>
