@@ -15,9 +15,14 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     ViteMarkdown({
-      wrapperClasses: 'prose mx-auto',
+      wrapperClasses: 'prose dark:prose-light mx-auto',
       markdownItSetup(md) {
-        md.use(MarkdownItAnchor);
+        md.use(MarkdownItAnchor, {
+          permalink: true,
+          permalinkBefore: true,
+          permalinkSymbol: '#',
+          permalinkAttrs: () => ({ 'aria-hidden': true }),
+        });
         md.use(MarkdownItPrism);
       },
     }),

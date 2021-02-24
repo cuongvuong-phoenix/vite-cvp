@@ -5,6 +5,8 @@ hello: 'Hello, this is Vite-template!'
 button:
   increase-counter: 'Increase the Counter by {n}'
   decrease-counter: 'Decrease the Counter by {n}'
+  turn-on-dark-mode: 'Turn-on dark mode'
+  turn-off-dark-mode: 'Turn-off dark mode'
 input:
   amount: 'Amount'
 select:

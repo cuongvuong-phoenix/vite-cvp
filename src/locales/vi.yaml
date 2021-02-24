@@ -5,6 +5,8 @@ hello: 'Xin chào, đây là Vite-template!'
 button:
   increase-counter: 'Tăng Bộ đếm lên {n}'
   decrease-counter: 'Giảm Bộ đếm xuống {n}'
+  turn-on-dark-mode: 'Bật chế độ Tối'
+  turn-off-dark-mode: 'Tắt chế độ Tối'
 input:
   amount: 'Số lượng'
 select:

@@ -10,10 +10,20 @@
       </router-link>
     </nav>
 
-    <div class="flex items-center justify-center mt-4 mb-8">
+    <div class="flex items-center justify-center mt-4 mb-8 space-x-4">
       <select v-model="currentLocale" :title="t('select.change-languages')">
         <option v-for="locale in LOCALES" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
       </select>
+
+      <button
+        @click="toggleDarkMode()"
+        :title="isDarkMode ? t('button.turn-off-dark-mode') : t('button.turn-on-dark-mode')"
+        type="button"
+        class="inline-flex items-center justify-center w-8 h-8 rounded-full"
+      >
+        <i-ion-moon-outline v-if="isDarkMode"></i-ion-moon-outline>
+        <i-ion-sunny-outline v-else></i-ion-sunny-outline>
+      </button>
     </div>
 
     <router-view></router-view>
@@ -24,6 +34,7 @@
   import { ref, watch } from 'vue';
   import { useI18n } from 'vue-i18n';
   import { useRouter } from 'vue-router';
+  import { useDark, useToggle } from '@vueuse/core';
   import { LOCALES } from './i18n';
 
   const router = useRouter();
@@ -44,6 +55,10 @@
       params: { locale: val },
     });
   });
+
+  // Dark modes.
+  const isDarkMode = useDark({ storageKey: 'theme' });
+  const toggleDarkMode = useToggle(isDarkMode);
 </script>
 
 <style lang="postcss" scoped>

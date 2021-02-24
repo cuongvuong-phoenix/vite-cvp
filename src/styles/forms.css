@@ -11,7 +11,7 @@ a {
 button,
 select,
 input[type='number'] {
-  @apply rounded-lg;
+  @apply bg-transparent rounded-lg;
 
   &:focus {
     @apply border-teal-500 outline-none ring ring-teal-500 ring-opacity-25;

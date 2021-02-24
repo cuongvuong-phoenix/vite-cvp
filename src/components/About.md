@@ -1,5 +1,10 @@
 # About
 
+This template is consisted of:
+
+- `Vite`.
+- `Vue-Router hhhh`.
+
 ```ts
 import { computed } from 'vue';
 import { useStore } from '../store';

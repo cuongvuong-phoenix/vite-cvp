@@ -1,0 +1,7 @@
+html:not(.dark) {
+  @apply text-gray-800 bg-white;
+}
+
+html.dark {
+  @apply text-gray-200 bg-trueGray-900;
+}
