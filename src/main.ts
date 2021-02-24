@@ -6,6 +6,7 @@ import { store, key } from './store';
 import { setupI18n } from './i18n';
 import en from './locales/en.yaml';
 import './styles/main.css';
+import 'prism-theme-one-light-dark/prism-onedark.css';
 
 const app = createApp(App);
 
