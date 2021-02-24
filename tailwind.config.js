@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors: {
         teal: colors.teal,
-        trueGray: colors.trueGray,
+        gray: colors.gray,
+        // trueGray: colors.trueGray,
       },
 
       typography: (theme) => ({
@@ -22,6 +23,8 @@ module.exports = {
             'code': false,
             'code::before': false,
             'code::after': false,
+            'a code': false,
+            'pre': false,
             'pre code': false,
             // Inline-code without Prism's `class="language"` attribute,
             // based on Prism `one-light-dark` theme (https://github.com/kenchandev/prism-theme-one-light-dark).
@@ -35,12 +38,12 @@ module.exports = {
         },
         light: {
           css: {
-            'color': theme('colors.gray.200'),
+            'color': theme('colors.gray.300'),
             '[class~="lead"]': {
-              color: theme('colors.gray.300'),
+              color: theme('colors.gray.400'),
             },
             'a, strong, h1, h2, h3, h4, thead': {
-              color: theme('colors.white'),
+              color: theme('colors.gray.200'),
             },
             'ol > li::before, figure figcaption': {
               color: theme('colors.gray.400'),
@@ -49,7 +52,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.400'),
             },
             'blockquote': {
-              color: theme('colors.gray.300'),
+              color: theme('colors.gray.400'),
               borderLeftColor: theme('colors.gray.700'),
             },
             'thead': {

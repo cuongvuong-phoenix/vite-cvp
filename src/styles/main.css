@@ -3,5 +3,5 @@ html:not(.dark) {
 }
 
 html.dark {
-  @apply text-gray-200 bg-trueGray-900;
+  @apply text-gray-300 bg-gray-900;
 }
