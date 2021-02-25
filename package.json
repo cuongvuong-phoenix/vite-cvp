@@ -8,8 +8,6 @@
   },
   "dependencies": {
     "@vueuse/core": "^4.2.2",
-    "prism-theme-one-light-dark": "^1.0.4",
-    "prism-theme-vars": "^0.1.4",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0-rc.7",
     "vue-router": "^4",
