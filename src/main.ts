@@ -8,6 +8,7 @@ import en from './locales/en.yaml';
 import './styles/tailwind.css';
 import './styles/markdown.css';
 import './styles/prism-one-dark.css';
+import './styles/prism-one-light.css';
 import './styles/main.css';
 
 const app = createApp(App);

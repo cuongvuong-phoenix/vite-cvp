@@ -1,8 +1,8 @@
 /* Based on: https://github.com/kenchandev/prism-theme-one-light-dark */
-html.dark {
+html:not(.dark) {
   code,
   pre {
-    color: #abb2bf;
+    color: #383a42;
     background: none;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     text-align: left;
@@ -28,7 +28,7 @@ html.dark {
   code::-moz-selection,
   code ::-moz-selection {
     text-shadow: none;
-    background: #9aa2b1;
+    background: #e5e6e7;
   }
   @media print {
     code,
@@ -41,11 +41,10 @@ html.dark {
     margin: 0.5em 0;
     overflow: auto;
   }
-  /* Inline-code */
   :not(pre) > code,
   pre {
-    background: #282c34;
-    border: 1px solid rgba(0, 0, 0);
+    background: #fff;
+    border: 1px solid #e7eaf4;
   }
   :not(pre) > code {
     padding: 0.2em 0.4em;
@@ -56,14 +55,14 @@ html.dark {
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: #5c6370;
+    color: #a0a1a7;
   }
   .token.punctuation {
-    color: #abb2bf;
+    color: #383a42;
   }
   .token.selector,
   .token.tag {
-    color: #e06c75;
+    color: #f07c85;
   }
   .token.property,
   .token.boolean,
@@ -72,31 +71,31 @@ html.dark {
   .token.symbol,
   .token.attr-name,
   .token.deleted {
-    color: #d19a66;
+    color: #e1aa76;
   }
   .token.string,
   .token.char,
   .token.attr-value,
   .token.builtin,
   .token.inserted {
-    color: #98c379;
+    color: #88b369;
   }
   .token.operator,
   .token.entity,
   .token.url,
   .language-css .token.string,
   .style .token.string {
-    color: #56b6c2;
+    color: #46a6b2;
   }
   .token.function {
-    color: #61afef;
+    color: #519fdf;
   }
   .token.atrule,
   .token.keyword,
   .token.regex,
   .token.important,
   .token.variable {
-    color: #c678dd;
+    color: #b668cd;
   }
   .token.important,
   .token.bold {
@@ -137,45 +136,45 @@ html.dark {
   }
   .line-numbers-rows > span:before {
     content: counter(linenumber);
-    color: #5c6370;
+    color: #b5b9c2;
     display: block;
     padding-right: 0.8em;
     text-align: right;
   }
   code.language-css,
   pre.languagecss {
-    color: #fa4273;
+    color: #ca1243;
   }
   code.language-javascript,
   pre.languagejavascript {
-    color: #fa4273;
+    color: #ca1243;
   }
   code.language-js,
   pre.languagejs {
-    color: #fa4273;
+    color: #ca1243;
   }
   code.language-jsx,
   pre.languagejsx {
-    color: #fa4273;
+    color: #ca1243;
   }
   code.language-sass,
   pre.languagesass {
-    color: #fa4273;
+    color: #ca1243;
   }
   code.language-scss,
   pre.languagescss {
-    color: #fa4273;
+    color: #ca1243;
   }
   code.language-ts,
   pre.languagets {
-    color: #fa4273;
+    color: #ca1243;
   }
   code.language-tsx,
   pre.languagetsx {
-    color: #fa4273;
+    color: #ca1243;
   }
   code.language-typescript,
   pre.languagetypescript {
-    color: #fa4273;
+    color: #ca1243;
   }
 }
