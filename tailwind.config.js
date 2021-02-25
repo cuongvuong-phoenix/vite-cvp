@@ -27,6 +27,7 @@ module.exports = {
             'pre': {
               color: false,
               backgroundColor: false,
+              fontSize: false,
             },
           },
         },

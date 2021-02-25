@@ -1115,6 +1115,11 @@ markdown-it-anchor@^7.0.2:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-7.0.2.tgz#1ac28261e0ea377b8298a1a6760e422921346a03"
   integrity sha512-UtYFAkce16mJlixXUMXUf14ZmOWK2YHLGKUpkZUn98w3qP8nVhb7k5sCBZmVHGMq3SpYtrxQ5XOdHQHRuLR40Q==
 
+markdown-it-prism-backticks@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-prism-backticks/-/markdown-it-prism-backticks-1.2.0.tgz#7b12e7a0375d8fd39129b262e586970e12a6a6d8"
+  integrity sha512-BYPehGEQMbNWHvoygUJPpRP55ORUnUYQw5mchHNMIFUz5EXEcl2lWD8x8Qyfg6Z6t9K9q9XZJ2oiQ/N4N0iVVw==
+
 markdown-it-prism@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/markdown-it-prism/-/markdown-it-prism-2.1.4.tgz#d7f52d811eb5f96813ec6a6013f85d939e99619c"

@@ -26,6 +26,7 @@
     "focus-visible": "^5.2.0",
     "markdown-it-anchor": "^7.0.2",
     "markdown-it-prism": "^2.1.4",
+    "markdown-it-prism-backticks": "^1.2.0",
     "postcss": "^8.2.6",
     "postcss-import": "^14.0.0",
     "precss": "^4.0.0",

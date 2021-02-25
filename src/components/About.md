@@ -3,9 +3,13 @@
 This template is consisted of:
 
 - `Vite`.
-- `Vue-Router hhhh`.
+- `Vue-Router hhhh` `another` is something.
 
-```ts
+```
+unknown language
+```
+
+```javascript
 import { computed } from 'vue';
 import { useStore } from '../store';
 import { useI18n } from 'vue-i18n';

@@ -7,8 +7,8 @@ import { setupI18n } from './i18n';
 import en from './locales/en.yaml';
 import './styles/tailwind.css';
 import './styles/markdown.css';
+import './styles/prism-one-dark.css';
 import './styles/main.css';
-import 'prism-theme-one-light-dark/prism-onedark.css';
 
 const app = createApp(App);
 
