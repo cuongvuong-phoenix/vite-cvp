@@ -10,7 +10,7 @@ a.header-anchor {
 
   &:hover,
   &:focus {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 

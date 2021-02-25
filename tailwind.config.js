@@ -8,7 +8,6 @@ module.exports = {
       colors: {
         teal: colors.teal,
         gray: colors.gray,
-        // trueGray: colors.trueGray,
       },
 
       typography: (theme) => ({
@@ -24,16 +23,11 @@ module.exports = {
             'code::before': false,
             'code::after': false,
             'a code': false,
-            'pre': false,
             'pre code': false,
-            // Inline-code without Prism's `class="language"` attribute,
-            // based on Prism `one-light-dark` theme (https://github.com/kenchandev/prism-theme-one-light-dark).
-            // ':not(pre) > code:not([class*="language-"])': {
-            //   backgroundColor: theme('colors.gray.200'),
-            //   borderRadius: '0.25em',
-            //   padding: '0.1em 0.3em',
-            //   lineHeight: '1.4em',
-            // },
+            'pre': {
+              color: false,
+              backgroundColor: false,
+            },
           },
         },
         light: {
