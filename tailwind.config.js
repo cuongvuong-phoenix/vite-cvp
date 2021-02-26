@@ -24,6 +24,7 @@ module.exports = {
               'color': theme('colors.amber.600'),
               'fontStyle': 'italic',
               'textDecoration': 'none',
+              'textUnderlinePosition': 'from-font',
               '&:hover, &:focus': {
                 textDecoration: 'underline',
               },
@@ -33,6 +34,7 @@ module.exports = {
             'code': false,
             'code::before': false,
             'code::after': false,
+            'a code': false,
             'pre code': false,
             'pre': {
               color: false,
