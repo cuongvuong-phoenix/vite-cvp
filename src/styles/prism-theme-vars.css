@@ -30,8 +30,9 @@
   --prism-keyword-control: var(--prism-keyword);
   --prism-regex: var(--prism-string);
   --prism-json-property: var(--prism-property);
-  --prism-inline-background: var(--prism-background);
   --prism-tag: var(--prism-builtin);
+  --prism-inline-background: var(--prism-background);
+  --prism-inline-foreground: var(--prism-foreground);
 
   /* Token Styles */
   --prism-comment-style: italic;
@@ -104,6 +105,10 @@ pre {
   padding: var(--prism-inline-padding-y) var(--prism-inline-padding-x);
   border-radius: var(--prism-inline-radius);
   background: var(--prism-inline-background);
+}
+
+:not(pre) > code:not([class*='language-']) {
+  color: var(--prism-inline-foreground) !important;
 }
 
 /* Selection */

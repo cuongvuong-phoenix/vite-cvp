@@ -4,6 +4,7 @@ This template is consisted of:
 
 - `Vite`.
 - `Vue-Router hhhh` `another` is something.
+- `<h1> hello <h1/>`{lang=html}
 
 ```
 unknown language

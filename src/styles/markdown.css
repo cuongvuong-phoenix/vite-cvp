@@ -1,3 +1,6 @@
+/* ---------------- `markdown-it-prism` ---------------- */
+@import './prism-one-dark-pro.css';
+
 /* ---------------- `markdown-it-anchor` ---------------- */
 a.header-anchor {
   float: left;
