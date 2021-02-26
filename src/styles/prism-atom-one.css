@@ -1,46 +1,63 @@
+/* `Atom One Light`: https://github.com/akamud/vscode-theme-onelight */
+/* `Atom One Dark`: https://github.com/akamud/vscode-theme-onedark */
 :root {
+  /* Colors definitions */
+  --color--foreground: #383a42;
+  --color--background: #fafafa;
+  --color--chalky: #c18401;
+  --color--coral: #e45649;
+  --color--dark: #a0a1a7;
+  --color--red: #ca1243;
+  --color--fountainBlue: #0184bc;
+  --color--green: #50a14f;
+  --color--malibu: #4078f2;
+  --color--purple: #a626a4;
+  --color--whiskey: #986801;
+
+  /* ---------------- Global ---------------- */
+  /* Font */
   --prism-font-family: 'Jetbrains Mono', 'Fira Code', Hack, Consolas, 'Ubuntu Mono', monospace;
+  --prism-font-size: 0.925em;
+
+  --prism-foreground: var(--color--foreground);
+  --prism-background: var(--color--background);
+
+  /* Tokens */
+  --prism-comment: var(--color--dark);
+  --prism-string: var(--color--green);
+  --prism-literal: var(--color--coral);
+  --prism-keyword: var(--color--purple);
+  --prism-function: var(--color--malibu);
+  --prism-deleted: var(--color--coral);
+  --prism-class: var(--color--chalky);
+  --prism-builtin: var(--color--chalky);
+  --prism-property: var(--color--whiskey);
+  --prism-namespace: var(--color--chalky);
+  --prism-punctuation: var(--color--foreground);
+  --prism-decorator: var(--color--malibu);
+  --prism-operator: var(--color--fountainBlue);
+  --prism-number: var(--color--whiskey);
+  --prism-boolean: var(--color--whiskey);
+  --prism-variable: var(--color--coral);
+  --prism-constant: var(--color--chalky);
+  --prism-symbol: var(--color--fountainBlue);
+  --prism-interpolation: var(--color--red);
+  --prism-selector: var(--color--green);
+  --prism-keyword-control: var(--color--purple);
+  --prism-regex: var(--color--fountainBlue);
+  --prism-json-property: var(--color--coral);
+  --prism-tag: var(--color--coral);
 
   /* Sizing */
   --prism-block-radius: 1em;
   --prism-inline-padding-x: 0.5em;
-  --prism-inline-padding-y: 0.2em;
+  --prism-inline-padding-y: 0.1em;
   --prism-inline-radius: 0.5em;
 }
 
-/* `Atom One Light` theme */
-/* Based on: https://github.com/akamud/vscode-theme-onelight */
 html:not(.dark) {
   /* Colors */
-  --prism-foreground: #383a42;
-  --prism-background: #fafafa;
-
-  /* Tokens */
-  --prism-comment: #a0a1a7;
-  --prism-string: #50a14f;
-  --prism-literal: #e45649;
-  --prism-keyword: #a626a4;
-  --prism-function: #4078f2;
-  --prism-deleted: #e45649;
-  --prism-class: #c18401;
-  --prism-builtin: #c18401;
-  --prism-property: #e45649;
-  --prism-namespace: #e45649;
-  --prism-punctuation: #383a42;
-  --prism-decorator: #4078f2;
-  --prism-operator: #0184bc;
-  --prism-number: #986801;
-  --prism-boolean: #986801;
-  --prism-variable: #e45649;
-  --prism-constant: #c18401;
-  --prism-symbol: #0184bc;
-  --prism-interpolation: #ca1243;
-  --prism-selector: #a626a4;
-  --prism-keyword-control: #a626a4;
-  --prism-regex: #0184bc;
-  --prism-json-property: #e45649;
-  --prism-tag: #e45649;
-  --prism-inline-foreground: var(--prism-foreground);
+  --prism-inline-foreground: theme('colors.amber.600');
   --prism-block-border-color: theme('colors.gray.300');
 
   /* Extension */
@@ -49,39 +66,21 @@ html:not(.dark) {
   --prism-selection-background: #e5e5e6;
 }
 
-/* `Atom One Dark` theme */
-/* Based on: https://github.com/akamud/vscode-theme-onedark */
 html.dark {
   /* Colors */
-  --prism-foreground: #abb2bf;
-  --prism-background: #282c34;
+  --color--foreground: #abb2bf;
+  --color--background: #282c34;
+  --color--chalky: #e5c07b;
+  --color--coral: #e06c75;
+  --color--dark: #5c6370;
+  --color--red: #f44747;
+  --color--fountainBlue: #56b6c2;
+  --color--green: #98c379;
+  --color--malibu: #61afef;
+  --color--purple: #c678dd;
+  --color--whiskey: #d19a66;
 
-  /* Tokens */
-  --prism-comment: #5c6370;
-  --prism-string: #98c379;
-  --prism-literal: #e06c75;
-  --prism-keyword: #c678dd;
-  --prism-function: #61afef;
-  --prism-deleted: #e06c75;
-  --prism-class: #e5c07b;
-  --prism-builtin: #e5c07b;
-  --prism-property: #e06c75;
-  --prism-namespace: #e06c75;
-  --prism-punctuation: #abb2bf;
-  --prism-decorator: #61afef;
-  --prism-operator: #56b6c2;
-  --prism-number: #d19a66;
-  --prism-boolean: #d19a66;
-  --prism-variable: #e06c75;
-  --prism-constant: #e5c07b;
-  --prism-symbol: #56b6c2;
-  --prism-interpolation: #be5046;
-  --prism-selector: #c678dd;
-  --prism-keyword-control: #c678dd;
-  --prism-regex: #56b6c2;
-  --prism-json-property: #e06c75;
-  --prism-tag: #e06c75;
-  --prism-inline-foreground: var(--prism-foreground);
+  --prism-inline-foreground: theme('colors.amber.500');
 
   /* Extension */
   --prism-line-number: #636d83;

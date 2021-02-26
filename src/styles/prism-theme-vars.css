@@ -1,7 +1,5 @@
 /* Adjusted from https://github.com/antfu/prism-theme-vars/blob/master/base.css */
 :root {
-  --prism-scheme: light;
-
   /* Colors */
   --prism-foreground: #6e6e6e;
   --prism-background: #f4f4f4;
