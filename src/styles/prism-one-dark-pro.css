@@ -17,6 +17,8 @@
   --one-dark-pro--whiskey: #d19a66;
 
   /* Prism */
+  --prism-font-family: 'Jetbrains Mono', 'Fira Code', Hack, Consolas, 'Ubuntu Mono', monospace;
+
   --prism-scheme: dark;
 
   --prism-foreground: #abb2bf;
@@ -53,8 +55,6 @@
   --prism-line-number-gutter: #2e3440;
   --prism-line-highlight-background: #191e2a;
   --prism-selection-background: #394960;
-
-  --prism-font-family: 'Jetbrains Mono', 'Fira Code', Hack, Consolas, 'Ubuntu Mono', monospace;
 
   --prism-block-radius: 0.5em;
   --prism-inline-padding-x: 0.5em;

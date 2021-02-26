@@ -1,5 +1,6 @@
 /* ---------------- `markdown-it-prism` ---------------- */
-@import './prism-one-dark-pro.css';
+@import './prism-theme-vars.css';
+@import './prism-atom-one.css';
 
 /* ---------------- `markdown-it-anchor` ---------------- */
 a.header-anchor {
