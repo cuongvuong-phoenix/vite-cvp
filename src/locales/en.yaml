@@ -1,7 +1,7 @@
 nav:
   home: 'Home'
   about: 'About'
-hello: 'Hello, this is Vite-template!'
+hello: 'Hello, this is Vite-vcp!'
 button:
   increase-counter: 'Increase the Counter by {n}'
   decrease-counter: 'Decrease the Counter by {n}'

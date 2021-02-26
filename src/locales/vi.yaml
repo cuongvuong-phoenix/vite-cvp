@@ -1,7 +1,7 @@
 nav:
   home: 'Trang chủ'
   about: 'Thông tin'
-hello: 'Xin chào, đây là Vite-template!'
+hello: 'Xin chào, đây là Vite-vcp!'
 button:
   increase-counter: 'Tăng Bộ đếm lên {n}'
   decrease-counter: 'Giảm Bộ đếm xuống {n}'

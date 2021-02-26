@@ -1,19 +1,10 @@
-a {
-  &:focus {
-    @apply outline-none;
-  }
-
-  &:focus-visible {
-    @apply border-teal-500 ring ring-teal-500 ring-opacity-25;
-  }
-}
-
+a,
 button,
 select,
 input[type='number'] {
   @apply bg-transparent rounded-lg;
 
   &:focus {
-    @apply border-teal-500 outline-none ring ring-teal-500 ring-opacity-25;
+    @apply outline-none border-amber-500 ring ring-amber-500 ring-opacity-40;
   }
 }

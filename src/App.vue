@@ -85,11 +85,11 @@
     @apply flex items-center space-x-2 text-xl;
 
     &:hover {
-      @apply text-teal-500;
+      @apply text-amber-500;
     }
   }
 
   .router-link-active {
-    @apply text-teal-700;
+    @apply text-amber-600;
   }
 </style>

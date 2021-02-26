@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-4xl font-bold">Vite-template</h1>
+    <h1 class="text-4xl font-bold">Vite-vcp</h1>
 
     <h2 class="mt-8 text-lg">{{ msg }}</h2>
 
@@ -9,7 +9,7 @@
         :title="t('button.decrease-counter', { n: amount })"
         @click="decrease()"
         type="button"
-        class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-teal-700"
+        class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-amber-500"
       >
         <i-ion-minus></i-ion-minus>
       </button>
@@ -20,7 +20,7 @@
         :title="t('button.increase-counter', { n: amount })"
         @click="increase()"
         type="button"
-        class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-teal-700"
+        class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-amber-500"
       >
         <i-ion-plus></i-ion-plus>
       </button>

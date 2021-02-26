@@ -1,3 +1,5 @@
+@import './forms';
+
 html:not(.dark) {
   @apply text-gray-800 bg-white;
 }

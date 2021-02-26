@@ -8,7 +8,6 @@ module.exports = {
       colors: {
         amber: colors.amber,
         gray: colors.gray,
-        teal: colors.teal,
       },
 
       // Customize from official styles
@@ -26,6 +25,7 @@ module.exports = {
               'textDecoration': 'none',
               'textUnderlinePosition': 'from-font',
               '&:hover, &:focus': {
+                color: theme('colors.amber.500'),
                 textDecoration: 'underline',
               },
             },
