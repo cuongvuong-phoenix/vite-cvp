@@ -27,7 +27,7 @@ h6 {
   &:hover,
   &:focus {
     .header-anchor {
-      opacity: 0.5;
+      opacity: 1;
     }
   }
 }

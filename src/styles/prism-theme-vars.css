@@ -85,7 +85,7 @@ code {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  color: var(--prism-foreground) !important;
+  color: var(--prism-foreground);
 }
 
 /* Code blocks */
@@ -108,7 +108,11 @@ pre {
 }
 
 :not(pre) > code:not([class*='language-']) {
-  color: var(--prism-inline-foreground) !important;
+  color: var(--prism-inline-foreground);
+}
+
+:not(pre) > a code:not([class*='language-']) {
+  color: inherit;
 }
 
 /* Selection */

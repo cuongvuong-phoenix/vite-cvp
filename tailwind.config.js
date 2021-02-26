@@ -11,19 +11,28 @@ module.exports = {
         teal: colors.teal,
       },
 
+      // Customize from official styles
+      // (https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js)
       typography: (theme) => ({
-        // Customized from: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
         DEFAULT: {
           css: {
             'ul > li::before': {
               backgroundColor: theme('colors.gray.500'),
             },
 
-            // Avoid overridding Prism's theme.
+            'a': {
+              'color': theme('colors.amber.600'),
+              'fontStyle': 'italic',
+              'textDecoration': 'none',
+              '&:hover, &:focus': {
+                textDecoration: 'underline',
+              },
+            },
+
+            // Avoid overriding Prism's theme.
             'code': false,
             'code::before': false,
             'code::after': false,
-            'a code': false,
             'pre code': false,
             'pre': {
               color: false,
@@ -38,7 +47,7 @@ module.exports = {
             '[class~="lead"]': {
               color: theme('colors.gray.400'),
             },
-            'a, strong, h1, h2, h3, h4, thead': {
+            'strong, h1, h2, h3, h4, thead': {
               color: theme('colors.gray.200'),
             },
             'ol > li::before, figure figcaption': {
@@ -61,14 +70,6 @@ module.exports = {
         },
       }),
     },
-
-    // typography: {
-    //   css: {
-    //     code: {
-    //       color: false,
-    //     }
-    //   }
-    // }
   },
   variants: {
     extend: {
