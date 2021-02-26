@@ -35,10 +35,29 @@
   import { useI18n } from 'vue-i18n';
   import { useRouter } from 'vue-router';
   import { useDark, useToggle } from '@vueuse/core';
+  import { useHead } from '@vueuse/head';
   import { LOCALES } from './i18n';
 
   const router = useRouter();
   const { t, locale } = useI18n();
+
+  // <head>
+  useHead({
+    meta: [
+      {
+        name: 'application-name',
+        content: 'Vite-vcp',
+      },
+      {
+        name: 'description',
+        content: 'Opinionated Vite Starter Template. Inpsired by Vitesse https://github.com/antfu/vitesse',
+      },
+      {
+        name: 'author',
+        content: 'Vuong Chi Cuong (vuongcuong.phoenix@gmail.com)',
+      },
+    ],
+  });
 
   // Clone to avoid double-changing global `locale`.
   const currentLocale = ref(locale.value);

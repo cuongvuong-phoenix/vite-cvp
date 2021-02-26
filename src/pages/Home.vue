@@ -7,12 +7,17 @@
 
 <script setup lang="ts">
   import { computed } from 'vue';
-  import { useStore } from '../store';
   import { useI18n } from 'vue-i18n';
+  import { useHead } from '@vueuse/head';
+  import { useStore } from '../store';
   import Hello from '../components/Hello.vue';
 
   const store = useStore();
   const { t } = useI18n();
+
+  useHead({
+    title: 'Vite-vcp',
+  });
 
   const counter = computed(() => store.state.counter);
 </script>

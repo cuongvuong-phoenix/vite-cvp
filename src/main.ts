@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import 'focus-visible/dist/focus-visible.min.js';
+import { createHead } from '@vueuse/head';
 import App from './App.vue';
 import { setupRouter } from './routes';
 import { store, key } from './store';
@@ -24,4 +25,6 @@ const i18n = setupI18n({
 
 const router = setupRouter(i18n);
 
-app.use(router).use(store, key).use(i18n).mount('#app');
+const head = createHead();
+
+app.use(router).use(store, key).use(i18n).use(head).mount('#app');
