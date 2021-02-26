@@ -9,8 +9,8 @@ Test...
 
 This template is consisted of:
 
-- `Vite`.
-- `Vue-Router hhhh` `another` is something.
+- `Vite`
+- `Vue-Router`
 
 ```
 unknown language

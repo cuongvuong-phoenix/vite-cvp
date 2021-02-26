@@ -40,6 +40,7 @@ module.exports = {
               color: false,
               backgroundColor: false,
               fontSize: false,
+              borderRadius: false,
             },
           },
         },
