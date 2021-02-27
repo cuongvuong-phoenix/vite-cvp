@@ -16,6 +16,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     ViteMarkdown({
+      headEnabled: true,
       wrapperClasses: 'prose dark:prose-light mx-auto',
       markdownItSetup(md) {
         md.use(MarkdownItPrism, { defaultLanguage: 'markup' });
