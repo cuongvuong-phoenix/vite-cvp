@@ -1,7 +1,13 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  purge: {
+    content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    options: {
+      // From `vite-plugin-md`.
+      safelist: ['dark', 'prose', 'dark:prose-light', 'mx-auto'],
+    },
+  },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
