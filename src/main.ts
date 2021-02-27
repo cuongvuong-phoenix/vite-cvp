@@ -10,6 +10,8 @@ import './styles/tailwind.css';
 import './styles/markdown.css';
 import './styles/main.css';
 
+const production = import.meta.env.PROD;
+
 const app = createApp(App);
 
 const i18n = setupI18n({
@@ -19,8 +21,8 @@ const i18n = setupI18n({
   messages: {
     en,
   },
-  missingWarn: false,
-  fallbackWarn: false,
+  missingWarn: production,
+  fallbackWarn: production,
 });
 
 const router = setupRouter(i18n);
