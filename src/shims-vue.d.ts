@@ -5,9 +5,9 @@ declare module '*.vue' {
 }
 
 declare module '*.md' {
-  import { ComponentOptions } from 'vue';
-  const Component: ComponentOptions;
-  export default Component;
+  import { DefineComponent } from 'vue';
+  const component: DefineComponent;
+  export default component;
 }
 
 declare module '*.yaml' {
