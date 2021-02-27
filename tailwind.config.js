@@ -31,7 +31,6 @@ module.exports = {
               'textDecoration': 'none',
               'textUnderlinePosition': 'from-font',
               '&:hover, &:focus': {
-                color: theme('colors.amber.500'),
                 textDecoration: 'underline',
               },
             },
