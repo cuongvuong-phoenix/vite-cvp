@@ -56,18 +56,15 @@
 }
 
 html:not(.dark) {
-  /* Colors */
   --prism-inline-foreground: theme('colors.amber.600');
   --prism-block-border-color: theme('colors.gray.300');
 
-  /* Extension */
   --prism-line-number: #9d9d9f;
   --prism-line-highlight-background: #383a420c;
   --prism-selection-background: #e5e5e6;
 }
 
 html.dark {
-  /* Colors */
   --color--foreground: #abb2bf;
   --color--background: #282c34;
   --color--chalky: #e5c07b;
@@ -82,7 +79,6 @@ html.dark {
 
   --prism-inline-foreground: theme('colors.amber.500');
 
-  /* Extension */
   --prism-line-number: #636d83;
   --prism-line-highlight-background: #99bbff0a;
   --prism-selection-background: #3e4451;
