@@ -10,6 +10,7 @@
   "dependencies": {
     "@vueuse/core": "^4.2.2",
     "@vueuse/head": "^0.3.1",
+    "@vueuse/motion": "^1.2.6",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0-rc.7",
     "vue-router": "^4",

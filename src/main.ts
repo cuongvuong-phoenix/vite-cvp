@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import { createHead } from '@vueuse/head';
+import { MotionPlugin } from '@vueuse/motion';
 import App from '~/App.vue';
 import { setupRouter } from '~/routes';
 import { store, key } from '~/store';
@@ -28,4 +29,4 @@ const router = setupRouter(i18n);
 
 const head = createHead();
 
-app.use(router).use(store, key).use(i18n).use(head).mount('#app');
+app.use(router).use(store, key).use(i18n).use(head).use(MotionPlugin).mount('#app');

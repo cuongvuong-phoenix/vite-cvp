@@ -26,7 +26,8 @@
 
       <ul
         v-show="isLangDropdownOpen"
-        class="absolute py-2 transform -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-2xl left-1/2 top-full dark:bg-gray-900 dark:border-gray-700"
+        v-motion-pop-visible
+        class="absolute left-0 py-2 bg-white border border-gray-100 rounded-lg shadow-2xl top-full dark:bg-gray-900 dark:border-gray-700"
       >
         <li v-for="locale in LOCALES" :key="locale.code" class="py-2 -my-2">
           <button
