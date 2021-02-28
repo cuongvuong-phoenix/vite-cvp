@@ -4,11 +4,17 @@ module.exports = {
   purge: {
     content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     options: {
-      // From `vite-plugin-md`.
+      // Avoid purging auto-injecting classes from `vite-plugin-md`.
       safelist: ['dark', 'prose', 'dark:prose-light', 'mx-auto'],
     },
   },
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   darkMode: 'class', // or 'media' or 'class'
+  variants: {
+    extend: {
+      typography: ['dark'],
+    },
+  },
   theme: {
     extend: {
       colors: {
@@ -79,10 +85,4 @@ module.exports = {
       }),
     },
   },
-  variants: {
-    extend: {
-      typography: ['dark'],
-    },
-  },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 };
