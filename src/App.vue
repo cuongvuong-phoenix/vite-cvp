@@ -1,7 +1,6 @@
 <template>
-  <div class="container px-4 mx-auto mt-8">
+  <div class="container p-4 mx-auto mt-8">
     <Header></Header>
-
     <router-view></router-view>
   </div>
 </template>
