@@ -9,8 +9,8 @@
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
   import { useHead } from '@vueuse/head';
-  import { useStore } from '../store';
-  import Hello from '../components/Hello.vue';
+  import { useStore } from '~/store';
+  import Hello from '~/components/Hello.vue';
 
   const store = useStore();
   const { t } = useI18n();

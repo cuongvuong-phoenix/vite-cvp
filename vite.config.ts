@@ -11,6 +11,11 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '~': path.resolve(__dirname, 'src'),
+    },
+  },
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],

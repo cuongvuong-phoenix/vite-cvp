@@ -1,13 +1,13 @@
 import { createApp } from 'vue';
 import { createHead } from '@vueuse/head';
-import App from './App.vue';
-import { setupRouter } from './routes';
-import { store, key } from './store';
-import { setupI18n } from './i18n';
-import en from './locales/en.yaml';
-import './styles/tailwind.css';
-import './styles/markdown.css';
-import './styles/main.css';
+import App from '~/App.vue';
+import { setupRouter } from '~/routes';
+import { store, key } from '~/store';
+import { setupI18n } from '~/i18n';
+import en from '~/locales/en.yaml';
+import '~/styles/tailwind.css';
+import '~/styles/markdown.css';
+import '~/styles/main.css';
 
 const production = import.meta.env.PROD;
 

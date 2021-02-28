@@ -1,8 +1,7 @@
 import { createRouter, RouteRecordRaw, createWebHistory } from 'vue-router';
 import { Composer, I18n } from 'vue-i18n';
-import { loadLocaleMessages, LOCALES, setI18nLanguage } from '../i18n';
-
-import Home from '../pages/Home.vue';
+import { loadLocaleMessages, LOCALES, setI18nLanguage } from '~/i18n';
+import Home from '~/pages/Home.vue';
 
 export const setupRouter = (i18n: I18n) => {
   const locale = i18n.mode === 'legacy' ? i18n.global.locale : ((i18n.global as unknown) as Composer).locale.value;

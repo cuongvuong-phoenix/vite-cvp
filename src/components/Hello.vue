@@ -31,7 +31,7 @@
 <script setup lang="ts">
   import { defineProps, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
-  import { useStore } from '../store';
+  import { useStore } from '~/store';
 
   const store = useStore();
   const { t } = useI18n();

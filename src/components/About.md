@@ -16,14 +16,36 @@ This template is consisted of:
 unknown language
 ```
 
-```javascript
-import { computed } from 'vue';
-import { useStore } from '../store';
-import { useI18n } from 'vue-i18n';
-import Hello from '../components/Hello.vue';
+```ts
+import { createApp } from 'vue';
+import { createHead } from '@vueuse/head';
+import App from '~/App.vue';
+import { setupRouter } from '~/routes';
+import { store, key } from '~/store';
+import { setupI18n } from '~/i18n';
+import en from '~/locales/en.yaml';
+import '~/styles/tailwind.css';
+import '~/styles/markdown.css';
+import '~/styles/main.css';
 
-const store = useStore();
-const { t } = useI18n();
+const production = import.meta.env.PROD;
 
-const counter = computed(() => store.state.counter);
+const app = createApp(App);
+
+const i18n = setupI18n({
+  legacy: false,
+  locale: 'en',
+  fallbackLocale: 'en',
+  messages: {
+    en,
+  },
+  missingWarn: production,
+  fallbackWarn: production,
+});
+
+const router = setupRouter(i18n);
+
+const head = createHead();
+
+app.use(router).use(store, key).use(i18n).use(head).mount('#app');
 ```
