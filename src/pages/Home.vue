@@ -1,7 +1,7 @@
 <template>
-  <div class="space-y-4 text-center">
+  <div class="text-center">
     <Hello :msg="t('hello')"></Hello>
-    <div>{{ t('counter') }}: {{ counter }}</div>
+    <div class="mt-4">{{ t('counter') }}: {{ counter }}</div>
   </div>
 </template>
 
