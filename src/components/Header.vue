@@ -20,14 +20,27 @@
       @mouseleave="isLangDropdownOpen = false"
       class="relative"
     >
-      <button type="button" class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500">
+      <button
+        :title="t('button.change-languages')"
+        type="button"
+        class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
+      >
         <i-ion-language-outline></i-ion-language-outline>
       </button>
 
       <ul
         v-show="isLangDropdownOpen"
-        v-motion-pop-visible
-        class="absolute left-0 py-2 bg-white border border-gray-100 rounded-lg shadow-2xl top-full dark:bg-gray-900 dark:border-gray-700"
+        v-motion
+        :initial="{
+          scale: 0,
+          opacity: 0,
+          translateX: '-50%',
+        }"
+        :visible="{
+          scale: 1,
+          opacity: 1,
+        }"
+        class="absolute py-2 bg-white border border-gray-100 rounded-lg shadow-lg left-1/2 top-full dark:bg-gray-900 dark:border-gray-700"
       >
         <li v-for="locale in LOCALES" :key="locale.code" class="py-2 -my-2">
           <button

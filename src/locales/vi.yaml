@@ -7,7 +7,6 @@ button:
   decrease-counter: 'Giảm Bộ đếm xuống {n}'
   turn-on-dark-mode: 'Bật chế độ Tối'
   turn-off-dark-mode: 'Tắt chế độ Tối'
+  change-languages: 'Thay đổi ngôn ngữ'
 input:
   amount: 'Số lượng'
-select:
-  change-languages: 'Thay đổi ngôn ngữ'

@@ -7,7 +7,6 @@ button:
   decrease-counter: 'Decrease the Counter by {n}'
   turn-on-dark-mode: 'Turn-on dark mode'
   turn-off-dark-mode: 'Turn-off dark mode'
+  change-languages: 'Change languages'
 input:
   amount: 'Amount'
-select:
-  change-languages: 'Change languages'
