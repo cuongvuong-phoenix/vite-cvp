@@ -15,6 +15,7 @@ a.header-anchor {
 
   &:hover,
   &:focus {
+    opacity: 1;
     text-decoration: underline;
   }
 }
