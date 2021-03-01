@@ -15,7 +15,7 @@ export const setupRouter = (i18n: I18n) => {
     {
       path: '/:locale/about',
       name: 'about',
-      component: () => import('../pages/About.vue'),
+      component: () => import('~/pages/About.vue'),
     },
     {
       path: '/:pathMatch(.*)*',
