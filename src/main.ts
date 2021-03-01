@@ -9,7 +9,6 @@ import { setupI18n } from '~/i18n';
 import en from '~/locales/en.yaml';
 import '~/styles/tailwind.css';
 import '~/styles/markdown.css';
-import '~/styles/nprogress.css';
 import '~/styles/main.css';
 
 const production = import.meta.env.PROD;
