@@ -8,8 +8,8 @@ module.exports = {
       safelist: ['dark', 'prose', 'dark:prose-light', 'mx-auto'],
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   darkMode: 'class', // or 'media' or 'class'
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   variants: {
     extend: {
       typography: ['dark'],
