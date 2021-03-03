@@ -3687,27 +3687,28 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-plugin-components@^0.6.14:
-  version "0.6.14"
-  resolved "https://registry.yarnpkg.com/vite-plugin-components/-/vite-plugin-components-0.6.14.tgz#6807b49b6b64e4d610862fe892ede2dc011431f3"
-  integrity sha512-Xhfuwckd1p8/Mj7mRs/wZZx15CZPYljOl/BWwpvMayFlx52lez28y6QQF3/mPXbtWDK3YuNLGp6xUpMnRJ00gQ==
+vite-plugin-components@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/vite-plugin-components/-/vite-plugin-components-0.7.5.tgz#fb08346e0a38d8caecbaa07f4dd74fbeb93d09c1"
+  integrity sha512-Sly+l1GMRqLeeOFXc9uT1wJUSZQ0LP/65h/c4NK9CWdw2HhHBuB/yyp3ocPLfaq2k+KUeIX2J/Vco/G4hGAy4w==
   dependencies:
     chokidar "^3.5.1"
     debug "^4.3.2"
     fast-glob "npm:@knightly/fast-glob@master"
     minimatch "^3.0.4"
 
-vite-plugin-icons@^0.2.2:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/vite-plugin-icons/-/vite-plugin-icons-0.2.4.tgz#bea7fb4c9bbd799430f264d92d629d7458be981f"
-  integrity sha512-Tljh95wAzGcVS1g8ExfiIw+ugDHvTjM1YCjCouk3Q/I2/z21fZsxvJCExe2ZZjv6Ww7K4G4mH/KhwjqCD5tcXQ==
+vite-plugin-icons@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-icons/-/vite-plugin-icons-0.3.2.tgz#d44542f6d6569d21970e0859bd63893c08c2e97f"
+  integrity sha512-6HDBO6aqJLaJ8lkT9FChAUtniRRzhDWbhNzJLfT7QdDcQ2kaapReksngNEA1+tNlFd5Auey4VGS2VjI3V1KkvA==
   dependencies:
     "@iconify/json-tools" "^1.0.10"
+    vue-template-es2015-compiler "^1.9.1"
 
-vite-plugin-md@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.5.1.tgz#f6996382df10227e256e22adcb79a57e0915159d"
-  integrity sha512-D7WeLZzAGQjb4UtCEXcSKlvGOrHYOiVGWVrzH3+snrOFNoeMc5PDLmy0IS9E/mdMperPkzgaivd5SQg+nY1olQ==
+vite-plugin-md@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.6.0.tgz#b7d298f1b27f0071d3ecfeb1aae652f2e9b9caf9"
+  integrity sha512-JAYDQAqmh+HPcEFea/DnNul6+5xQIsZ+eGB69BuBdqf0IluunBRDhILRGRonqn9Tq11ZZEVpMv6Weyl7BcjUnw==
   dependencies:
     gray-matter "^4.0.2"
     markdown-it "^12.0.4"
@@ -3759,6 +3760,11 @@ vue-router@^4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.4.tgz#ad9b4b7bbdad622407b4ff189b1646f48c1e9053"
   integrity sha512-uN6PDEaYdU9aRO7mU+Dkr1uaY49hV3fucEDG/Vre/Qj8ct3RoJS16vcPrvKVzn69zDDjBV5b9Xw7fZA9r6b/Iw==
+
+vue-template-es2015-compiler@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
+  integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
 vue@^3.0.5:
   version "3.0.7"
