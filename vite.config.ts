@@ -19,8 +19,9 @@ export default defineConfig({
   },
   plugins: [
     {
-      ...eslint({ include: './src/**/*.+(vue|js|jsx|ts|tsx)' }),
+      ...eslint({ include: './src/**/*.+(vue|js|ts)' }),
       enforce: 'pre',
+      apply: 'serve',
     },
     vue({
       include: [/\.vue$/, /\.md$/],
