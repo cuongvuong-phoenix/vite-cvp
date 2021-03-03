@@ -5,7 +5,7 @@ export interface State {
   counter: number;
 }
 
-export const key: InjectionKey<Store<State>> = Symbol();
+export const key: InjectionKey<Store<State>> = Symbol('Vuex State');
 
 export const store = createStore<State>({
   state: {

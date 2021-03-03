@@ -6,9 +6,9 @@
   <div class="flex items-center justify-center mt-16 space-x-4">
     <button
       :title="t('button.decrease-counter', { n: amount })"
-      @click="decrease()"
       type="button"
       class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-amber-500"
+      @click="decrease()"
     >
       <i-ion-minus></i-ion-minus>
     </button>
@@ -17,9 +17,9 @@
 
     <button
       :title="t('button.increase-counter', { n: amount })"
-      @click="increase()"
       type="button"
       class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-amber-500"
+      @click="increase()"
     >
       <i-ion-plus></i-ion-plus>
     </button>

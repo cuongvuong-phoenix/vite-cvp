@@ -15,10 +15,10 @@
     <!-- "Language Dropdown" -->
     <div
       ref="langDropdownRef"
+      class="relative"
       @click="isLangDropdownOpen = true"
       @mouseenter="isLangDropdownOpen = true"
       @mouseleave="isLangDropdownOpen = false"
-      class="relative"
     >
       <button
         :title="t('button.change-languages')"
@@ -44,12 +44,12 @@
       >
         <li v-for="locale in LOCALES" :key="locale.code" class="py-2 -my-2">
           <button
-            @click="currentLocale = locale.code"
             type="button"
             class="w-full px-3 whitespace-nowrap hover:text-amber-500"
             :class="{
               'text-amber-600': currentLocale === locale.code,
             }"
+            @click="currentLocale = locale.code"
           >
             {{ locale.name }}
           </button>
@@ -59,10 +59,10 @@
     <!-- END "Language Dropdown" -->
 
     <button
-      @click="toggleDarkMode"
       :title="isDarkMode ? t('button.turn-off-dark-mode') : t('button.turn-on-dark-mode')"
       type="button"
       class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
+      @click="toggleDarkMode"
     >
       <i-ion-moon-outline v-if="isDarkMode"></i-ion-moon-outline>
       <i-ion-sunny-outline v-else></i-ion-sunny-outline>
