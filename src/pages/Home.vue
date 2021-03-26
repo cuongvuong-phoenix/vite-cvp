@@ -24,7 +24,7 @@
 
 <i18n lang="yaml">
 en:
-  counter: 'Counter'
+  counter: Counter
 vi:
-  counter: 'Bộ đếm'
+  counter: Bộ đếm
 </i18n>

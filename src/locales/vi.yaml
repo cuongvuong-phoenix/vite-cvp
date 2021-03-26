@@ -1,12 +1,12 @@
 nav:
-  home: 'Trang chủ'
-  about: 'Thông tin'
-hello: 'Xin chào, đây là Vite-vcp!'
+  home: Trang chủ
+  about: Thông tin
+hello: Xin chào, đây là Vite-vcp!
 button:
-  increase-counter: 'Tăng Bộ đếm lên {n}'
-  decrease-counter: 'Giảm Bộ đếm xuống {n}'
-  turn-on-dark-mode: 'Bật chế độ Tối'
-  turn-off-dark-mode: 'Tắt chế độ Tối'
-  change-languages: 'Thay đổi ngôn ngữ'
+  increase-counter: Tăng Bộ đếm lên {n}
+  decrease-counter: Giảm Bộ đếm xuống {n}
+  turn-on-dark-mode: Bật chế độ Tối
+  turn-off-dark-mode: Tắt chế độ Tối
+  change-languages: Thay đổi ngôn ngữ
 input:
-  amount: 'Số lượng'
+  amount: Số lượng
