@@ -64,7 +64,7 @@ export async function setupI18n(ctx: SSRContext) {
 
   if (!LOCALES.includes(paramLocale)) {
     paramLocale = DEFAULT_LOCALE;
-    router.push({ name: 'home', params: { locale: paramLocale } });
+    await router.push({ name: 'home', params: { locale: paramLocale } });
   }
 
   const message = await importLocaleMessage(paramLocale);
