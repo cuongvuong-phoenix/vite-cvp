@@ -2,7 +2,11 @@
   <div class="container px-4 py-8 mx-auto mt-8">
     <Header></Header>
 
-    <RouterView></RouterView>
+    <RouterView v-slot="{ Component }">
+      <Suspense timeout="0">
+        <component :is="Component"></component>
+      </Suspense>
+    </RouterView>
   </div>
 </template>
 

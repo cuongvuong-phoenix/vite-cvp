@@ -1,12 +1,11 @@
-import { createRouter, RouteRecordRaw, createWebHistory } from 'vue-router';
-import { LOCALES, DEFAULT_LOCALE } from '~/locales';
-import Home from '~/pages/Home.vue';
+import { RouteRecordRaw } from 'vue-router';
+import { DEFAULT_LOCALE } from '~/locales';
 
-const routes: RouteRecordRaw[] = [
+export const routes: RouteRecordRaw[] = [
   {
     path: '/:locale/',
     name: 'home',
-    component: Home,
+    component: () => import('~/pages/Home.vue'),
   },
   {
     path: '/:locale/about',
@@ -14,17 +13,8 @@ const routes: RouteRecordRaw[] = [
     component: () => import('~/pages/About.vue'),
   },
   {
-    path: '/:locale?/:pathMatch(.*)*',
+    path: '/:pathMatch(.*)*',
     name: 'not-found',
-    redirect: (to) => {
-      const locale = to.params.locale as string;
-
-      return { name: 'home', params: { locale: LOCALES.includes(locale) ? locale : DEFAULT_LOCALE } };
-    },
+    redirect: () => ({ name: 'home', params: { locale: DEFAULT_LOCALE } }),
   },
 ];
-
-export const router = createRouter({
-  history: createWebHistory(),
-  routes,
-});

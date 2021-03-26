@@ -3,16 +3,20 @@
   "license": "MIT",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "dev": "vite-ssr",
+    "build": "vite-ssr build"
   },
   "dependencies": {
     "@vueuse/core": "^4.6.2",
     "@vueuse/head": "^0.5.1",
     "@vueuse/motion": "^1.5.2",
     "nprogress": "^0.2.0",
+<<<<<<< HEAD
     "vue": "^3.0.8",
+=======
+    "vite-ssr": "^0.6.6",
+    "vue": "^3.0.7",
+>>>>>>> 7666318 (refactor!, feat!: integrate SSR with `vite-ssr` plugin)
     "vue-i18n": "^9.0.0",
     "vue-router": "^4",
     "vuex": "^4.0.0"
@@ -33,6 +37,7 @@
     "markdown-it-anchor": "^7.1.0",
     "markdown-it-prism": "^2.1.6",
     "markdown-it-prism-backticks": "^1.2.0",
+    "patch-vue-directive-ssr": "^0.0.1",
     "postcss": "^8.2.8",
     "postcss-import": "^14.0.0",
     "precss": "^4.0.0",
