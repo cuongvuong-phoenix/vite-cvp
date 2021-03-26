@@ -9,14 +9,6 @@ const PRODUCTION = import.meta.env.PROD;
 
 const CLIENT = !import.meta.env.SSR;
 
-const messageImports = import.meta.glob('./translations/*.yaml');
-
-function importLocale(locale: string) {
-  const [, importLocale] = Object.entries(messageImports).find(([key]) => key.includes(`/${locale}.`)) || [];
-
-  return importLocale && importLocale();
-}
-
 export function setI18nLocale(i18n: I18n, locale: string) {
   i18n.global.locale.value = locale;
 
@@ -26,7 +18,7 @@ export function setI18nLocale(i18n: I18n, locale: string) {
 }
 
 export async function loadLocaleMessage(i18n: I18n, locale: string) {
-  const message = await importLocale(locale)!;
+  const message = await import(`./translations/${locale}.yaml`)!;
 
   i18n.global.setLocaleMessage(locale, message.default);
 
@@ -66,7 +58,13 @@ export async function setupI18n(ctx: SSRContext) {
     router.push({ name: 'home', params: { locale: paramLocale } });
   }
 
-  const message = await importLocale(paramLocale)!;
+  let message = { default: {} };
+  if (!CLIENT) {
+    // Initial import for SSR.
+    message = await import(/* @vite-ignore */ `/src/locales/translations/${paramLocale}.yaml`);
+  } else {
+    message = await import(`./translations/${paramLocale}.yaml`);
+  }
 
   const i18n = (createI18n({
     legacy: false,
