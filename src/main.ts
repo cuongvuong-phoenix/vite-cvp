@@ -7,8 +7,10 @@ import { setupRouter } from '~/routes';
 import { store, key } from '~/store';
 import { setupI18n } from '~/i18n';
 import en from '~/locales/en.yaml';
-import '~/styles/tailwind.css';
-import '~/styles/markdown.css';
+// Distinct-importing styles to prevent long hot-reloading when editing self-styles.
+import '~/styles/vendors/tailwind.css';
+import '~/styles/vendors/nprogress.css';
+import '~/styles/markdown/main.css';
 import '~/styles/main.css';
 
 const production = import.meta.env.PROD;
