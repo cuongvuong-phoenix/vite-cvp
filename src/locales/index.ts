@@ -1,37 +1,11 @@
 import { nextTick } from 'vue';
 import { createI18n } from 'vue-i18n';
 import { SSRContext } from '~/types';
-import { I18n, DEFAULT_LOCALE, LOCALES } from '~/locales/utils';
+import { I18n, DEFAULT_LOCALE, LOCALES, loadLocaleMessage, setI18nLocale, importLocaleMessage } from '~/locales/utils';
 
 export * from '~/locales/utils';
 
 const PRODUCTION = import.meta.env.PROD;
-
-const CLIENT = !import.meta.env.SSR;
-
-export function setI18nLocale(i18n: I18n, locale: string) {
-  i18n.global.locale.value = locale;
-
-  if (CLIENT) {
-    document.querySelector('html')?.setAttribute('lang', locale);
-  }
-}
-
-const messageImports = import.meta.glob('./translations/*.yaml');
-
-function importLocaleMessage(locale: string) {
-  const [, importLocale] = Object.entries(messageImports).find(([key]) => key.includes(`/${locale}.yaml`)) || [];
-
-  return importLocale && importLocale();
-}
-
-export async function loadLocaleMessage(i18n: I18n, locale: string) {
-  const message = await importLocaleMessage(locale)!;
-
-  i18n.global.setLocaleMessage(locale, message.default);
-
-  return nextTick();
-}
 
 export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
   const locale = i18n.global.locale.value;
