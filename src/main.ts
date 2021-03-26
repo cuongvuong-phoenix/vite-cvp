@@ -22,8 +22,6 @@ export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
 
   const i18n = await setupI18n(ctx);
 
-  setupRouterForI18n(i18n, ctx);
-
   const head = createHead();
 
   if (CLIENT) {

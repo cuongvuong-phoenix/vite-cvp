@@ -25,7 +25,7 @@ export function setI18nLocale(i18n: I18n, locale: string) {
   }
 }
 
-export async function loadLocaleMessages(i18n: I18n, locale: string) {
+export async function loadLocaleMessage(i18n: I18n, locale: string) {
   const message = await importLocale(locale)!;
 
   i18n.global.setLocaleMessage(locale, message.default);
@@ -33,7 +33,32 @@ export async function loadLocaleMessages(i18n: I18n, locale: string) {
   return nextTick();
 }
 
-export async function setupI18n({ router, initialRoute }: SSRContext) {
+export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
+  const locale = i18n.global.locale.value;
+
+  // Guard for auto load messages & set locale.
+  router.beforeEach(async (to, _, next) => {
+    const paramLocale = to.params.locale as string;
+
+    // Check if got the right locales.
+    if (!LOCALES.includes(paramLocale)) {
+      return next({ name: 'home', params: { locale } });
+    }
+
+    // Cancel loading if already loaded.
+    if (!i18n.global.availableLocales.includes(paramLocale)) {
+      await loadLocaleMessage(i18n, paramLocale);
+    }
+
+    setI18nLocale(i18n, paramLocale);
+
+    return next();
+  });
+}
+
+export async function setupI18n(ctx: SSRContext) {
+  const { router, initialRoute } = ctx;
+
   let paramLocale = initialRoute.params.locale as string;
 
   if (!LOCALES.includes(paramLocale)) {
@@ -56,28 +81,7 @@ export async function setupI18n({ router, initialRoute }: SSRContext) {
 
   setI18nLocale(i18n, paramLocale);
 
+  setupRouterForI18n(i18n, ctx);
+
   return i18n;
-}
-
-export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
-  const locale = i18n.global.locale.value;
-
-  // Guard for auto load messages & set locale.
-  router.beforeEach(async (to, _, next) => {
-    const paramLocale = to.params.locale as string;
-
-    // Check if got the right locales.
-    if (!LOCALES.includes(paramLocale)) {
-      return next({ name: 'home', params: { locale } });
-    }
-
-    // Cancel loading if already loaded.
-    if (!i18n.global.availableLocales.includes(paramLocale)) {
-      await loadLocaleMessages(i18n, paramLocale);
-    }
-
-    setI18nLocale(i18n, paramLocale);
-
-    return next();
-  });
 }
