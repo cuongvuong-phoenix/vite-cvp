@@ -27,6 +27,12 @@ export const loadLocaleMessages = async (i18n: I18n, locale: string) => {
 };
 
 export function setupI18n(options: I18nOptions) {
+  if (options.legacy) {
+    throw new Error(
+      `This setup doesn't support "Legacy API" mode. Check out https://vue-i18n.intlify.dev/guide/advanced/lazy.html#lazy-loading if you want to use 2 modes in the same time (not recommended).`
+    );
+  }
+
   const i18n = (createI18n(options) as unknown) as I18n;
 
   setI18nLanguage(i18n, DEFAULT_LOCALE);
