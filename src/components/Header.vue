@@ -30,7 +30,6 @@
 
       <ul
         v-show="isLangDropdownMenuOpen"
-        v-motion
         :initial="{
           scale: 0,
           opacity: 0,
