@@ -13,17 +13,12 @@ export const routes: RouteRecordRaw[] = [
     component: () => import('~/pages/About.vue'),
   },
   {
-    path: '/:locale/:pathMatch(.*)*',
-    name: 'not-found-with-locale',
+    path: '/:locale?/:pathMatch(.*)*',
+    name: 'not-found',
     redirect: (to) => {
       const locale = to.params.locale as string;
 
       return { name: 'home', params: { locale: LOCALES.includes(locale) ? locale : DEFAULT_LOCALE } };
     },
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'not-found',
-    redirect: (_) => ({ name: 'home', params: { locale: DEFAULT_LOCALE } }),
   },
 ];
