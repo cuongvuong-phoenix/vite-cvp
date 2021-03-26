@@ -1,6 +1,6 @@
 import { nextTick } from 'vue';
-import { createI18n, I18nOptions } from 'vue-i18n';
-import { RouteLocationNormalizedLoaded, Router } from 'vue-router';
+import { createI18n } from 'vue-i18n';
+import { SSRContext } from '~/types';
 import { I18n, DEFAULT_LOCALE, LOCALES } from '~/locales/utils';
 
 export * from '~/locales/utils';
@@ -33,13 +33,7 @@ export async function loadLocaleMessages(i18n: I18n, locale: string) {
   return nextTick();
 }
 
-export async function setupI18n({
-  router,
-  initialRoute,
-}: {
-  router: Router;
-  initialRoute: RouteLocationNormalizedLoaded;
-}) {
+export async function setupI18n({ router, initialRoute }: SSRContext) {
   let paramLocale = initialRoute.params.locale as string;
 
   if (!LOCALES.includes(paramLocale)) {
@@ -65,7 +59,7 @@ export async function setupI18n({
   return i18n;
 }
 
-export function setupRouterForI18n(i18n: I18n, { router }: { router: Router }) {
+export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
   const locale = i18n.global.locale.value;
 
   // Guard for auto load messages & set locale.
