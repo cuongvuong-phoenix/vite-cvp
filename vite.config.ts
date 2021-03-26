@@ -41,6 +41,9 @@ export default defineConfig({
       },
     }),
     ViteComponents({
+      // Disable auto-importing components under `src/components`.
+      // Only enable for `vite-plugin-icons`.
+      dirs: [],
       customComponentResolvers: ViteIconsResolver(),
     }),
     ViteIcons(),
