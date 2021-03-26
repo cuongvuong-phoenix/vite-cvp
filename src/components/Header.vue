@@ -42,16 +42,16 @@
         }"
         class="absolute py-2 bg-white border border-gray-100 rounded-lg shadow-lg left-1/2 top-full dark:bg-gray-900 dark:border-gray-700"
       >
-        <li v-for="locale in LOCALES" :key="locale.code" class="py-2 -my-2">
+        <li v-for="lang in LANGUAGES" :key="lang.locale" class="py-2 -my-2">
           <button
             type="button"
             class="w-full px-3 whitespace-nowrap hover:text-amber-500"
             :class="{
-              'text-amber-600': currentLocale === locale.code,
+              'text-amber-600': currentLocale === lang.locale,
             }"
-            @click="currentLocale = locale.code"
+            @click="currentLocale = lang.locale"
           >
-            {{ locale.name }}
+            {{ lang.name }}
           </button>
         </li>
       </ul>
@@ -75,7 +75,7 @@
   import { useRouter } from 'vue-router';
   import { useI18n } from 'vue-i18n';
   import { useDark, useToggle, onClickOutside } from '@vueuse/core';
-  import { LOCALES } from '~/i18n';
+  import { LANGUAGES } from '~/i18n';
   const router = useRouter();
   const { t, locale } = useI18n();
 
