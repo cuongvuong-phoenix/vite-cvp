@@ -1,10 +1,11 @@
 import path from 'path';
 import fastify from 'fastify';
 import fastifyStatic from 'fastify-static';
-import manifest from './dist/client/ssr-manifest.json';
-import render from './dist/server/main';
 
 async function main() {
+  const manifest = await import('./dist/client/ssr-manifest.json');
+  const { default: render } = await import('./dist/server/main');
+
   const server = fastify();
 
   server.register(fastifyStatic, {
@@ -28,15 +29,17 @@ async function main() {
   return server;
 }
 
-main().then((server) => {
-  const port = process.env.PORT || 5000;
+main()
+  .then((server) => {
+    const port = process.env.PORT || 5000;
 
-  server.listen(port, (err, address) => {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
+    server.listen(port, (err, address) => {
+      if (err) {
+        console.error(err);
+        process.exit(1);
+      }
 
-    console.log(`Server listening at ${address}`);
-  });
-});
+      console.log(`Server listening at ${address}`);
+    });
+  })
+  .catch((err) => console.error(err));
