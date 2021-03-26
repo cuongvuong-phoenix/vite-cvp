@@ -6,7 +6,7 @@ import { SSRContext } from './types';
 import App from '~/App.vue';
 import { routes } from '~/router';
 import { store, key } from '~/store';
-import { setupI18n, setupRouterForI18n } from '~/locales';
+import { setupI18n } from '~/locales';
 // Distinct-importing styles to prevent long hot-reloading when editing self-styles.
 import '~/styles/vendors/tailwind.css';
 import '~/styles/vendors/nprogress.css';
