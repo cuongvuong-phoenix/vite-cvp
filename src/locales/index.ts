@@ -18,7 +18,13 @@ export function setI18nLocale(i18n: I18n, locale: string) {
 }
 
 export async function loadLocaleMessage(i18n: I18n, locale: string) {
-  const message = await import(`./translations/${locale}.yaml`)!;
+  let message = { default: {} };
+  if (!CLIENT) {
+    // Correct import for SSR.
+    message = await import(/* @vite-ignore */ `/src/locales/translations/${locale}.yaml`);
+  } else {
+    message = await import(`./translations/${locale}.yaml`);
+  }
 
   i18n.global.setLocaleMessage(locale, message.default);
 
@@ -60,7 +66,7 @@ export async function setupI18n(ctx: SSRContext) {
 
   let message = { default: {} };
   if (!CLIENT) {
-    // Initial import for SSR.
+    // Correct import for SSR.
     message = await import(/* @vite-ignore */ `/src/locales/translations/${paramLocale}.yaml`);
   } else {
     message = await import(`./translations/${paramLocale}.yaml`);
