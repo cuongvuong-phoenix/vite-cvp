@@ -17,14 +17,17 @@ export function setI18nLocale(i18n: I18n, locale: string) {
   }
 }
 
-export async function loadLocaleMessage(i18n: I18n, locale: string) {
-  let message = { default: {} };
+async function importLocaleMessage(locale: string) {
   if (!CLIENT) {
     // Correct import for SSR.
-    message = await import(/* @vite-ignore */ `/src/locales/translations/${locale}.yaml`);
+    return await import(/* @vite-ignore */ `/src/locales/translations/${locale}.yaml`);
   } else {
-    message = await import(`./translations/${locale}.yaml`);
+    return await import(`./translations/${locale}.yaml`);
   }
+}
+
+export async function loadLocaleMessage(i18n: I18n, locale: string) {
+  const message = await importLocaleMessage(locale);
 
   i18n.global.setLocaleMessage(locale, message.default);
 
@@ -64,13 +67,7 @@ export async function setupI18n(ctx: SSRContext) {
     router.push({ name: 'home', params: { locale: paramLocale } });
   }
 
-  let message = { default: {} };
-  if (!CLIENT) {
-    // Correct import for SSR.
-    message = await import(/* @vite-ignore */ `/src/locales/translations/${paramLocale}.yaml`);
-  } else {
-    message = await import(`./translations/${paramLocale}.yaml`);
-  }
+  const message = await importLocaleMessage(paramLocale);
 
   const i18n = (createI18n({
     legacy: false,
