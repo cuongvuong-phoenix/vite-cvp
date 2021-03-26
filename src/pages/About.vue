@@ -1,13 +1,13 @@
 <template>
-  <AboutMD></AboutMD>
+  <MarkdownAbout></MarkdownAbout>
 
-  <Typography></Typography>
+  <MarkdownTypography></MarkdownTypography>
 </template>
 
 <script setup lang="ts">
   import { useHead } from '@vueuse/head';
-  import AboutMD from '~/components/About.md';
-  import Typography from '~/components/Typography.md';
+  import MarkdownAbout from '~/components/markdown/About.md';
+  import MarkdownTypography from '~/components/markdown/Typography.md';
 
   useHead({
     title: 'Vite-vcp | About',
