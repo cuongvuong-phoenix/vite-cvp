@@ -91,9 +91,13 @@
 
   // Sync with template changes.
   watch(currentLocale, (val) => {
+    const { name, params, hash, query } = router.currentRoute.value;
+
     router.push({
-      name: router.currentRoute.value.name!,
-      params: { locale: val },
+      name: name!,
+      hash,
+      query,
+      params: { ...params, locale: val },
     });
   });
 
