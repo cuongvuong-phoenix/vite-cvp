@@ -16,9 +16,9 @@
     <div
       ref="langDropdownRef"
       class="relative"
-      @click="isLangDropdownOpen = true"
-      @mouseenter="isLangDropdownOpen = true"
-      @mouseleave="isLangDropdownOpen = false"
+      @click="isLangDropdownMenuOpen = true"
+      @mouseenter="isLangDropdownMenuOpen = true"
+      @mouseleave="isLangDropdownMenuOpen = false"
     >
       <button
         :title="t('button.change-languages')"
@@ -29,7 +29,7 @@
       </button>
 
       <ul
-        v-show="isLangDropdownOpen"
+        v-show="isLangDropdownMenuOpen"
         v-motion
         :initial="{
           scale: 0,
@@ -76,9 +76,11 @@
   import { useI18n } from 'vue-i18n';
   import { useDark, useToggle, onClickOutside } from '@vueuse/core';
   import { LANGUAGES } from '~/locales';
+
   const router = useRouter();
   const { t, locale } = useI18n();
 
+  // -------- Locales --------
   // Clone to avoid double-changing global `locale`.
   const currentLocale = ref(locale.value);
 
@@ -95,13 +97,13 @@
     });
   });
 
-  // Languages.
-  const isLangDropdownOpen = ref(false);
-  const langDropdownRef = ref(null);
+  // Change locale.
+  const isLangDropdownMenuOpen = ref(false);
+  const langDropdownRef = ref<HTMLDivElement>(null);
 
-  onClickOutside(langDropdownRef, () => (isLangDropdownOpen.value = false));
+  onClickOutside(langDropdownRef, () => (isLangDropdownMenuOpen.value = false));
 
-  // Dark mode.
+  // -------- Dark mode --------
   const isDarkMode = useDark({ storageKey: 'theme' });
   const toggleDarkMode = useToggle(isDarkMode);
 </script>
