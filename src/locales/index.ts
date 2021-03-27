@@ -1,4 +1,3 @@
-import { nextTick } from 'vue';
 import { createI18n } from 'vue-i18n';
 import { SSRContext } from '~/types';
 import { I18n, DEFAULT_LOCALE, LOCALES, loadLocaleMessage, setI18nLocale, importLocaleMessage } from '~/locales/utils';

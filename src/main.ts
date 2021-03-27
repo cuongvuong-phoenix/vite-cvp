@@ -13,8 +13,6 @@ import '~/styles/vendors/nprogress.css';
 import '~/styles/markdown/main.css';
 import '~/styles/main.css';
 
-const PRODUCTION = import.meta.env.PROD;
-
 const CLIENT = !import.meta.env.SSR;
 
 export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
