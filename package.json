@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite-ssr",
-    "copy-func-lib": "shx cp -f ./dist/client/ssr-manifest.json ./functions/lib/client/ && shx cp -f ./dist/server/main.js ./functions/lib/server/",
-    "build": "shx rm -rf dist && vite-ssr build && yarn copy-func-lib",
+    "clean": "./scripts/clean.sh",
+    "build": "yarn clean && vite-ssr build && ./scripts/copy-func-libs.sh",
     "serve": "cross-env NODE_ENV=production netlify dev"
   },
   "dependencies": {
@@ -39,7 +39,6 @@
     "postcss-import": "^14.0.0",
     "precss": "^4.0.0",
     "prettier": "2.2.1",
-    "shx": "^0.3.3",
     "tailwindcss": "^2.0.4",
     "typescript": "^4.2.3",
     "vite": "^2.1.3",
