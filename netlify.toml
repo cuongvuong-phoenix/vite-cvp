@@ -1,8 +1,9 @@
 [build]
-  publish = "dist/"
+  publish = "dist/client"
   command = "yarn build"
+  functions = "functions"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/index"
   status = 200

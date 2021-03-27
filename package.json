@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite-ssr",
-    "build": "shx rm -rf dist && vite-ssr build",
-    "serve": "cross-env NODE_ENV=production esno server.ts"
+    "copy-func-lib": "shx cp -f ./dist/client/ssr-manifest.json ./functions/lib/client/ && shx cp -f ./dist/server/main.js ./functions/lib/server/",
+    "build": "shx rm -rf dist && vite-ssr build && yarn copy-func-lib",
+    "serve": "cross-env NODE_ENV=production netlify dev"
   },
   "dependencies": {
     "@vueuse/core": "^4.6.2",
