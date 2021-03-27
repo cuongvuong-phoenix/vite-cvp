@@ -75,7 +75,7 @@
   import { useRouter } from 'vue-router';
   import { useI18n } from 'vue-i18n';
   import { useDark, useToggle, onClickOutside } from '@vueuse/core';
-  import { LANGUAGES } from '~/i18n';
+  import { LANGUAGES } from '~/locales';
   const router = useRouter();
   const { t, locale } = useI18n();
 
