@@ -2,7 +2,7 @@
   <div class="container px-4 py-8 mx-auto mt-8">
     <Header></Header>
 
-    <router-view></router-view>
+    <RouterView></RouterView>
   </div>
 </template>
 

@@ -1,13 +1,13 @@
 <template>
   <!-- "Navigations" -->
   <nav class="flex items-center justify-center space-x-4">
-    <router-link :to="{ name: 'home', params: { locale } }" :title="t('nav.home')" class="router-link">
+    <RouterLink :to="{ name: 'home', params: { locale } }" :title="t('nav.home')" class="router-link">
       <i-ion-home-outline></i-ion-home-outline>
-    </router-link>
+    </RouterLink>
     <span>|</span>
-    <router-link :to="{ name: 'about', params: { locale } }" :title="t('nav.about')" class="router-link">
+    <RouterLink :to="{ name: 'about', params: { locale } }" :title="t('nav.about')" class="router-link">
       <i-ion-ios-information-circle-outline></i-ion-ios-information-circle-outline>
-    </router-link>
+    </RouterLink>
   </nav>
   <!-- END "Navigations" -->
 
