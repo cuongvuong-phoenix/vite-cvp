@@ -22,7 +22,7 @@ async function main() {
 
       res.status(200).type('text/html').send(html);
     } catch (err) {
-      res.status(404).send({ message: err });
+      res.status(500).send({ message: err });
     }
   });
 
