@@ -30,15 +30,7 @@
 
       <ul
         v-show="isLangDropdownMenuOpen"
-        :initial="{
-          scale: 0,
-          opacity: 0,
-          translateX: '-50%',
-        }"
-        :visible="{
-          scale: 1,
-          opacity: 1,
-        }"
+        ref="langDropdownMenuRef"
         class="absolute py-2 bg-white border border-gray-100 rounded-lg shadow-lg left-1/2 top-full dark:bg-gray-900 dark:border-gray-700"
       >
         <li v-for="lang in LANGUAGES" :key="lang.locale" class="py-2 -my-2">
@@ -74,6 +66,7 @@
   import { useRouter } from 'vue-router';
   import { useI18n } from 'vue-i18n';
   import { useDark, useToggle, onClickOutside } from '@vueuse/core';
+  import { useMotion } from '@vueuse/motion';
   import { LANGUAGES } from '~/locales';
 
   const router = useRouter();
@@ -108,6 +101,21 @@
   const langDropdownRef = ref<HTMLDivElement>(null);
 
   onClickOutside(langDropdownRef, () => (isLangDropdownMenuOpen.value = false));
+
+  // Use Composition API to avoid SSR error: https://github.com/vueuse/motion/issues/12
+  const langDropdownMenuRef = ref<HTMLUListElement>(null);
+
+  useMotion(langDropdownMenuRef, {
+    initial: {
+      scale: 0,
+      opacity: 0,
+      translateX: '-50%',
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+    },
+  });
 
   // -------- Dark mode --------
   const isDarkMode = useDark({ storageKey: 'theme' });

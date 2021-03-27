@@ -48,7 +48,6 @@
     "markdown-it-anchor": "^7.1.0",
     "markdown-it-prism": "^2.1.6",
     "markdown-it-prism-backticks": "^1.2.0",
-    "patch-vue-directive-ssr": "^0.0.1",
     "postcss": "^8.2.8",
     "postcss-import": "^14.0.0",
     "precss": "^4.0.0",
