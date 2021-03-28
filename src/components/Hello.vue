@@ -31,15 +31,15 @@
   import { useI18n } from 'vue-i18n';
   import { useStore } from '~/store';
 
-  const store = useStore();
-  const { t } = useI18n();
-
   const props = defineProps({
     msg: {
       type: String,
       required: true,
     },
   });
+
+  const store = useStore();
+  const { t } = useI18n();
 
   const amount = ref(1);
 

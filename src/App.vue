@@ -10,7 +10,6 @@
   import { useHead } from '@vueuse/head';
   import Header from '~/components/Header.vue';
 
-  // <head>
   useHead({
     meta: [
       {
@@ -19,7 +18,7 @@
       },
       {
         name: 'description',
-        content: 'Opinionated Vite Starter Template. Inpsired by Vitesse https://github.com/antfu/vitesse',
+        content: '⚡ Opinionated Vite Starter Template. Inpsired by Vitesse https://github.com/antfu/vitesse',
       },
       {
         name: 'author',
