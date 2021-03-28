@@ -15,7 +15,7 @@
 
     <a
       rel="noreferrer"
-      href="https://github.com/vuong-cuong-phoenix/vite-vcp"
+      href="https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function"
       target="_blank"
       title="GitHub"
       class="router-link"
