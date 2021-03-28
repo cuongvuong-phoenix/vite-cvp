@@ -1,11 +1,6 @@
 /* Make clicks pass-through */
 :root {
   --nprogress-color: theme('colors.amber.600');
-  --nprogress--bar--height: 2px;
-}
-
-html.dark {
-  --nprogress--bar--height: 4px;
 }
 
 #nprogress {
@@ -21,7 +16,7 @@ html.dark {
   left: 0;
 
   width: 100%;
-  height: var(--nprogress--bar--height);
+  height: 3px;
 }
 
 /* Fancy blur effect */

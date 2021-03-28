@@ -1,7 +1,6 @@
 nav:
   home: Home
   about: About
-hello: Hello, this is Vite-vcp!
 button:
   increase-counter: Increase the Counter by {n}
   decrease-counter: Decrease the Counter by {n}
@@ -10,3 +9,7 @@ button:
   change-languages: Change languages
 input:
   amount: Amount
+
+msg:
+  1: An opinionated Vite Starter Template
+  2: Inspired by {0}{1}
