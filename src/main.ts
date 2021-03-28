@@ -7,10 +7,10 @@ import { router } from '~/router';
 import { store, key } from '~/store';
 import { setupI18n } from '~/locales';
 // Distinct-importing styles to prevent long hot-reloading when editing self-styles.
-import '~/styles/vendors/tailwind.css';
-import '~/styles/vendors/nprogress.css';
-import '~/styles/markdown/main.css';
-import '~/styles/main.css';
+import '~/assets/styles/vendors/tailwind.css';
+import '~/assets/styles/vendors/nprogress.css';
+import '~/assets/styles/markdown/main.css';
+import '~/assets/styles/main.css';
 
 const app = createApp(App);
 
