@@ -16,9 +16,9 @@
 
 🔥 This repo consists 3 kinds of templates corresponding to each branch:
 
-- 👉 (now) [`master`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) ([demo](https://vite-vcp.netlify.app)) - regular **SPA**
+- [`master`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) ([demo](https://vite-vcp.netlify.app)) - default **SPA**
 - [`ssr--fastify`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify) - **SSR** with [Fastify](https://www.fastify.io/)
-- [`ssr--netlify-function`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function) ([demo](https://vite-vcp-ssr.netlify.app)) - **SSR** with [Netlify platforms](https://www.netlify.com/products/) (static hosting + functions)
+- 👉 (now) [`ssr--netlify-function`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function) ([demo](https://vite-vcp-ssr.netlify.app)) - **SSR** with [Netlify platforms](https://www.netlify.com/products/) (static hosting + functions)
 
 ---
 
@@ -38,6 +38,8 @@
 
   - 💡 [VueUse](https://github.com/vueuse/vueuse) - collection of essential Vue Composition Utilities
   - 🌍 [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization plugin for Vue.js
+
+- ⚒️ Server-Side Rendering with [Netlify platforms](https://www.netlify.com/products/) - integrate static hosting together alongside serverless lambda function
 
 - 🎨 [TailwindCSS](https://github.com/windicss/windicss) - utility-first CSS framework for rapidly building custom user interfaces
 
@@ -64,8 +66,9 @@
   - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism)
   - [`markdown-it-prism-backticks`](https://github.com/stevejay/markdown-it-prism-backticks)
   - [`markdown-it-anchor`](https://github.com/valeriangalliat/markdown-it-anchor)
+- [Vite SSR](https://github.com/frandiox/vite-ssr)
 
-### Vue 3
+### Client
 
 - [Vue Router 4](https://github.com/vuejs/vue-router-next)
 - [Vuex 4](https://github.com/vuejs/vuex/tree/4.0)
@@ -74,6 +77,12 @@
   - [`@vueuse/motion`](https://github.com/vueuse/motion)
 - [Vue I18n](https://github.com/intlify/vue-i18n-next)
   - [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n)
+
+### Server(less)
+
+- [Netlify platforms](https://www.netlify.com/products/)
+  - [Netlify functions](./functions)
+  - Configurated by [`netlify.toml`](./netlify.toml)
 
 ### UI
 
@@ -90,6 +99,7 @@
 ### Dev tools
 
 - [TypeScript](https://www.typescriptlang.org/)
+- [Netlify CLI](https://cli.netlify.com/)
 - [VS Code Extensions](./.vscode/extensions.json)
   - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Vue 3 with `<script setup>` IDE support
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
@@ -108,7 +118,7 @@
 If you prefer to do it manually with the cleaner git history
 
 ```shell
-$ npx degit vuong-cuong-phoenix/vite-vcp my-vite-vcp-app
+$ npx degit vuong-cuong-phoenix/vite-vcp#ssr--netlify-function my-vite-vcp-app
 $ cd my-vite-vcp-app
 $ yarn install
 ```
@@ -129,13 +139,11 @@ And, enjoy :)
 
 ### Development
 
-Just run
+Just run and follow dev-sever logs
 
 ```shell
 $ yarn dev
 ```
-
-and follow dev-sever logs.
 
 ### Build
 
@@ -145,15 +153,17 @@ To build for production, run
 $ yarn build
 ```
 
-and you will see the generated files in `dist` that ready to be served.
+And you will see the generated files in `dist` that ready to be served.
 
 ### Preview
 
-You can preview your production build by running:
+You can preview your production build by running
 
 ```shell
 $ yarn serve
 ```
+
+> You must have [Netlify CLI](https://cli.netlify.com/) installed & setup first to run this command. Because Netlify CLI is **quite large**, I recommend to **install it globally**.
 
 ### Deploy on Netlify
 
