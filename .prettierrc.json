@@ -4,5 +4,14 @@
   "singleQuote": true,
   "quoteProps": "consistent",
   "trailingComma": "es5",
-  "vueIndentScriptAndStyle": true
+  "vueIndentScriptAndStyle": true,
+
+  "overrides": [
+    {
+      "files": "*.yaml",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

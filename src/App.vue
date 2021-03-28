@@ -1,5 +1,5 @@
 <template>
-  <div class="container px-4 py-8 mx-auto mt-8">
+  <div class="container px-10 py-8 mx-auto">
     <Header></Header>
 
     <RouterView v-slot="{ Component }">
@@ -14,16 +14,15 @@
   import { useHead } from '@vueuse/head';
   import Header from '~/components/Header.vue';
 
-  // <head>
   useHead({
     meta: [
       {
         name: 'application-name',
-        content: 'Vite-vcp',
+        content: 'Vite-VCP',
       },
       {
         name: 'description',
-        content: 'Opinionated Vite Starter Template. Inpsired by Vitesse https://github.com/antfu/vitesse',
+        content: '⚡ Opinionated Vite Starter Template. Inpsired by Vitesse https://github.com/antfu/vitesse',
       },
       {
         name: 'author',

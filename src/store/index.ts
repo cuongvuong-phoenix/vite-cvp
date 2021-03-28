@@ -3,6 +3,7 @@ import { createStore, Store, useStore as baseUseStore } from 'vuex';
 
 export interface State {
   counter: number;
+  amount: number;
 }
 
 export const key: InjectionKey<Store<State>> = Symbol('Vuex State');
@@ -10,6 +11,7 @@ export const key: InjectionKey<Store<State>> = Symbol('Vuex State');
 export const store = createStore<State>({
   state: {
     counter: 0,
+    amount: 1,
   },
 
   mutations: {
@@ -18,6 +20,9 @@ export const store = createStore<State>({
     },
     decreaseCounter(state, n) {
       state.counter -= n;
+    },
+    setAmount(state, amount) {
+      state.amount = amount;
     },
   },
 });
