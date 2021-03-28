@@ -87,12 +87,9 @@
 
     router.push({
       name: name!,
+      params: { ...params, locale: val },
       query,
       hash,
-      params: {
-        ...params,
-        locale: val,
-      },
     });
   });
 
