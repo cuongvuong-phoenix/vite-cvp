@@ -5,18 +5,21 @@
 
   <div class="mt-4 text-lg">
     <h3>{{ t('msg.1') }}</h3>
-    <div class="mt-2">
-      <h3>{{ t('msg.2') }}</h3>
-      <a
-        rel="noreferrer"
-        href="https://github.com/antfu/vitesse"
-        target="_blank"
-        class="inline-flex items-center mt-1 space-x-1 hover:text-amber-600"
-      >
-        <i-carbon-campsite></i-carbon-campsite>
-        <h3>Vitesse</h3>
-      </a>
-    </div>
+
+    <h3 class="mt-2">
+      <i18n-t keypath="msg.2">
+        <br />
+        <a
+          rel="noreferrer"
+          href="https://github.com/antfu/vitesse"
+          target="_blank"
+          class="inline-flex items-center object-center mt-1 space-x-1 hover:text-amber-600"
+        >
+          <i-carbon-campsite></i-carbon-campsite>
+          Vitesse
+        </a>
+      </i18n-t>
+    </h3>
   </div>
 
   <div class="flex items-center justify-center mt-12 space-x-4">

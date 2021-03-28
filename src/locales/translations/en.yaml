@@ -12,4 +12,4 @@ input:
 
 msg:
   1: An opinionated Vite Starter Template
-  2: Inspired by
+  2: Inspired by {0}{1}

@@ -12,4 +12,4 @@ input:
 
 msg:
   1: Một bản khởi động mẫu được điều chỉnh sẵn cho Vite
-  2: Lấy cảm hứng từ
+  2: Lấy cảm hứng từ {0}{1}
