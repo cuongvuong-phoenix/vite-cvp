@@ -1,5 +1,5 @@
 <template>
-  <div class="container px-4 py-8 mx-auto mt-8">
+  <div class="container px-10 py-8 mx-auto">
     <Header></Header>
 
     <RouterView></RouterView>
@@ -14,7 +14,7 @@
     meta: [
       {
         name: 'application-name',
-        content: 'Vite-vcp',
+        content: 'Vite-VCP',
       },
       {
         name: 'description',

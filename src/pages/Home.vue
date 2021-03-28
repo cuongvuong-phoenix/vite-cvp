@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <Hello :msg="t('hello')"></Hello>
+    <Hello></Hello>
 
     <div class="mt-4">{{ t('counter') }}: {{ counter }}</div>
   </div>
@@ -14,7 +14,7 @@
   import Hello from '~/components/Hello.vue';
 
   useHead({
-    title: 'Vite-vcp',
+    title: 'Vite-VCP',
   });
 
   const store = useStore();

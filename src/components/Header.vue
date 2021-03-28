@@ -4,10 +4,24 @@
     <RouterLink :to="{ name: 'home', params: { locale } }" :title="t('nav.home')" class="router-link">
       <i-ion-home-outline></i-ion-home-outline>
     </RouterLink>
+
     <span>|</span>
+
     <RouterLink :to="{ name: 'about', params: { locale } }" :title="t('nav.about')" class="router-link">
       <i-ion-ios-information-circle-outline></i-ion-ios-information-circle-outline>
     </RouterLink>
+
+    <span>|</span>
+
+    <a
+      rel="noreferrer"
+      href="https://github.com/vuong-cuong-phoenix/vite-vcp"
+      target="_blank"
+      title="GitHub"
+      class="router-link"
+    >
+      <i-codicon-github-alt></i-codicon-github-alt>
+    </a>
   </nav>
   <!-- END "Navigations" -->
 
@@ -15,7 +29,7 @@
     <!-- "Language Dropdown" -->
     <div
       ref="langDropdownRef"
-      class="relative"
+      class="relative z-10"
       @click="isLangDropdownMenuOpen = true"
       @mouseenter="isLangDropdownMenuOpen = true"
       @mouseleave="isLangDropdownMenuOpen = false"

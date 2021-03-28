@@ -10,6 +10,6 @@
   import MarkdownTypography from '~/components/markdown/Typography.md';
 
   useHead({
-    title: 'Vite-vcp | About',
+    title: 'Vite-VCP | About',
   });
 </script>
