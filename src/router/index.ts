@@ -14,6 +14,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('~/pages/About.vue'),
   },
   {
+    path: '/:locale/markdown-preview',
+    name: 'markdown-preview',
+    component: () => import('~/pages/MarkdownPreview.vue'),
+  },
+  {
     path: '/:locale?/:pathMatch(.*)*',
     name: 'not-found',
     redirect: (to) => {

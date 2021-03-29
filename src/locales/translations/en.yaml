@@ -1,7 +1,7 @@
 nav:
   home: Home
   about: About
-  md-playground: Markdown Playground
+  markdown-preview: Markdown Preview
 
 button:
   increase-counter: Increase the Counter by {n}
@@ -20,3 +20,6 @@ msg:
 pages:
   home:
     counter: Counter
+
+  markdown-preview:
+    intro: Below is the preview of Markdown rendered & configurated by {0}.{1}The content was taken from {2}.{3}Try playing with {4} and see this page changes!
