@@ -1,15 +1,21 @@
 nav:
   home: Trang chủ
   about: Thông tin
+
 button:
   increase-counter: Tăng Bộ đếm lên {n}
   decrease-counter: Giảm Bộ đếm xuống {n}
   turn-on-dark-mode: Bật chế độ Tối
   turn-off-dark-mode: Tắt chế độ Tối
   change-languages: Thay đổi ngôn ngữ
+
 input:
   amount: Số lượng
 
 msg:
   1: Một bản khởi động mẫu được điều chỉnh sẵn cho Vite
   2: Lấy cảm hứng từ {0}{1}
+
+pages:
+  home:
+    counter: Bộ đếm
