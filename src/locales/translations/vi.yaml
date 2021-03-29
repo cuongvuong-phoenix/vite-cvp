@@ -1,15 +1,25 @@
 nav:
   home: Trang chủ
   about: Thông tin
+  markdown-preview: Xem thử Markdown
+
 button:
   increase-counter: Tăng Bộ đếm lên {n}
   decrease-counter: Giảm Bộ đếm xuống {n}
   turn-on-dark-mode: Bật chế độ Tối
   turn-off-dark-mode: Tắt chế độ Tối
   change-languages: Thay đổi ngôn ngữ
+
 input:
   amount: Số lượng
 
 msg:
   1: Một bản khởi động mẫu được điều chỉnh sẵn cho Vite
   2: Lấy cảm hứng từ {0}{1}
+
+pages:
+  home:
+    counter: Bộ đếm
+
+  markdown-preview:
+    intro: Dưới đây là xem thử Markdown đã được xử lý hiển thị & cấu hình bởi {0}.{1}Nội dung được lấy từ {2}.{3}Hãy thử thay đổi {4} và xem trang này thay đổi nhé!

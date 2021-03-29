@@ -1,51 +1,30 @@
-# About
+[Vite-VCP](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) is an opinionated [Vite](https://vitejs.dev) + [Vue 3](https://v3.vuejs.org/) starter template made by [@vuong-cuong-phoenix](https://github.com/vuong-cuong-phoenix) (thats why its called _Vite-**VCP**_).
 
-Test...
+Inspired from [Vitesse](https://github.com/antfu/vitesse) made by [@antifu](https://github.com/antfu), this template aims to provide a way to quickly create apps with many features pre-packed:
 
-- [Normal link](#)
-- `Inline code`
-- [`Link with inline-code (no language)`](#)
-- [`Link with inline-code (language)`{lang=markup}](#)
+- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
-This template is consisted of:
+- Vue 3 eco-system
 
-- `Vite`
-- `Vue-Router`
+  - 🚀 [Vue Router 4](https://github.com/vuejs/vue-router-next) - the official router for Vue.js
+  - 🗃️ [Vuex 4](https://github.com/vuejs/vuex/tree/4.0) - state management pattern & library for Vue.js
+  - 📜 Use the [new `<script setup>` style](https://github.com/vuejs/rfcs/pull/227)
 
-```
-unknown language
-```
+- Vue 3 extensions
 
-```ts
-import { createApp } from 'vue';
-import { createHead } from '@vueuse/head';
-import App from '~/App.vue';
-import { setupRouter } from '~/routes';
-import { store, key } from '~/store';
-import { setupI18n } from '~/i18n';
-import en from '~/locales/en.yaml';
-import '~/styles/tailwind.css';
-import '~/styles/markdown.css';
-import '~/styles/main.css';
+  - 💡 [VueUse](https://github.com/vueuse/vueuse) - collection of essential Vue Composition Utilities
+  - 🌍 [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization plugin for Vue.js
 
-const production = import.meta.env.PROD;
+- 🎨 [TailwindCSS](https://github.com/windicss/windicss) - utility-first CSS framework for rapidly building custom user interfaces
 
-const app = createApp(App);
+- 😃 [Use icons from Iconify's rich icon sets](https://github.com/iconify)
 
-const i18n = setupI18n({
-  legacy: false,
-  locale: 'en',
-  fallbackLocale: 'en',
-  messages: {
-    en,
-  },
-  missingWarn: production,
-  fallbackWarn: production,
-});
+- 📝 [Use Markdown as component](./src/components)
 
-const router = setupRouter(i18n);
+- 🛡️ TypeScript support
 
-const head = createHead();
+- ☁️️ Easily deploy on [Netlify](./netlify.toml) without manual server setup
 
-app.use(router).use(store, key).use(i18n).use(head).mount('#app');
-```
+- 👍 Always update to latest version of dependencies
+
+Check out [GitHub repo](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) for more details.

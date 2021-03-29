@@ -2,7 +2,7 @@
   <div class="text-center">
     <Hello></Hello>
 
-    <div class="mt-4">{{ t('counter') }}: {{ counter }}</div>
+    <div class="mt-4">{{ t('pages.home.counter') }}: {{ counter }}</div>
   </div>
 </template>
 
@@ -22,10 +22,3 @@
 
   const counter = computed(() => store.state.counter);
 </script>
-
-<i18n lang="yaml">
-en:
-  counter: Counter
-vi:
-  counter: Bộ đếm
-</i18n>
