@@ -139,11 +139,13 @@ And, enjoy :)
 
 ### Development
 
-Just run and follow dev-sever logs
+Just run
 
 ```shell
 $ yarn dev
 ```
+
+and follow dev-sever logs.
 
 ### Build
 
@@ -153,7 +155,7 @@ To build for production, run
 $ yarn build
 ```
 
-And you will see the generated files in `dist` that ready to be served.
+and you will see the generated files in `dist` that ready to be served.
 
 ### Preview
 

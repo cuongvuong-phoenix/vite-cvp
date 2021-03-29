@@ -7,6 +7,7 @@ import viteSSR from 'vite-ssr/plugin';
 import ViteMarkdown from 'vite-plugin-md';
 import MarkdownItPrism from 'markdown-it-prism';
 import MarkdownItPrismBacktick from 'markdown-it-prism-backticks';
+import MarkdownItAttrs from 'markdown-it-attrs';
 import MarkdownItAnchor from 'markdown-it-anchor';
 import ViteComponents from 'vite-plugin-components';
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons';
@@ -35,6 +36,10 @@ export default defineConfig({
       markdownItSetup(md) {
         md.use(MarkdownItPrism, { defaultLanguage: 'markup' });
         md.use(MarkdownItPrismBacktick);
+        md.use(MarkdownItAttrs, {
+          // Security (https://github.com/arve0/markdown-it-attrs#security).
+          allowedAttributes: ['id', 'class'],
+        });
         md.use(MarkdownItAnchor, {
           permalink: true,
           permalinkBefore: true,

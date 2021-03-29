@@ -1,15 +1,25 @@
 nav:
   home: Home
   about: About
+  markdown-preview: Markdown Preview
+
 button:
   increase-counter: Increase the Counter by {n}
   decrease-counter: Decrease the Counter by {n}
   turn-on-dark-mode: Turn-on dark mode
   turn-off-dark-mode: Turn-off dark mode
   change-languages: Change languages
+
 input:
   amount: Amount
 
 msg:
   1: An opinionated Vite Starter Template
   2: Inspired by {0}{1}
+
+pages:
+  home:
+    counter: Counter
+
+  markdown-preview:
+    intro: Below is the preview of Markdown rendered & configurated by {0}.{1}The content was taken from {2}.{3}Try playing with {4} and see this page changes!

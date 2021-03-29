@@ -13,6 +13,16 @@
 
     <span>|</span>
 
+    <RouterLink
+      :to="{ name: 'markdown-preview', params: { locale } }"
+      :title="t('nav.markdown-preview')"
+      class="router-link"
+    >
+      <i-teenyicons-markdown-outline></i-teenyicons-markdown-outline>
+    </RouterLink>
+
+    <span>|</span>
+
     <a
       rel="noreferrer"
       href="https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function"
