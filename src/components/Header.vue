@@ -25,7 +25,7 @@
 
     <a
       rel="noreferrer"
-      href="https://github.com/vuong-cuong-phoenix/vite-vcp"
+      href="https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify"
       target="_blank"
       title="GitHub"
       class="router-link"

@@ -1,4 +1,4 @@
-[Vite-VCP](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) is an opinionated [Vite](https://vitejs.dev) + [Vue 3](https://v3.vuejs.org/) starter template made by [@vuong-cuong-phoenix](https://github.com/vuong-cuong-phoenix) (thats why its called _Vite-**VCP**_).
+[Vite-VCP](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify/tree/master) is an opinionated [Vite](https://vitejs.dev) + [Vue 3](https://v3.vuejs.org/) starter template made by [@vuong-cuong-phoenix](https://github.com/vuong-cuong-phoenix) (thats why its called _Vite-**VCP**_).
 
 Inspired from [Vitesse](https://github.com/antfu/vitesse) made by [@antifu](https://github.com/antfu), this template aims to provide a way to quickly create apps with many features pre-packed:
 
@@ -27,4 +27,4 @@ Inspired from [Vitesse](https://github.com/antfu/vitesse) made by [@antifu](http
 
 - 👍 Always update to latest version of dependencies
 
-Check out [GitHub repo](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) for more details.
+Check out [GitHub repo](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify/tree/master) for more details.
