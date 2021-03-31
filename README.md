@@ -17,7 +17,7 @@
 🔥 This repo consists 3 kinds of templates corresponding to each branch:
 
 - [`master`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) ([demo](https://vite-vcp.netlify.app)) - default **SPA**
-- 👉 (now) [`ssr--fastify`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify) - **SSR** with [Fastify](https://www.fastify.io/)
+- 👉 (now) [`ssr--fastify`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify) ([demo](https://vite-vcp.herokuapp.com)) - **SSR** with [Fastify](https://www.fastify.io/) + [Heroku](https://www.heroku.com/)
 - [`ssr--netlify-function`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function) ([demo](https://vite-vcp-ssr.netlify.app)) - **SSR** with [Netlify platforms](https://www.netlify.com/products/) (static hosting + functions)
 
 ---
@@ -49,7 +49,7 @@
 
 - 🛡️ TypeScript support
 
-- ☁️️ Easily deploy on [Netlify](./netlify.toml) without manual server setup
+- ☁️️ Easily deploy on [Heroku](https://www.heroku.com/)
 
 - 👍 Always update to latest version of dependencies
 
@@ -164,11 +164,27 @@ You can preview your production build by running
 $ yarn serve
 ```
 
-### Deploy on Netlify
+### Deploy on Heroku
 
-Create your site at [Netlify](https://app.netlify.com), connect to your repo & hit `OK`, your App will be live in a minute.
+1. If you haven't initialized Git via `$ git init` then you must run it first.
 
-> Some config in **Netlify UI** will be overrided by our [`netlify.toml`](./netlify.toml) file. Check all the [config avaiable](https://app.netlify.com) for more details.
+2. Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+
+3. Login to your Heroku account using:
+   ```shell
+   $ heroku login
+   ```
+4. Depend on your choice, you can [create a new Heroku app](https://devcenter.heroku.com/articles/git#for-a-new-heroku-app) or [add remote from your existing Heroku app](https://devcenter.heroku.com/articles/git#for-an-existing-heroku-app).
+
+5. Deploy!
+
+   ```shell
+   $ git push heroku <your branch name>:master
+   ```
+
+   Your app will be live in some minutes.
+
+> Watch for Heroku logs while it building & deploying your app. If something went wrong you can try [search for it first](https://www.google.com/). You could [create new issue](https://github.com/vuong-cuong-phoenix/vite-vcp/issues/new) for me if searching is not enough to help you, I'm very eager to fix your issues!
 
 ---
 
