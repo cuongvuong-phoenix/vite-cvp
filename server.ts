@@ -1,4 +1,4 @@
-import path from 'path';
+import * as path from 'path';
 import fastify from 'fastify';
 import fastifyStatic from 'fastify-static';
 
@@ -32,14 +32,15 @@ async function main() {
 main()
   .then((server) => {
     const port = process.env.PORT || 5000;
+    const ip = process.env.NODE_ENV === 'production' ? '0.0.0.0' : '127.0.0.1';
 
-    server.listen(port, (err, address) => {
+    server.listen(port, ip, (err, address) => {
       if (err) {
         console.error(err);
         process.exit(1);
       }
 
-      console.log(`Server listening at ${address}`);
+      console.log(`🚀 Server listening at ${address}`);
     });
   })
   .catch((err) => console.error(err));
