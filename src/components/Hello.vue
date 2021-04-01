@@ -48,25 +48,25 @@
 <script setup lang="ts">
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
-  import { useStore } from '~/store';
+  import { useStoreCounter } from '~/store';
 
-  const store = useStore();
+  const storeCounter = useStoreCounter();
   const { t } = useI18n();
 
   const amount = computed({
     get() {
-      return store.state.amount;
+      return storeCounter.amount;
     },
-    set(val) {
-      store.commit('setAmount', val);
+    set(val: number) {
+      storeCounter.setAmount(val);
     },
   });
 
   const increase = () => {
-    store.commit('increaseCounter', amount.value);
+    storeCounter.increaseCounter(amount.value);
   };
 
   const decrease = () => {
-    store.commit('decreaseCounter', amount.value);
+    storeCounter.decreaseCounter(amount.value);
   };
 </script>
