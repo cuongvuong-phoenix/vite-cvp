@@ -4,7 +4,7 @@ import { MotionPlugin } from '@vueuse/motion';
 import NProgress from 'nprogress';
 import App from '~/App.vue';
 import { router } from '~/router';
-import { store, key } from '~/store';
+import { store } from '~/store';
 import { setupI18n } from '~/locales';
 // Distinct-importing styles to prevent long hot-reloading when editing self-styles.
 import '~/assets/styles/vendors/tailwind.css';
@@ -25,4 +25,4 @@ router.afterEach(() => {
   NProgress.done();
 });
 
-app.use(router).use(store, key).use(i18n).use(head).use(MotionPlugin).mount('#app');
+app.use(router).use(store).use(i18n).use(head).use(MotionPlugin).mount('#app');
