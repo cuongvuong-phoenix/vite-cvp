@@ -11,14 +11,37 @@
 </template>
 
 <script setup lang="ts">
+  import { ref, watch } from 'vue';
   import { useHead } from '@vueuse/head';
+  import { useRouter } from 'vue-router';
+  import { useI18n } from 'vue-i18n';
   import Header from '~/components/Header.vue';
 
+  const router = useRouter();
+  const { t } = useI18n();
+
+  const appBaseTitle = 'Vite-VCP';
+
+  function getAppTitleByRoute(route: any, t: any) {
+    const name = String(route.name);
+
+    return name === 'home' ? appBaseTitle : `${appBaseTitle} | ${t(`nav.${name}`)}`;
+  }
+
+  // Based on 'initialRoute' of SSR.
+  const appTitle = ref(getAppTitleByRoute(router.currentRoute.value, t));
+
+  // Auto-changing `<title>` based on current route.
+  watch(router.currentRoute, (route) => {
+    appTitle.value = getAppTitleByRoute(route, t);
+  });
+
   useHead({
+    title: appTitle,
     meta: [
       {
         name: 'application-name',
-        content: 'Vite-VCP',
+        content: appBaseTitle,
       },
       {
         name: 'description',

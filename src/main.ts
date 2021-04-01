@@ -22,13 +22,14 @@ export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
 
   const head = createHead();
 
-  // State hydration with Pinia
+  // State hydration with Pinia.
   if (!CLIENT) {
     initialState.store = JSON.stringify(store.state.value);
   } else {
     store.state.value = JSON.parse(initialState.store);
   }
 
+  // NProgress.
   if (CLIENT) {
     router.beforeEach(() => {
       NProgress.start();
