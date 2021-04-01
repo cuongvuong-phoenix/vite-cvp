@@ -51,6 +51,15 @@
         name: 'author',
         content: 'Vuong Chi Cuong (vuongcuong.phoenix@gmail.com)',
       },
+      // Open Graph protocol (https://ogp.me/).
+      {
+        property: 'og:title',
+        content: appTitle,
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
     ],
   });
 </script>
