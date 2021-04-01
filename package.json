@@ -6,18 +6,18 @@
     "dev": "vite-ssr",
     "clean": "./scripts/clean.sh",
     "build": "yarn clean && vite-ssr build && ./scripts/copy-func-libs.sh",
-    "serve": "cross-env NODE_ENV=production netlify dev"
+    "serve": "netlify dev"
   },
   "dependencies": {
     "@vueuse/core": "^4.6.2",
     "@vueuse/head": "^0.5.1",
     "@vueuse/motion": "^1.5.2",
     "nprogress": "^0.2.0",
+    "pinia": "^2.0.0-alpha.9",
     "vite-ssr": "^0.6.6",
     "vue": "^3.0.9",
     "vue-i18n": "^9.0.0",
-    "vue-router": "^4",
-    "vuex": "^4.0.0"
+    "vue-router": "^4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.2",
@@ -31,7 +31,6 @@
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^1.2.0",
     "@vue/compiler-sfc": "^3.0.9",
-    "cross-env": "^7.0.3",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "markdown-it-anchor": "^7.1.0",
