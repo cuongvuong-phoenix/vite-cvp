@@ -15,16 +15,16 @@ Inspired from [Vitesse](https://github.com/antfu/vitesse) made by [@antifu](http
   - 💡 [VueUse](https://github.com/vueuse/vueuse) - collection of essential Vue Composition Utilities
   - 🌍 [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization plugin for Vue.js
 
-- 🎨 [TailwindCSS](https://github.com/windicss/windicss) - utility-first CSS framework for rapidly building custom user interfaces
+- ⚒️ Server-Side Rendering with [Netlify platforms](https://www.netlify.com/products/) - integrate static hosting together alongside serverless lambda function
+
+- 🎨 [TailwindCSS](https://tailwindcss.com/) - utility-first CSS framework for rapidly building custom user interfaces
 
 - 😃 [Use icons from Iconify's rich icon sets](https://github.com/iconify)
 
-- 📝 [Use Markdown as component](./src/components)
+- 📝 [Use Markdown as Vue component](https://github.com/antfu/vite-plugin-md)
 
 - 🛡️ TypeScript support
 
-- ☁️️ Easily deploy on [Netlify](./netlify.toml) without manual server setup
+- ☁️️ Easily deploy on [Netlify](https://www.netlify.com/) without manual server setup
 
 - 👍 Always update to latest version of dependencies
-
-Check out [GitHub repo](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function) for more details.

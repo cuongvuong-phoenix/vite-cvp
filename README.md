@@ -17,7 +17,7 @@
 🔥 This repo consists 3 kinds of templates corresponding to each branch:
 
 - [`master`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) ([demo](https://vite-vcp.netlify.app)) - default **SPA**
-- [`ssr--fastify`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify) - **SSR** with [Fastify](https://www.fastify.io/)
+- [`ssr--fastify`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify) ([demo](https://vite-vcp.herokuapp.com)) - **SSR** with [Fastify](https://www.fastify.io/) + deploy on [Heroku](https://www.heroku.com/)
 - 👉 (now) [`ssr--netlify-function`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function) ([demo](https://vite-vcp-ssr.netlify.app)) - **SSR** with [Netlify platforms](https://www.netlify.com/products/) (static hosting + functions)
 
 ---
@@ -41,11 +41,11 @@
 
 - ⚒️ Server-Side Rendering with [Netlify platforms](https://www.netlify.com/products/) - integrate static hosting together alongside serverless lambda function
 
-- 🎨 [TailwindCSS](https://github.com/windicss/windicss) - utility-first CSS framework for rapidly building custom user interfaces
+- 🎨 [TailwindCSS](https://tailwindcss.com/) - utility-first CSS framework for rapidly building custom user interfaces
 
 - 😃 [Use icons from Iconify's rich icon sets](https://github.com/iconify)
 
-- 📝 [Use Markdown as component](./src/components)
+- 📝 [Use Markdown as Vue component](./src/components)
 
 - 🛡️ TypeScript support
 
@@ -59,14 +59,12 @@
 
 ### Vite
 
-- [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons)
-- [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components)
-  > _Note:_ Only enable for auto-importing **Iconify** icons. Regular component should be explicitly imported for better IDE support.
-- [`vite-plugin-md`](https://github.com/antfu/vite-plugin-md)
-  - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism)
-  - [`markdown-it-prism-backticks`](https://github.com/stevejay/markdown-it-prism-backticks)
-  - [`markdown-it-anchor`](https://github.com/valeriangalliat/markdown-it-anchor)
 - [Vite SSR](https://github.com/frandiox/vite-ssr)
+- [`vite-plugin-md`](https://github.com/antfu/vite-plugin-md)
+- [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components)
+- [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons)
+  > _Note:_ Only enable for auto-importing **Iconify** icons. Regular component should be explicitly imported for better IDE support.
+- [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n)
 
 ### Client
 
@@ -76,7 +74,6 @@
   - [`@vueuse/head`](https://github.com/vueuse/head)
   - [`@vueuse/motion`](https://github.com/vueuse/motion)
 - [Vue I18n](https://github.com/intlify/vue-i18n-next)
-  - [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n)
 
 ### Server(less)
 
@@ -86,10 +83,15 @@
 
 ### UI
 
-- [TailwindCSS](https://github.com/windicss/windicss)
+- [TailwindCSS](https://tailwindcss.com/)
   - [`@tailwindcss/forms`](https://github.com/tailwindlabs/tailwindcss-forms)
   - [`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography)
 - [Iconify](https://github.com/iconify)
+- [`markdown-it`](https://github.com/markdown-it/markdown-it)
+  - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism)
+  - [`markdown-it-prism-backticks`](https://github.com/stevejay/markdown-it-prism-backticks)
+  - [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs)
+  - [`markdown-it-anchor`](https://github.com/valeriangalliat/markdown-it-anchor)
 
 ### Coding Style
 
