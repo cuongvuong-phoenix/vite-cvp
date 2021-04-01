@@ -2638,6 +2638,11 @@ pify@^2.0.0, pify@^2.3.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha1-7RQaasBDqEnqWISY59yosVMw6Qw=
 
+pinia@^2.0.0-alpha.9:
+  version "2.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.0-alpha.9.tgz#ae2ac75923b66005babcfb8769e0ec3b6186b58c"
+  integrity sha512-D4OHifPNu8u/ozubyCBqc8kvEM7Urb3Zyelo1GdoDHMYLkjDdTyn6MXbeUO+LXiXqDv5RA4p/tLVUZcsAdQRcQ==
+
 pkg-dir@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
@@ -3834,11 +3839,6 @@ vue@^3.0.9:
     "@vue/compiler-dom" "3.0.9"
     "@vue/runtime-dom" "3.0.9"
     "@vue/shared" "3.0.9"
-
-vuex@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/vuex/-/vuex-4.0.0.tgz#ac877aa76a9c45368c979471e461b520d38e6cf5"
-  integrity sha512-56VPujlHscP5q/e7Jlpqc40sja4vOhC4uJD1llBCWolVI8ND4+VzisDVkUMl+z5y0MpIImW6HjhNc+ZvuizgOw==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

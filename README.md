@@ -31,7 +31,7 @@
 - Vue 3 eco-system
 
   - 🚀 [Vue Router 4](https://github.com/vuejs/vue-router-next) - the official router for Vue.js
-  - 🗃️ [Vuex 4](https://github.com/vuejs/vuex/tree/4.0) - state management pattern & library for Vue.js
+  - 🗃️ [Pinia](https://pinia.esm.dev) - the Vue Store that you will enjoy using (core of [Vuex 5](https://github.com/vuejs/rfcs/discussions/270) & soon will be merged together!)
   - 📜 Use the [new `<script setup>` style](https://github.com/vuejs/rfcs/pull/227)
 
 - Vue 3 extensions
@@ -66,7 +66,7 @@
 ### Vue 3
 
 - [Vue Router 4](https://github.com/vuejs/vue-router-next)
-- [Vuex 4](https://github.com/vuejs/vuex/tree/4.0)
+- [Pinia](https://pinia.esm.dev)
 - [VueUse](https://github.com/vueuse/vueuse)
   - [`@vueuse/head`](https://github.com/vueuse/head)
   - [`@vueuse/motion`](https://github.com/vueuse/motion)
