@@ -110,7 +110,7 @@
     const { name, params, query, hash } = router.currentRoute.value;
 
     router.push({
-      name: name!,
+      name,
       params: { ...params, locale: val },
       query,
       hash,
