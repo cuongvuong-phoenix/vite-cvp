@@ -7,14 +7,21 @@
 </template>
 
 <script setup lang="ts">
+  import { ref, watch } from 'vue';
   import { useHead } from '@vueuse/head';
+  import { useRouter } from 'vue-router';
+  import { useI18n } from 'vue-i18n';
   import Header from '~/components/Header.vue';
 
+  const appBaseTitle = 'Vite-VCP';
+  const appTitle = ref(appBaseTitle);
+
   useHead({
+    title: appTitle,
     meta: [
       {
         name: 'application-name',
-        content: 'Vite-VCP',
+        content: appBaseTitle,
       },
       {
         name: 'description',
@@ -25,5 +32,15 @@
         content: 'Vuong Chi Cuong (vuongcuong.phoenix@gmail.com)',
       },
     ],
+  });
+
+  // Auto-changing `<title>` based on current route.
+  const router = useRouter();
+  const { t } = useI18n();
+
+  watch(router.currentRoute, (route) => {
+    const name = String(route.name);
+
+    appTitle.value = name === 'home' ? appBaseTitle : `${appBaseTitle} | ${t(`nav.${name}`)}`;
   });
 </script>
