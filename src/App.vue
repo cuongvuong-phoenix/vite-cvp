@@ -16,6 +16,16 @@
   const appBaseTitle = 'Vite-VCP';
   const appTitle = ref(appBaseTitle);
 
+  const router = useRouter();
+  const { t } = useI18n();
+
+  // Auto-change `<title>` based on current route.
+  watch(router.currentRoute, (route) => {
+    const name = String(route.name);
+
+    appTitle.value = name === 'home' ? appBaseTitle : `${appBaseTitle} | ${t(`nav.${name}`)}`;
+  });
+
   useHead({
     title: appTitle,
     meta: [
@@ -31,16 +41,15 @@
         name: 'author',
         content: 'Vuong Chi Cuong (vuongcuong.phoenix@gmail.com)',
       },
+      // Open Graph protocol (https://ogp.me/).
+      {
+        property: 'og:title',
+        content: appTitle,
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
     ],
-  });
-
-  // Auto-changing `<title>` based on current route.
-  const router = useRouter();
-  const { t } = useI18n();
-
-  watch(router.currentRoute, (route) => {
-    const name = String(route.name);
-
-    appTitle.value = name === 'home' ? appBaseTitle : `${appBaseTitle} | ${t(`nav.${name}`)}`;
   });
 </script>
