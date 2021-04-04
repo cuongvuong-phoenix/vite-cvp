@@ -1,11 +1,11 @@
 import { h, resolveComponent } from 'vue';
 import { createRouter, RouteRecordRaw, createWebHistory } from 'vue-router';
-import { LOCALES, DEFAULT_LOCALE } from '~/locales';
 import Home from '~/pages/Home.vue';
+import NotFound from '~/pages/NotFound.vue';
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/:locale?',
+    path: '/:locale?/',
     component: {
       render: () => h(resolveComponent('RouterView')),
     },
@@ -25,17 +25,12 @@ const routes: RouteRecordRaw[] = [
         name: 'markdown-preview',
         component: () => import('~/pages/MarkdownPreview.vue'),
       },
+      {
+        path: ':pathMatch(.*)*',
+        name: 'not-found',
+        component: NotFound,
+      },
     ],
-  },
-
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'not-found',
-    redirect: (to) => {
-      const locale = to.params.pathMatch[0] as string;
-
-      return { name: 'home', params: { locale: LOCALES.includes(locale) ? locale : DEFAULT_LOCALE } };
-    },
   },
 ];
 
