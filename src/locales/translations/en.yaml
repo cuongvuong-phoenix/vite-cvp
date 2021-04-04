@@ -2,6 +2,7 @@ nav:
   home: Home
   about: About
   markdown-preview: Markdown Preview
+  not-found: 404 - Page not found
 
 button:
   increase-counter: Increase the Counter by {n}
@@ -23,3 +24,7 @@ pages:
 
   markdown-preview:
     intro: Below is the preview of Markdown rendered & configurated by {0}.{1}The content was taken from {2}.{3}Try playing with {4} and see this page changes!
+
+  not-found:
+    msg: This page was not found!<br />You may have mistyped the address or the page may have moved.
+    to-home: Take me to the home page

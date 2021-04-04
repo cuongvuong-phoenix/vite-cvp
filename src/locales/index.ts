@@ -9,13 +9,15 @@ const PRODUCTION = import.meta.env.PROD;
 export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
   const locale = i18n.global.locale.value;
 
-  // Guard for auto load messages & set locale.
+  // Guard for auto loading messages & setting locale based on `locale` param.
   router.beforeEach(async (to, _, next) => {
-    const paramLocale = to.params.locale as string;
+    const { name, params, query, hash } = to;
+
+    const paramLocale = params.locale as string;
 
     // Check if got the right locales.
     if (!LOCALES.includes(paramLocale)) {
-      return next({ name: 'home', params: { locale } });
+      return next({ name, params: { ...params, locale }, query, hash });
     }
 
     // Cancel loading if already loaded.

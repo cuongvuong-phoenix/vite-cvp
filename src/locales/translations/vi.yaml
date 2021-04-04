@@ -2,6 +2,7 @@ nav:
   home: Trang chủ
   about: Thông tin
   markdown-preview: Xem thử Markdown
+  not-found: 404 - Không tìm thấy trang
 
 button:
   increase-counter: Tăng Bộ đếm lên {n}
@@ -23,3 +24,7 @@ pages:
 
   markdown-preview:
     intro: Dưới đây là xem thử Markdown đã được xử lý hiển thị & cấu hình bởi {0}.{1}Nội dung được lấy từ {2}.{3}Hãy thử thay đổi {4} và xem trang này thay đổi nhé!
+
+  not-found:
+    msg: Không thể tìm thấy trang này!<br />Có thể bạn đã nhập nhầm địa chỉ hoặc trang này đã bị di chuyển.
+    to-home: Đưa tôi trở về trang chủ
