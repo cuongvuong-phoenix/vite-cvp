@@ -152,7 +152,7 @@
     }
   }
 
-  .router-link-active {
+  .router-link-exact-active {
     @apply text-amber-600;
   }
 </style>
