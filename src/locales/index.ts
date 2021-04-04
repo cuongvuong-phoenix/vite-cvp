@@ -34,11 +34,12 @@ export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
 export async function setupI18n(ctx: SSRContext) {
   const { router, initialRoute } = ctx;
 
-  let paramLocale = initialRoute.params.locale as string;
+  const { name, params, query, hash } = initialRoute;
+  let paramLocale = params.locale as string;
 
   if (!LOCALES.includes(paramLocale)) {
     paramLocale = DEFAULT_LOCALE;
-    await router.push({ name: 'home', params: { locale: paramLocale } });
+    await router.push({ name, params: { ...params, locale: paramLocale }, query, hash });
   }
 
   const message = await importLocaleMessage(paramLocale)!;
