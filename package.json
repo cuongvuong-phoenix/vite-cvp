@@ -8,7 +8,7 @@
     "serve": "esno server.ts"
   },
   "dependencies": {
-    "@vueuse/core": "^4.6.3",
+    "@vueuse/core": "^4.7.0",
     "@vueuse/head": "^0.5.1",
     "@vueuse/motion": "^1.5.3",
     "esno": "^0.5.0",
@@ -16,14 +16,14 @@
     "fastify-static": "^4.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.0-alpha.10",
-    "vite-ssr": "^0.6.6",
+    "vite-ssr": "^0.6.8",
     "vue": "^3.0.11",
     "vue-i18n": "^9.0.0",
     "vue-router": "^4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.2",
-    "@iconify/json": "^1.1.324",
+    "@iconify/json": "^1.1.326",
     "@intlify/vite-plugin-vue-i18n": "^2.0.4",
     "@rollup/plugin-eslint": "^8.0.1",
     "@tailwindcss/forms": "^0.3.2",
@@ -43,7 +43,7 @@
     "postcss-import": "^14.0.1",
     "precss": "^4.0.0",
     "prettier": "2.2.1",
-    "tailwindcss": "^2.0.4",
+    "tailwindcss": "^2.1.1",
     "typescript": "^4.2.3",
     "vite": "^2.1.5",
     "vite-plugin-components": "^0.8.3",
