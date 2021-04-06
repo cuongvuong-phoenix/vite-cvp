@@ -24,7 +24,7 @@
 
 <br />
 
-## 💪 Features
+## ✨ Features
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
@@ -48,6 +48,8 @@
 - 🛡️ TypeScript support
 
 - ☁️️ Easily deploy on [Netlify](./netlify.toml) without manual server setup
+
+- 💪 Good practices from official libs/plugins/repos
 
 - 👍 Always update to latest version of dependencies
 
@@ -107,7 +109,7 @@
 
 ### Clone to local
 
-If you prefer to do it manually with the cleaner git history
+If you prefer to do it manually with a cleaner git history
 
 ```shell
 $ npx degit vuong-cuong-phoenix/vite-vcp my-vite-vcp-app
@@ -117,7 +119,7 @@ $ yarn install
 
 ## 🗹 Checklist
 
-When you use this template, try follow the checklist to update your info properly:
+When you use this template, try following this checklist to update your info properly:
 
 - [ ] Rename `name`, `license`, `version` fields in `package.json`
 - [ ] Change the author name in `LICENSE` file
@@ -125,7 +127,7 @@ When you use this template, try follow the checklist to update your info properl
 - [ ] Remove `.github` folder which contains _GitHub_ related content
 - [ ] Clean up the `README`
 
-And, enjoy :)
+and... enjoy :)
 
 ## 💁 Usage
 
@@ -159,9 +161,9 @@ $ yarn serve
 
 ### Deploy on Netlify
 
-Create your site at [Netlify](https://app.netlify.com), connect to your repo & hit `OK`, your App will be live in a minute.
+Create your site at [Netlify](https://app.netlify.com), connect to your repo & hit `OK`, your app will be live in a minute.
 
-> Some config in **Netlify UI** will be overrided by our [`netlify.toml`](./netlify.toml) file. Check all the [config avaiable](https://app.netlify.com) for more details.
+> Some configs in **Netlify UI** will be overrided by [`netlify.toml`](./netlify.toml) file. Check [all configs avaiable](https://docs.netlify.com/configure-builds/file-based-configuration/) for more details.
 
 ---
 
