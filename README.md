@@ -24,7 +24,7 @@
 
 <br />
 
-## 💪 Features
+## ✨ Features
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
@@ -50,6 +50,8 @@
 - 🛡️ TypeScript support
 
 - ☁️️ Easily deploy on [Heroku](./Procfile)
+
+- 💪 Good practices from official libs/plugins/repos
 
 - 👍 Always update to latest version of dependencies
 
@@ -116,7 +118,7 @@
 
 ### Clone to local
 
-If you prefer to do it manually with the cleaner git history
+If you prefer to do it manually with a cleaner git history
 
 ```shell
 $ npx degit vuong-cuong-phoenix/vite-vcp#ssr--fastify my-vite-vcp-app
@@ -126,7 +128,7 @@ $ yarn install
 
 ## 🗹 Checklist
 
-When you use this template, try follow the checklist to update your info properly:
+When you use this template, try following this checklist to update your info properly:
 
 - [ ] Rename `name`, `license`, `version` fields in `package.json`
 - [ ] Change the author name in `LICENSE` file
@@ -134,7 +136,7 @@ When you use this template, try follow the checklist to update your info properl
 - [ ] Remove `.github` folder which contains _GitHub_ related content
 - [ ] Clean up the `README`
 
-And, enjoy :)
+and... enjoy :)
 
 ## 💁 Usage
 
