@@ -175,7 +175,7 @@ You must have [Netlify CLI](https://cli.netlify.com/) installed & setup first to
 
 Create your site at [Netlify](https://app.netlify.com), connect to your repo & hit `OK`, your App will be live in a minute.
 
-> Some config in **Netlify UI** will be overrided by our [`netlify.toml`](./netlify.toml) file. Check all the [config avaiable](https://app.netlify.com) for more details.
+> Some configs in **Netlify UI** will be overrided by [`netlify.toml`](./netlify.toml) file. Check [all configs avaiable](https://docs.netlify.com/configure-builds/file-based-configuration/) for more details.
 
 ---
 

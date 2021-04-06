@@ -6,6 +6,7 @@
     "dev": "vite-ssr",
     "clean": "./scripts/clean.sh",
     "build": "yarn clean && vite-ssr build && ./scripts/copy-func-libs.sh",
+    "build:netlify": "netlify build",
     "serve": "netlify dev"
   },
   "dependencies": {

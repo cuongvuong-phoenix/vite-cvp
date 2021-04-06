@@ -1,9 +1,11 @@
 const manifest = require('./lib/client/ssr-manifest.json');
 const { default: render } = require('./lib/server/main');
 
-exports.handler = async function () {
+exports.handler = async function (event) {
   try {
-    const url = process.env.URL;
+    // `process.env.URL` from Netlify build enviroment.
+    // `event.path` from AWS Lambda event object.
+    const url = `${process.env.URL}${event.path}`;
 
     const { html } = await render(url, { manifest, preload: true });
 
