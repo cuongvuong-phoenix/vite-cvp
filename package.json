@@ -20,6 +20,7 @@
     "@iconify/json": "^1.1.326",
     "@intlify/vite-plugin-vue-i18n": "^2.1.1",
     "@rollup/plugin-eslint": "^8.0.1",
+    "@sindresorhus/slugify": "^1.1.0",
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/typography": "^0.4.0",
     "@types/markdown-it": "^12.0.1",
