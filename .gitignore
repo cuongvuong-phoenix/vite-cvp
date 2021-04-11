@@ -4,7 +4,12 @@ dist
 dist-ssr
 *.local
 
+# File generated from transpiling `server.ts`
+server.js
+
 # Local Netlify folder
 .netlify
+
+# Cross-branch files
 functions/lib/client
 functions/lib/server
