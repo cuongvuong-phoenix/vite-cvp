@@ -1,5 +1,20 @@
-dist
+# ----------------------------------------------------------------
+# Sync with `.gitignore`
+# ----------------------------------------------------------------
 node_modules
-public
+.DS_Store
+dist
+dist-ssr
+*.local
 
+# Netlify.
+.netlify
+
+# Serverless function.
+functions/lib/client
+functions/lib/server
+
+# ----------------------------------------------------------------
+# Custom
+# ----------------------------------------------------------------
 *.css
