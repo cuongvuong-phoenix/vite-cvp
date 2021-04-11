@@ -2,14 +2,13 @@
   "private": true,
   "scripts": {
     "dev": "vite-ssr",
-    "build": "rm -rf dist && vite-ssr build",
-    "serve": "esno server.ts"
+    "build": "rm -rf dist && vite-ssr build && tsc --resolveJsonModule server.ts ",
+    "serve": "node server.js"
   },
   "dependencies": {
     "@vueuse/core": "^4.8.1",
     "@vueuse/head": "^0.5.1",
     "@vueuse/motion": "^1.5.4",
-    "esno": "^0.5.0",
     "fastify": "^3.14.2",
     "fastify-static": "^4.0.1",
     "nprogress": "^0.2.0",
