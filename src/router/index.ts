@@ -1,5 +1,5 @@
-import { h, resolveComponent } from 'vue';
-import { createRouter, RouteRecordRaw, createWebHistory } from 'vue-router';
+import { h } from 'vue';
+import { createRouter, RouteRecordRaw, createWebHistory, RouterView } from 'vue-router';
 import Home from '~/pages/Home.vue';
 import NotFound from '~/pages/NotFound.vue';
 
@@ -7,7 +7,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/:locale?/',
     component: {
-      render: () => h(resolveComponent('RouterView')),
+      render: () => h(RouterView),
     },
     children: [
       {
