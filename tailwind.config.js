@@ -5,11 +5,6 @@ module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './tailwind-safelist.txt'],
   darkMode: 'class', // or 'media' or 'class'
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
-  variants: {
-    extend: {
-      typography: ['dark'],
-    },
-  },
   theme: {
     extend: {
       colors: {
