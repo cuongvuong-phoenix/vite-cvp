@@ -1,16 +1,21 @@
 import { createI18n } from 'vue-i18n';
+import NProgress from 'nprogress';
 import { SSRContext } from '~/types';
 import { I18n, DEFAULT_LOCALE, LOCALES, loadLocaleMessage, setI18nLocale, importLocaleMessage } from '~/locales/utils';
 
 export * from '~/locales/utils';
 
-const PRODUCTION = import.meta.env.PROD;
+const CLIENT = !import.meta.env.SSR;
 
 export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
   const locale = i18n.global.locale.value;
 
   // Guard for auto loading messages & setting locale based on `locale` param.
   router.beforeEach(async (to, _, next) => {
+    if (CLIENT) {
+      NProgress.start();
+    }
+
     const { name, params, query, hash } = to;
 
     const paramLocale = params.locale as string;
@@ -34,6 +39,8 @@ export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
 export async function setupI18n(ctx: SSRContext) {
   const { router, initialRoute } = ctx;
 
+  // Initially load the right message on server-side,
+  // because `beforeEach()` won't run when server-side render for the first time.
   const { name, params, query, hash } = initialRoute;
   let paramLocale = params.locale as string;
 
@@ -51,8 +58,8 @@ export async function setupI18n(ctx: SSRContext) {
     messages: {
       [paramLocale]: message.default,
     },
-    missingWarn: PRODUCTION,
-    fallbackWarn: PRODUCTION,
+    missingWarn: false,
+    fallbackWarn: false,
   }) as unknown) as I18n;
 
   setI18nLocale(i18n, paramLocale);
