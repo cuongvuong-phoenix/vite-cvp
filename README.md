@@ -41,6 +41,8 @@
 
 - 🎨 [TailwindCSS](https://tailwindcss.com/) - utility-first CSS framework for rapidly building custom user interfaces
 
+  - 💨 [Tailwind JIT](https://tailwindcss.com/docs/just-in-time-mode) - a faster, more powerful, on-demand engine for Tailwind CSS v2.1+
+
 - 😃 [Use icons from Iconify's rich icon sets](https://github.com/iconify)
 
 - 📝 [Use Markdown as Vue component](./src/components)
