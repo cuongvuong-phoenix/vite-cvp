@@ -4,8 +4,6 @@ import { I18n, LOCALES, DEFAULT_LOCALE, loadLocaleMessages, setI18nLanguage } fr
 
 export * from '~/locales/utils';
 
-const PRODUCTION = import.meta.env.PROD;
-
 export function setupRouterForI18n(i18n: I18n, router: Router) {
   // Guard for auto loading messages & setting locale based on `locale` param.
   router.beforeEach(async (to, _, next) => {
@@ -33,8 +31,8 @@ export function setupI18n(router: Router) {
   const i18n = createI18n({
     legacy: false,
     fallbackLocale: DEFAULT_LOCALE,
-    missingWarn: PRODUCTION,
-    fallbackWarn: PRODUCTION,
+    missingWarn: false,
+    fallbackWarn: false,
   }) as I18n;
 
   setupRouterForI18n(i18n, router);
