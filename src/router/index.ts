@@ -1,11 +1,11 @@
-import { RouteRecordRaw } from 'vue-router';
-import { h, resolveComponent } from 'vue';
+import { h } from 'vue';
+import { RouteRecordRaw, RouterView } from 'vue-router';
 
 export const routes: RouteRecordRaw[] = [
   {
     path: '/:locale?/',
     component: {
-      render: () => h(resolveComponent('RouterView')),
+      render: () => h(RouterView),
     },
     children: [
       {

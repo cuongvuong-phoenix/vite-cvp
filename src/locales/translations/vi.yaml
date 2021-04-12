@@ -23,7 +23,7 @@ pages:
     counter: Bộ đếm
 
   markdown-preview:
-    intro: Dưới đây là xem thử Markdown đã được xử lý hiển thị & cấu hình bởi {0}.{1}Nội dung được lấy từ {2}.{3}Hãy thử thay đổi {4} và xem trang này thay đổi nhé!
+    intro: Dưới đây là xem thử Markdown đã được xử lý hiển thị & cấu hình bởi {0}.{1}Nội dung được lấy từ {2}.{3}Hãy thử chỉnh sửa {4} và xem trang này thay đổi nhé!
 
   not-found:
     msg: Không thể tìm thấy trang này!<br />Có thể bạn đã nhập nhầm địa chỉ hoặc trang này đã bị di chuyển.

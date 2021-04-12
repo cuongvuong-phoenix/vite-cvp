@@ -21,7 +21,7 @@
           <code>@tailwindcss/typography</code> demo
         </a>
         <br />
-        <code>~/src/components/markdown/Typo.md</code>
+        <code>src/components/markdown/Preview.md</code>
       </i18n-t>
     </p>
   </div>
