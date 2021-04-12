@@ -7,10 +7,13 @@ dist
 dist-ssr
 *.local
 
-# Netlify.
+# File generated from transpiling `server.ts`
+server.js
+
+# Local Netlify folder
 .netlify
 
-# Serverless function.
+# Cross-branch files
 functions/lib/client
 functions/lib/server
 
