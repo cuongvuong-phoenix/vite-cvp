@@ -30,16 +30,12 @@
     title: appTitle,
     meta: [
       {
-        name: 'application-name',
-        content: appBaseTitle,
-      },
-      {
         name: 'description',
         content: '⚡ Opinionated Vite Starter Template. Inpsired by Vitesse https://github.com/antfu/vitesse',
       },
       {
         name: 'author',
-        content: 'Vuong Chi Cuong (vuongcuong.phoenix@gmail.com)',
+        content: 'Vuong Chi Cuong <vuongcuong.phoenix@gmail.com>',
       },
       // Open Graph protocol (https://ogp.me/).
       {
