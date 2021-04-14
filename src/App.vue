@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, watch } from 'vue';
+  import { reactive, toRef, watch } from 'vue';
   import { useHead } from '@vueuse/head';
   import { useRouter } from 'vue-router';
   import { useI18n } from 'vue-i18n';
@@ -20,45 +20,64 @@
   const router = useRouter();
   const { t } = useI18n();
 
-  const appBaseTitle = 'Vite-VCP';
+  /* ----------------------------------------------------------------
+  App title
+  ---------------------------------------------------------------- */
+  const titleBase = 'Vite-VCP';
 
-  function getAppTitleByRoute(route: any, t: any) {
+  function getTitleByRoute(route: any, t: any) {
     const name = String(route.name);
 
-    return name === 'home' ? appBaseTitle : `${appBaseTitle} | ${t(`nav.${name}`)}`;
+    const titleRoute = t(`nav.${name}`);
+
+    return {
+      full: name === 'home' ? titleBase : `${titleBase} | ${titleRoute}`,
+      short: titleRoute,
+    };
   }
 
-  // Based on 'initialRoute' of SSR.
-  const appTitle = ref(getAppTitleByRoute(router.currentRoute.value, t));
+  // Get title from `initialRoute` of SSR.
+  const titleInitial = getTitleByRoute(router.currentRoute.value, t);
 
   // Auto-changing `<title>` based on current route.
-  watch(router.currentRoute, (route) => {
-    appTitle.value = getAppTitleByRoute(route, t);
+  const title = reactive({
+    full: titleInitial.full,
+    short: titleInitial.short,
   });
 
+  watch(router.currentRoute, (route) => {
+    const titleByRoute = getTitleByRoute(route, t);
+
+    title.full = titleByRoute.full;
+    title.short = titleByRoute.short;
+  });
+
+  /* ----------------------------------------------------------------
+  <head>
+  ---------------------------------------------------------------- */
   useHead({
-    title: appTitle,
+    title: toRef(title, 'full'),
     meta: [
       {
-        name: 'application-name',
-        content: appBaseTitle,
-      },
-      {
         name: 'description',
-        content: '⚡ Opinionated Vite Starter Template. Inpsired by Vitesse https://github.com/antfu/vitesse',
+        content: '⚡ Opinionated Vite Starter Template. Inspired by Vitesse https://github.com/antfu/vitesse',
       },
       {
         name: 'author',
-        content: 'Vuong Chi Cuong (vuongcuong.phoenix@gmail.com)',
+        content: 'Cuong Vuong Chi <vuongcuong.phoenix@gmail.com>',
       },
       // Open Graph protocol (https://ogp.me/).
       {
-        property: 'og:title',
-        content: appTitle,
+        property: 'og:site_name',
+        content: titleBase,
       },
       {
-        property: 'og:type',
-        content: 'website',
+        property: 'og:title',
+        content: toRef(title, 'short'),
+      },
+      {
+        property: 'og:description',
+        content: '⚡ Opinionated Vite Starter Template. Inspired by Vitesse https://github.com/antfu/vitesse',
       },
     ],
   });

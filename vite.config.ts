@@ -1,8 +1,6 @@
 import path from 'path';
 import { defineConfig } from 'vite';
-import eslint from '@rollup/plugin-eslint';
 import vue from '@vitejs/plugin-vue';
-// @ts-ignore
 import viteSSR from 'vite-ssr/plugin';
 import ViteMarkdown from 'vite-plugin-md';
 import MarkdownItPrism from 'markdown-it-prism';
@@ -24,11 +22,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    {
-      ...eslint({ include: './src/**/*.+(vue|js|ts)' }),
-      enforce: 'pre',
-      apply: 'serve',
-    },
     viteSSR(),
     vue({
       include: [/\.vue$/, /\.md$/],
