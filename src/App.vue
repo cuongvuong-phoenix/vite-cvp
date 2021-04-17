@@ -3,9 +3,11 @@
     <Header />
 
     <RouterView v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component" />
-      </transition>
+      <template v-if="Component">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </template>
     </RouterView>
   </div>
 </template>
