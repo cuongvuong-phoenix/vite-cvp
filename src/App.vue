@@ -81,7 +81,10 @@
 </script>
 
 <style lang="postcss">
-  .fade-enter-active,
+  .fade-enter-active {
+    transition: opacity 0.25s ease-out;
+  }
+
   .fade-leave-active {
     transition: opacity 0.25s ease-in;
   }
