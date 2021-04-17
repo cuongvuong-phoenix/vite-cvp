@@ -1,15 +1,15 @@
 <template>
   <div class="container px-10 py-8 mx-auto">
-    <Header></Header>
+    <Header />
 
-    <RouterView></RouterView>
+    <RouterView />
   </div>
 </template>
 
 <script setup lang="ts">
   import { reactive, toRef, watch } from 'vue';
   import { useHead } from '@vueuse/head';
-  import { useRouter } from 'vue-router';
+  import { useRouter, RouterView } from 'vue-router';
   import { useI18n } from 'vue-i18n';
   import Header from '~/components/Header.vue';
 
@@ -21,18 +21,18 @@
   ---------------------------------------------------------------- */
   const titleBase = 'Vite-VCP';
 
-  // Auto-change `<title>` based on current route.
   const title = reactive({
-    full: titleBase,
-    short: t(`nav.home`),
+    full: '',
+    short: '',
   });
 
+  // Auto-change `<title>` based on current route.
   watch(router.currentRoute, (route) => {
     const name = String(route.name);
 
     const titleRoute = t(`nav.${name}`);
 
-    title.full = name === 'home' ? titleBase : `${titleBase} | ${titleRoute}`;
+    title.full = name === 'home' ? titleBase : `${titleBase} · ${titleRoute}`;
     title.short = titleRoute;
   });
 
