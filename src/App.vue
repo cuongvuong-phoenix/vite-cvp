@@ -8,9 +8,9 @@
 
 <script setup lang="ts">
   import { reactive, toRef, watch } from 'vue';
-  import { useHead } from '@vueuse/head';
   import { useRouter, RouterView } from 'vue-router';
   import { useI18n } from 'vue-i18n';
+  import { useHead } from '@vueuse/head';
   import Header from '~/components/Header.vue';
 
   const router = useRouter();
