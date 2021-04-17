@@ -2,7 +2,11 @@
   <div class="container px-10 py-8 mx-auto">
     <Header />
 
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </RouterView>
   </div>
 </template>
 
@@ -50,3 +54,15 @@
     ],
   });
 </script>
+
+<style lang="postcss">
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.25s ease-in;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+</style>
