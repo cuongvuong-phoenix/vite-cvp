@@ -1,88 +1,90 @@
 <template>
   <!-- "Navigations" -->
-  <nav class="flex items-center justify-center space-x-4">
-    <RouterLink :to="{ name: 'home', params: { locale } }" :title="t('nav.home')" class="router-link">
-      <i-ion-home-outline />
-    </RouterLink>
+  <header>
+    <nav class="flex items-center justify-center space-x-4">
+      <RouterLink :to="{ name: 'home', params: { locale } }" :title="t('nav.home')" class="router-link">
+        <i-ion-home-outline />
+      </RouterLink>
 
-    <span>|</span>
+      <span>|</span>
 
-    <RouterLink :to="{ name: 'about', params: { locale } }" :title="t('nav.about')" class="router-link">
-      <i-ion-ios-information-circle-outline />
-    </RouterLink>
+      <RouterLink :to="{ name: 'about', params: { locale } }" :title="t('nav.about')" class="router-link">
+        <i-ion-ios-information-circle-outline />
+      </RouterLink>
 
-    <span>|</span>
+      <span>|</span>
 
-    <RouterLink
-      :to="{ name: 'markdown-preview', params: { locale } }"
-      :title="t('nav.markdown-preview')"
-      class="router-link"
-    >
-      <i-teenyicons-markdown-outline />
-    </RouterLink>
+      <RouterLink
+        :to="{ name: 'markdown-preview', params: { locale } }"
+        :title="t('nav.markdown-preview')"
+        class="router-link"
+      >
+        <i-teenyicons-markdown-outline />
+      </RouterLink>
 
-    <span>|</span>
+      <span>|</span>
 
-    <a
-      rel="noreferrer"
-      href="https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify"
-      target="_blank"
-      title="GitHub"
-      class="router-link"
-    >
-      <i-codicon-github-alt />
-    </a>
-  </nav>
-  <!-- END "Navigations" -->
+      <a
+        rel="noreferrer"
+        href="https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify"
+        target="_blank"
+        title="GitHub"
+        class="router-link"
+      >
+        <i-codicon-github-alt />
+      </a>
+    </nav>
+    <!-- END "Navigations" -->
 
-  <div class="flex items-center justify-center mt-4 mb-8 space-x-4">
-    <!-- "Language Dropdown" -->
-    <div
-      ref="langDropdownRef"
-      class="relative z-10"
-      @click="isLangDropdownMenuOpen = true"
-      @mouseenter="isLangDropdownMenuOpen = true"
-      @mouseleave="isLangDropdownMenuOpen = false"
-    >
+    <div class="flex items-center justify-center mt-4 mb-8 space-x-4">
+      <!-- "Language Dropdown" -->
+      <div
+        ref="langDropdownRef"
+        class="relative z-10"
+        @click="isLangDropdownMenuOpen = true"
+        @mouseenter="isLangDropdownMenuOpen = true"
+        @mouseleave="isLangDropdownMenuOpen = false"
+      >
+        <button
+          :title="t('button.change-languages')"
+          type="button"
+          class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
+        >
+          <i-ion-language-outline />
+        </button>
+
+        <ul
+          v-show="isLangDropdownMenuOpen"
+          ref="langDropdownMenuRef"
+          class="absolute py-2 bg-white border border-gray-100 rounded-lg shadow-lg left-1/2 top-full dark:bg-gray-900 dark:border-gray-700"
+        >
+          <li v-for="lang in LANGUAGES" :key="lang.locale" class="py-2 -my-2">
+            <button
+              type="button"
+              class="w-full px-3 whitespace-nowrap hover:text-amber-500"
+              :class="{
+                'text-amber-600': currentLocale === lang.locale,
+              }"
+              @click="currentLocale = lang.locale"
+            >
+              {{ lang.name }}
+            </button>
+          </li>
+        </ul>
+      </div>
+      <!-- END "Language Dropdown" -->
+
       <button
-        :title="t('button.change-languages')"
+        :title="isDarkMode ? t('button.turn-off-dark-mode') : t('button.turn-on-dark-mode')"
         type="button"
         class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
+        @click="toggleDarkMode"
       >
-        <i-ion-language-outline />
+        <i-ion-moon-outline v-if="isDarkMode" />
+        <i-ion-sunny-outline v-else />
       </button>
-
-      <ul
-        v-show="isLangDropdownMenuOpen"
-        ref="langDropdownMenuRef"
-        class="absolute py-2 bg-white border border-gray-100 rounded-lg shadow-lg left-1/2 top-full dark:bg-gray-900 dark:border-gray-700"
-      >
-        <li v-for="lang in LANGUAGES" :key="lang.locale" class="py-2 -my-2">
-          <button
-            type="button"
-            class="w-full px-3 whitespace-nowrap hover:text-amber-500"
-            :class="{
-              'text-amber-600': currentLocale === lang.locale,
-            }"
-            @click="currentLocale = lang.locale"
-          >
-            {{ lang.name }}
-          </button>
-        </li>
-      </ul>
     </div>
-    <!-- END "Language Dropdown" -->
-
-    <button
-      :title="isDarkMode ? t('button.turn-off-dark-mode') : t('button.turn-on-dark-mode')"
-      type="button"
-      class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
-      @click="toggleDarkMode"
-    >
-      <i-ion-moon-outline v-if="isDarkMode" />
-      <i-ion-sunny-outline v-else />
-    </button>
-  </div>
+  </header>
 </template>
 
 <script setup lang="ts">
