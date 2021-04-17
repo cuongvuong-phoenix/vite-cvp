@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <Hello></Hello>
+    <Hello />
 
     <div class="mt-4">{{ t('pages.home.counter') }}: {{ storeCounter.counter }}</div>
   </div>

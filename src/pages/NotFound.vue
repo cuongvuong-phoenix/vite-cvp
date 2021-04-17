@@ -3,7 +3,7 @@
     <div class="p-8 border border-current md:p-16 2xl:p-24 rounded-2xl">
       <h1 class="text-9xl">404</h1>
 
-      <p class="mt-4" v-html="t('pages.not-found.msg')"></p>
+      <p class="mt-4" v-html="t('pages.not-found.msg')" />
 
       <RouterLink
         :to="{ name: 'home', params: { locale: locale } }"
@@ -16,6 +16,7 @@
 </template>
 
 <script setup lang="ts">
+  import { RouterLink } from 'vue-router';
   import { useI18n } from 'vue-i18n';
 
   const { t, locale } = useI18n();
