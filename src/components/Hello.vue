@@ -1,5 +1,5 @@
 <template>
-  <i-ion-ios-bolt class="mx-auto text-7xl text-amber-500"></i-ion-ios-bolt>
+  <i-ion-ios-bolt class="mx-auto text-7xl text-amber-500" />
 
   <h1 class="mt-2 text-4xl font-bold">Vite-VCP</h1>
 
@@ -15,7 +15,7 @@
           target="_blank"
           class="inline-flex items-center object-center mt-1 space-x-1 hover:text-amber-600"
         >
-          <i-carbon-campsite></i-carbon-campsite>
+          <i-carbon-campsite />
           Vitesse
         </a>
       </i18n-t>
@@ -29,7 +29,7 @@
       class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-amber-500"
       @click="decrease()"
     >
-      <i-ion-minus></i-ion-minus>
+      <i-ion-minus />
     </button>
 
     <input v-model.number="amount" :title="t('input.amount')" type="number" class="w-24 text-center rounded-lg" />
@@ -40,7 +40,7 @@
       class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-amber-500"
       @click="increase()"
     >
-      <i-ion-plus></i-ion-plus>
+      <i-ion-plus />
     </button>
   </div>
 </template>

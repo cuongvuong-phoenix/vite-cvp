@@ -24,9 +24,9 @@ export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
 
   // State hydration with Pinia.
   if (!CLIENT) {
-    initialState.store = JSON.stringify(store.state.value);
+    initialState.store = store.state.value;
   } else {
-    store.state.value = JSON.parse(initialState.store);
+    store.state.value = initialState.store;
   }
 
   // NProgress.

@@ -2,13 +2,13 @@
   <!-- "Navigations" -->
   <nav class="flex items-center justify-center space-x-4">
     <RouterLink :to="{ name: 'home', params: { locale } }" :title="t('nav.home')" class="router-link">
-      <i-ion-home-outline></i-ion-home-outline>
+      <i-ion-home-outline />
     </RouterLink>
 
     <span>|</span>
 
     <RouterLink :to="{ name: 'about', params: { locale } }" :title="t('nav.about')" class="router-link">
-      <i-ion-ios-information-circle-outline></i-ion-ios-information-circle-outline>
+      <i-ion-ios-information-circle-outline />
     </RouterLink>
 
     <span>|</span>
@@ -18,7 +18,7 @@
       :title="t('nav.markdown-preview')"
       class="router-link"
     >
-      <i-teenyicons-markdown-outline></i-teenyicons-markdown-outline>
+      <i-teenyicons-markdown-outline />
     </RouterLink>
 
     <span>|</span>
@@ -30,7 +30,7 @@
       title="GitHub"
       class="router-link"
     >
-      <i-codicon-github-alt></i-codicon-github-alt>
+      <i-codicon-github-alt />
     </a>
   </nav>
   <!-- END "Navigations" -->
@@ -49,7 +49,7 @@
         type="button"
         class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
       >
-        <i-ion-language-outline></i-ion-language-outline>
+        <i-ion-language-outline />
       </button>
 
       <ul
@@ -79,15 +79,15 @@
       class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
       @click="toggleDarkMode"
     >
-      <i-ion-moon-outline v-if="isDarkMode"></i-ion-moon-outline>
-      <i-ion-sunny-outline v-else></i-ion-sunny-outline>
+      <i-ion-moon-outline v-if="isDarkMode" />
+      <i-ion-sunny-outline v-else />
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
   import { ref, watch } from 'vue';
-  import { useRouter } from 'vue-router';
+  import { useRouter, RouterLink } from 'vue-router';
   import { useI18n } from 'vue-i18n';
   import { useDark, useToggle, onClickOutside } from '@vueuse/core';
   import { useMotion } from '@vueuse/motion';

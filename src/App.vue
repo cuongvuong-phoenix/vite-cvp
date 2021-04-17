@@ -1,6 +1,6 @@
 <template>
   <div class="container px-10 py-8 mx-auto">
-    <Header></Header>
+    <Header />
 
     <RouterView v-slot="{ Component }">
       <Suspense timeout="0">
@@ -12,9 +12,9 @@
 
 <script setup lang="ts">
   import { reactive, toRef, watch } from 'vue';
-  import { useHead } from '@vueuse/head';
-  import { useRouter } from 'vue-router';
+  import { useRouter, RouterView } from 'vue-router';
   import { useI18n } from 'vue-i18n';
+  import { useHead } from '@vueuse/head';
   import Header from '~/components/Header.vue';
 
   const router = useRouter();
@@ -25,32 +25,25 @@
   ---------------------------------------------------------------- */
   const titleBase = 'Vite-VCP';
 
-  function getTitleByRoute(route: any, t: any) {
-    const name = String(route.name);
-
-    const titleRoute = t(`nav.${name}`);
-
-    return {
-      full: name === 'home' ? titleBase : `${titleBase} | ${titleRoute}`,
-      short: titleRoute,
-    };
-  }
-
-  // Get title from `initialRoute` of SSR.
-  const titleInitial = getTitleByRoute(router.currentRoute.value, t);
+  const title = reactive({
+    full: '',
+    short: '',
+  });
 
   // Auto-changing `<title>` based on current route.
-  const title = reactive({
-    full: titleInitial.full,
-    short: titleInitial.short,
-  });
+  watch(
+    router.currentRoute,
+    (route) => {
+      const name = String(route.name);
 
-  watch(router.currentRoute, (route) => {
-    const titleByRoute = getTitleByRoute(route, t);
+      const titleRoute = t(`nav.${name}`);
 
-    title.full = titleByRoute.full;
-    title.short = titleByRoute.short;
-  });
+      title.full = name === 'home' ? titleBase : `${titleBase} · ${titleRoute}`;
+      title.short = titleRoute;
+    },
+    // Get title from first time rendering of SSR.
+    { immediate: true }
+  );
 
   /* ----------------------------------------------------------------
   <head>
