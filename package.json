@@ -13,14 +13,14 @@
     "fastify-static": "^4.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.0-alpha.16",
-    "vite-ssr": "^0.8.0",
+    "vite-ssr": "^0.8.1",
     "vue": "^3.0.11",
     "vue-i18n": "^9.1.6",
     "vue-router": "^4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.6.4",
-    "@iconify/json": "^1.1.339",
+    "@antfu/eslint-config": "^0.6.5",
+    "@iconify/json": "^1.1.341",
     "@intlify/vite-plugin-vue-i18n": "^2.1.2",
     "@sindresorhus/slugify": "^1.1.2",
     "@tailwindcss/forms": "^0.3.2",
@@ -36,15 +36,15 @@
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-prism": "^2.1.6",
     "markdown-it-prism-backticks": "^1.2.0",
-    "postcss": "^8.2.14",
-    "postcss-import": "^14.0.1",
+    "postcss": "^8.2.15",
+    "postcss-import": "^14.0.2",
     "precss": "^4.0.0",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "tailwindcss": "^2.1.2",
     "typescript": "^4.2.4",
-    "vite": "^2.2.4",
+    "vite": "^2.3.0",
     "vite-plugin-components": "^0.9.0",
     "vite-plugin-icons": "^0.5.0",
-    "vite-plugin-md": "^0.6.4"
+    "vite-plugin-md": "^0.6.6"
   }
 }
