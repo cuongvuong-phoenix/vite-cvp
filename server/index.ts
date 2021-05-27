@@ -3,13 +3,13 @@ import fastify from 'fastify';
 import fastifyStatic from 'fastify-static';
 
 async function main() {
-  const manifest = await import('./dist/client/ssr-manifest.json');
-  const { default: render } = await import('./dist/server/main');
+  const manifest = await import('../dist/client/ssr-manifest.json');
+  const { default: render } = await import('../dist/server/main');
 
   const server = fastify();
 
   server.register(fastifyStatic, {
-    root: path.join(__dirname, 'dist/client'),
+    root: path.join(__dirname, '../dist/client'),
     index: false,
     wildcard: false,
   });
@@ -40,7 +40,7 @@ main()
         process.exit(1);
       }
 
-      console.log(`🚀 Server listening at ${address}`);
+      console.log(`🔥 Server listening at ${address}`);
     });
   })
   .catch((err) => console.error(err));
