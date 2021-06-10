@@ -65,7 +65,17 @@
             scale: 1,
             opacity: 1,
           }"
-          class="absolute py-2 bg-white border border-gray-100 rounded-lg shadow-lg left-1/2 top-full dark:bg-gray-900 dark:border-gray-700"
+          class="
+            absolute
+            py-2
+            bg-white
+            border border-gray-100
+            rounded-lg
+            shadow-lg
+            left-1/2
+            top-full
+            dark:bg-gray-900 dark:border-gray-700
+          "
         >
           <li v-for="lang in LANGUAGES" :key="lang.locale" class="py-2 -my-2">
             <button
@@ -102,6 +112,7 @@
   import { useI18n } from 'vue-i18n';
   import { useDark, useToggle, onClickOutside } from '@vueuse/core';
   import { LANGUAGES } from '~/locales';
+  import { ErrorRouterNameNotProvided } from '~/utils/exceptions';
 
   const router = useRouter();
   const { t, locale } = useI18n();
@@ -117,7 +128,11 @@
 
   // Sync with template changes.
   watch(currentLocale, (val) => {
-    const { name, params, query, hash } = router.currentRoute.value;
+    const { name, params, query, hash, fullPath } = router.currentRoute.value;
+
+    if (!name) {
+      throw new ErrorRouterNameNotProvided(fullPath);
+    }
 
     router.push({
       name,
@@ -129,7 +144,7 @@
 
   // Change locale.
   const isLangDropdownMenuOpen = ref(false);
-  const langDropdownRef = ref<HTMLDivElement>(null);
+  const langDropdownRef = ref<HTMLDivElement | null>(null);
 
   onClickOutside(langDropdownRef, () => (isLangDropdownMenuOpen.value = false));
 

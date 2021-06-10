@@ -2,21 +2,26 @@ import { createI18n } from 'vue-i18n';
 import { Router } from 'vue-router';
 import NProgress from 'nprogress';
 import { I18n, LOCALES, DEFAULT_LOCALE, loadLocaleMessages, setI18nLanguage } from '~/locales/utils';
+import { ErrorRouterNameNotProvided } from '~/utils/exceptions';
 
 export * from '~/locales/utils';
 
 export function setupRouterForI18n(i18n: I18n, router: Router) {
   // Guard for auto loading messages & setting locale based on `locale` param.
-  router.beforeEach(async (to, _, next) => {
+  router.beforeEach(async (to, _) => {
     NProgress.start();
 
-    const { name, params, query, hash } = to;
+    const { name, params, query, hash, fullPath } = to;
+
+    if (!name) {
+      throw new ErrorRouterNameNotProvided(fullPath);
+    }
 
     const paramLocale = params.locale as string;
 
     // Check if got the right locales.
     if (!LOCALES.includes(paramLocale)) {
-      return next({ name, params: { ...params, locale: DEFAULT_LOCALE }, query, hash });
+      return { name, params: { ...params, locale: DEFAULT_LOCALE }, query, hash };
     }
 
     // Cancel loading if already loaded.
@@ -25,8 +30,6 @@ export function setupRouterForI18n(i18n: I18n, router: Router) {
     }
 
     setI18nLanguage(i18n, paramLocale);
-
-    return next();
   });
 }
 

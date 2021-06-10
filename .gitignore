@@ -4,8 +4,8 @@ dist
 dist-ssr
 *.local
 
-# File generated from transpiling.
-server.js
+# File generated from transpiling server.
+server/*.js
 
 # Local Netlify folder.
 .netlify
