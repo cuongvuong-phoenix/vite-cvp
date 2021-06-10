@@ -5,7 +5,8 @@
     "build:client": "rm -rf dist && vite-ssr build",
     "build:server": "tsc server/index.ts --resolveJsonModule",
     "build": "yarn build:client && yarn build:server",
-    "serve": "node server/index.js"
+    "serve": "node server/index.js",
+    "lint:type": "tsc --noEmit && vue-tsc --noEmit"
   },
   "dependencies": {
     "@vueuse/core": "^4.11.2",
@@ -47,6 +48,7 @@
     "vite": "^2.3.6",
     "vite-plugin-components": "^0.10.4",
     "vite-plugin-icons": "^0.6.1",
-    "vite-plugin-md": "^0.6.7"
+    "vite-plugin-md": "^0.6.7",
+    "vue-tsc": "^0.1.7"
   }
 }
