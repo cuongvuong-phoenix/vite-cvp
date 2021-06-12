@@ -8,7 +8,7 @@ export * from '~/locales/utils';
 
 export function setupRouterForI18n(i18n: I18n, router: Router) {
   // Guard for auto loading messages & setting locale based on `locale` param.
-  router.beforeEach(async (to, _) => {
+  router.beforeEach(async (to) => {
     NProgress.start();
 
     const { name, params, query, hash, fullPath } = to;
