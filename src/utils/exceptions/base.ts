@@ -1,15 +1,15 @@
+// @ts-nocheck
 export class BaseError extends Error {
   readonly name: string;
 
   constructor(name: string, description: string) {
     super(description);
 
-    // @ts-ignore
+    Object.setPrototypeOf(this, new.target.prototype); // restore prototype chain
+    this.name = name;
+
     if (Error.captureStackTree) {
-      // @ts-ignore
       Error.captureStackTree(this, BaseError);
     }
-
-    this.name = name;
   }
 }
