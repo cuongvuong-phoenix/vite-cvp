@@ -4,9 +4,11 @@
     "dev": "vite-ssr",
     "build:client": "rm -rf dist && vite-ssr build",
     "build:server": "tsc server/index.ts --resolveJsonModule",
-    "build": "yarn build:client && yarn build:server",
+    "build": "npm run build:client && npm run build:server",
     "serve": "node server/index.js",
-    "lint:type": "tsc --noEmit && vue-tsc --noEmit"
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:type": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@vueuse/core": "^4.11.2",

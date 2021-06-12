@@ -27,7 +27,7 @@ export function setupRouterForI18n(i18n: I18n, { router }: SSRContext) {
 
     // Check if got the right locales.
     if (!LOCALES.includes(paramLocale)) {
-      return { name, params: { ...params, locale }, query, hash };
+      return { name, params: { ...params, locale: DEFAULT_LOCALE }, query, hash };
     }
 
     // Cancel loading if already loaded.

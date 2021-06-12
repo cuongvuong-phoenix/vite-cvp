@@ -1,16 +1,10 @@
 import { BaseError } from '../base';
 
 export class ErrorRouterNameNotProvided extends BaseError {
-  readonly name: string;
-  readonly description: string;
-
-  constructor(routeFullPath: string) {
+  constructor(path: string) {
     const name = 'RouterNameNotProvided';
-    const description = `Must provide "name" for "${routeFullPath}" route.`;
+    const description = `Must provide "name" for "${path}" route.`;
 
     super(name, description);
-
-    this.name = name;
-    this.description = description;
   }
 }
