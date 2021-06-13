@@ -2,10 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "vite-ssr",
-    "build:client": "rm -rf dist && vite-ssr build",
-    "build:server": "tsc server/index.ts --resolveJsonModule",
-    "build": "npm run build:client && npm run build:server",
-    "serve": "node server/index.js",
+    "build": "rm -rf dist && vite-ssr build",
+    "serve": "ts-node ./server",
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:type": "vue-tsc --noEmit"
@@ -17,6 +15,7 @@
     "fastify-static": "^4.2.2",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.0-beta.2",
+    "ts-node": "^10.0.0",
     "vite-ssr": "^0.10.4",
     "vue": "^3.1.1",
     "vue-i18n": "^9.1.6",

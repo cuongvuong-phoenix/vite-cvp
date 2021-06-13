@@ -10,6 +10,3 @@ dist-ssr
 # Cross-branch files.
 functions/lib/client
 functions/lib/server
-
-# File generated from transpiling server.
-server/*.js
