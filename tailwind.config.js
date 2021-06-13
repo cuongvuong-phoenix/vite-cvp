@@ -7,10 +7,7 @@ module.exports = {
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   theme: {
     extend: {
-      colors: {
-        amber: colors.amber,
-        gray: colors.gray,
-      },
+      colors,
 
       // Customize from official styles
       // (https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js)

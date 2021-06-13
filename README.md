@@ -73,7 +73,6 @@
 - [Pinia](https://pinia.esm.dev)
 - [VueUse](https://github.com/vueuse/vueuse)
   - [`@vueuse/head`](https://github.com/vueuse/head)
-  - [`@vueuse/motion`](https://github.com/vueuse/motion)
 - [Vue I18n](https://github.com/intlify/vue-i18n-next)
 
 ### UI
