@@ -1,26 +1,13 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: {
-    content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-    options: {
-      // Avoid purging auto-injecting classes from `vite-plugin-md`.
-      safelist: ['dark', 'prose', 'dark:prose-light', 'mx-auto'],
-    },
-  },
+  mode: 'jit',
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './tailwind-safelist.txt'],
   darkMode: 'class', // or 'media' or 'class'
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
-  variants: {
-    extend: {
-      typography: ['dark'],
-    },
-  },
   theme: {
     extend: {
-      colors: {
-        amber: colors.amber,
-        gray: colors.gray,
-      },
+      colors,
 
       // Customize from official styles
       // (https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js)
