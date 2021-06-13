@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
 import { createHead } from '@vueuse/head';
-import { MotionPlugin } from '@vueuse/motion';
 import NProgress from 'nprogress';
 import App from '~/App.vue';
 import { router } from '~/router';
@@ -25,4 +24,4 @@ router.afterEach(() => {
   NProgress.done();
 });
 
-app.use(router).use(store).use(i18n).use(head).use(MotionPlugin).mount('#app');
+app.use(router).use(store).use(i18n).use(head).mount('#app');
