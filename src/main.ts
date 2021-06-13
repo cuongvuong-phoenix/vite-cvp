@@ -1,6 +1,5 @@
 import viteSSR from 'vite-ssr';
 import { createHead } from '@vueuse/head';
-import { MotionPlugin } from '@vueuse/motion';
 import NProgress from 'nprogress';
 import { SSRContext } from './types';
 import App from '~/App.vue';
@@ -39,7 +38,7 @@ export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
     });
   }
 
-  app.use(store).use(i18n).use(head).use(MotionPlugin);
+  app.use(store).use(i18n).use(head);
 
   return { head };
 });
