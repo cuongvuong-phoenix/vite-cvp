@@ -1,0 +1,1 @@
+prose dark:prose-light mx-auto

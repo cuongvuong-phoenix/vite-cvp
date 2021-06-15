@@ -2,15 +2,15 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import viteSSR from 'vite-ssr/plugin';
-import ViteMarkdown from 'vite-plugin-md';
+import viteMarkdown from 'vite-plugin-md';
 import MarkdownItPrism from 'markdown-it-prism';
 import MarkdownItPrismBacktick from 'markdown-it-prism-backticks';
 import MarkdownItAttrs from 'markdown-it-attrs';
 import MarkdownItAnchor from 'markdown-it-anchor';
 import slugify from '@sindresorhus/slugify';
-import ViteComponents from 'vite-plugin-components';
-import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons';
-import VueI18n from '@intlify/vite-plugin-vue-i18n';
+import viteComponents from 'vite-plugin-components';
+import viteIcons, { ViteIconsResolver } from 'vite-plugin-icons';
+import vueI18n from '@intlify/vite-plugin-vue-i18n';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,7 +26,7 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    ViteMarkdown({
+    viteMarkdown({
       headEnabled: true,
       wrapperClasses: 'prose dark:prose-light mx-auto',
       markdownItSetup(md) {
@@ -45,15 +45,13 @@ export default defineConfig({
         });
       },
     }),
-    ViteComponents({
+    viteComponents({
       // Disable auto-importing components under `src/components`.
       // Only enable for `vite-plugin-icons`.
       dirs: [],
       customComponentResolvers: ViteIconsResolver(),
     }),
-    ViteIcons(),
-    VueI18n({
-      include: path.resolve(__dirname, './src/locales/**'),
-    }),
+    viteIcons(),
+    vueI18n(),
   ],
 });

@@ -4,16 +4,15 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "strictNullChecks": false,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "types": ["vite/client", "vite-plugin-icons/client", "@intlify/vite-plugin-vue-i18n/client"],
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "~/*": ["*"]
+      "~/*": ["src/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

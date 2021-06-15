@@ -43,6 +43,8 @@
 
 - 🎨 [TailwindCSS](https://tailwindcss.com/) - utility-first CSS framework for rapidly building custom user interfaces
 
+  - 💨 [Tailwind JIT](https://tailwindcss.com/docs/just-in-time-mode) - a faster, more powerful, on-demand engine for Tailwind CSS v2.1+
+
 - 😃 [Use icons from Iconify's rich icon sets](https://github.com/iconify)
 
 - 📝 [Use Markdown as Vue component](./src/components)
@@ -74,7 +76,6 @@
 - [Pinia](https://pinia.esm.dev)
 - [VueUse](https://github.com/vueuse/vueuse)
   - [`@vueuse/head`](https://github.com/vueuse/head)
-  - [`@vueuse/motion`](https://github.com/vueuse/motion)
 - [Vue I18n](https://github.com/intlify/vue-i18n-next)
 
 ### Server(less)
