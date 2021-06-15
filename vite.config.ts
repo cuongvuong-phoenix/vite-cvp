@@ -52,8 +52,6 @@ export default defineConfig({
       customComponentResolvers: ViteIconsResolver(),
     }),
     viteIcons(),
-    vueI18n({
-      include: path.resolve(__dirname, './src/locales/**'),
-    }),
+    vueI18n(),
   ],
 });
