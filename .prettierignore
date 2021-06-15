@@ -14,9 +14,6 @@ dist-ssr
 functions/lib/client
 functions/lib/server
 
-# File generated from transpiling server.
-server/*.js
-
 # ----------------------------------------------------------------
 # Custom
 # ----------------------------------------------------------------
