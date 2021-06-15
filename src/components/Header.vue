@@ -55,15 +55,13 @@
 
         <transition
           enter-active-class="transition duration-200 ease-out"
-          enter-from-class="transform scale-90 opacity-0"
-          enter-to-class="transform scale-100 opacity-100"
+          enter-from-class="transform scale-75 opacity-0"
           leave-active-class="transition duration-150 ease-in"
-          leave-from-class="transform scale-100 opacity-100"
-          leave-to-class="transform scale-90 opacity-0"
+          leave-to-class="transform scale-75 opacity-0"
         >
           <ul
             v-show="isLangDropdownMenuOpen"
-            class="absolute py-2 origin-top bg-white border border-gray-100 rounded-lg shadow-lg  dark:bg-gray-900 dark:border-gray-700"
+            class="absolute py-2 origin-top-left bg-white border border-gray-100 rounded-lg shadow-lg  dark:bg-gray-900 dark:border-gray-700"
           >
             <li v-for="lang in LANGUAGES" :key="lang.locale" class="py-2 -my-2">
               <button
