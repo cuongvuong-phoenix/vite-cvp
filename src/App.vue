@@ -4,7 +4,13 @@
 
     <RouterView v-slot="{ Component }">
       <template v-if="Component">
-        <transition name="fade" mode="out-in">
+        <transition
+          mode="out-in"
+          enter-active-class="transition-opacity duration-300 ease-out"
+          enter-from-class="opacity-0"
+          leave-active-class="transition-opacity duration-200 ease-in"
+          leave-to-class="opacity-0"
+        >
           <suspense timeout="0">
             <component :is="Component" />
           </suspense>
@@ -79,18 +85,3 @@
     ],
   });
 </script>
-
-<style lang="postcss">
-  .fade-enter-active {
-    transition: opacity 0.25s ease-out;
-  }
-
-  .fade-leave-active {
-    transition: opacity 0.25s ease-in;
-  }
-
-  .fade-enter-from,
-  .fade-leave-to {
-    opacity: 0;
-  }
-</style>
