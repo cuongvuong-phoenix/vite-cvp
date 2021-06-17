@@ -7,7 +7,7 @@ import MarkdownItPrism from 'markdown-it-prism';
 import MarkdownItPrismBacktick from 'markdown-it-prism-backticks';
 import MarkdownItAttrs from 'markdown-it-attrs';
 import MarkdownItAnchor from 'markdown-it-anchor';
-import slugify from '@sindresorhus/slugify';
+import slugify from 'slugify';
 import viteComponents from 'vite-plugin-components';
 import viteIcons, { ViteIconsResolver } from 'vite-plugin-icons';
 import vueI18n from '@intlify/vite-plugin-vue-i18n';
@@ -37,7 +37,7 @@ export default defineConfig({
           allowedAttributes: ['id', 'class'],
         });
         md.use(MarkdownItAnchor, {
-          slugify,
+          slugify: (s) => slugify(s, { lower: true }),
           permalink: true,
           permalinkBefore: true,
           permalinkSymbol: '#',
