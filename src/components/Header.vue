@@ -55,9 +55,9 @@
 
         <transition
           enter-active-class="transition duration-200 ease-out"
-          enter-from-class="transform scale-75 opacity-0"
+          enter-from-class="scale-75 opacity-0"
           leave-active-class="transition duration-150 ease-in"
-          leave-to-class="transform scale-75 opacity-0"
+          leave-to-class="scale-75 opacity-0"
         >
           <ul
             v-show="isLangDropdownMenuOpen"
