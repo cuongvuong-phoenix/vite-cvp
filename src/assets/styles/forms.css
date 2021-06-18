@@ -5,7 +5,7 @@ input[type='number'] {
   @apply bg-transparent rounded-lg;
 
   &:focus {
-    @apply outline-none border-amber-500 ring ring-amber-500 ring-opacity-40;
+    @apply outline-none border-amber-500 ring ring-amber-500/40;
   }
 }
 
