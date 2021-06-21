@@ -3,6 +3,8 @@ import fastify from 'fastify';
 import fastifyStatic from 'fastify-static';
 
 async function main() {
+  // Ignore files which are not yet build.
+  // @ts-ignore
   const manifest = await import('../dist/client/ssr-manifest.json');
   // @ts-ignore
   const { default: render } = await import('../dist/server/main');
