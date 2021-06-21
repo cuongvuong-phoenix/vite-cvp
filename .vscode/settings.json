@@ -1,5 +1,6 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "volar.tsPlugin": true,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "volar.tsPlugin": true
 }
