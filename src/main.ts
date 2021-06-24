@@ -6,7 +6,6 @@ import App from '~/App.vue';
 import { routes } from '~/router';
 import { store } from '~/store';
 import { setupI18n } from '~/locales';
-// Distinct-importing styles to prevent long hot-reloading when editing self-styles.
 import '~/assets/styles/vendors/tailwind.css';
 import '~/assets/styles/vendors/nprogress.css';
 import '~/assets/styles/markdown/main.css';
@@ -17,17 +16,6 @@ const CLIENT = !import.meta.env.SSR;
 export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
   const { app, router, initialState } = ctx;
 
-  const i18n = await setupI18n(ctx);
-
-  const head = createHead();
-
-  // State hydration with Pinia.
-  if (!CLIENT) {
-    initialState.store = store.state.value;
-  } else {
-    store.state.value = initialState.store;
-  }
-
   // NProgress.
   if (CLIENT) {
     router.beforeEach(() => {
@@ -37,6 +25,17 @@ export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
       NProgress.done();
     });
   }
+
+  // State hydration with Pinia.
+  if (!CLIENT) {
+    initialState.store = store.state.value;
+  } else {
+    store.state.value = initialState.store;
+  }
+
+  const i18n = await setupI18n(ctx);
+
+  const head = createHead();
 
   app.use(store).use(i18n).use(head);
 
