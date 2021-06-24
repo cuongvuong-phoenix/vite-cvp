@@ -33,8 +33,10 @@ export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
     store.state.value = initialState.store;
   }
 
-  const i18n = await setupI18n(ctx);
+  // vue-i18n.
+  const i18n = await setupI18n(router);
 
+  // @vueuse/head.
   const head = createHead();
 
   app.use(store).use(i18n).use(head);

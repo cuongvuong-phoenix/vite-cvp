@@ -87,6 +87,7 @@
 ### UI
 
 - [TailwindCSS](https://tailwindcss.com/)
+  - [Tailwind JIT](https://tailwindcss.com/docs/just-in-time-mode)
   - [`@tailwindcss/forms`](https://github.com/tailwindlabs/tailwindcss-forms)
   - [`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography)
 - [Iconify](https://github.com/iconify)

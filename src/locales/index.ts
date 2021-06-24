@@ -1,13 +1,12 @@
 import { createI18n } from 'vue-i18n';
 import { Router } from 'vue-router';
-import { SSRContext } from '~/types';
-import { I18n, DEFAULT_LOCALE, LOCALES, loadLocaleMessage, setI18nLocale } from '~/locales/utils';
+import { I18n, LOCALES, DEFAULT_LOCALE, loadLocaleMessage, setI18nLocale } from '~/locales/utils';
 import { ErrorRouterNameNotProvided } from '~/utils/exceptions';
 
 export * from '~/locales/utils';
 
 function setupRouterForI18n(i18n: I18n, router: Router) {
-  // Guard for auto loading messages & setting locale based on `locale` param.
+  // Auto loading messages & setting locale based on `locale` param.
   router.beforeEach(async (to, _) => {
     const { name, params, query, hash, fullPath } = to;
 
@@ -15,23 +14,23 @@ function setupRouterForI18n(i18n: I18n, router: Router) {
       throw new ErrorRouterNameNotProvided(fullPath);
     }
 
-    const paramLocale = params.locale as string;
+    const locale = params.locale as string;
 
     // Check if got the right locales.
-    if (!LOCALES.includes(paramLocale)) {
+    if (!LOCALES.includes(locale)) {
       return { name, params: { ...params, locale: DEFAULT_LOCALE }, query, hash };
     }
 
     // Cancel loading if already loaded.
-    if (!i18n.global.availableLocales.includes(paramLocale)) {
-      await loadLocaleMessage(i18n, paramLocale);
+    if (!i18n.global.availableLocales.includes(locale)) {
+      await loadLocaleMessage(i18n, locale);
     }
 
-    setI18nLocale(i18n, paramLocale);
+    setI18nLocale(i18n, locale);
   });
 }
 
-export async function setupI18n(ctx: SSRContext) {
+export async function setupI18n(router: Router) {
   const i18n = createI18n({
     legacy: false,
     fallbackLocale: DEFAULT_LOCALE,
@@ -39,7 +38,7 @@ export async function setupI18n(ctx: SSRContext) {
     fallbackWarn: false,
   }) as I18n;
 
-  setupRouterForI18n(i18n, ctx.router);
+  setupRouterForI18n(i18n, router);
 
   return i18n;
 }
