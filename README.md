@@ -82,7 +82,7 @@
 
 - [Fastify](https://www.fastify.io/)
   - [`fastify-static`](https://github.com/fastify/fastify-static) - plugin for serving static files as fast as possible
-- [esno](https://github.com/antfu/esno) - TypeScript / ESNext node runtime powered by [`esbuild-register`](https://github.com/egoist/esbuild-register)
+- [ts-node](https://github.com/TypeStrong/ts-node) - TypeScript execution and REPL for node.js, with source map support
 
 ### UI
 

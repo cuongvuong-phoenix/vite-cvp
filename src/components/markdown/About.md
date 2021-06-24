@@ -19,12 +19,16 @@ Inspired from [Vitesse](https://github.com/antfu/vitesse) made by [@antifu](http
 
 - 🎨 [TailwindCSS](https://tailwindcss.com/) - utility-first CSS framework for rapidly building custom user interfaces
 
+  - 💨 [Tailwind JIT](https://tailwindcss.com/docs/just-in-time-mode) - a faster, more powerful, on-demand engine for Tailwind CSS v2.1+
+
 - 😃 [Use icons from Iconify's rich icon sets](https://github.com/iconify)
 
-- 📝 [Use Markdown as Vue component](https://github.com/antfu/vite-plugin-md)
+- 📝 [Use Markdown as Vue component](./src/components)
 
 - 🛡️ TypeScript support
 
-- ☁️️ Easily deploy on [Heroku](https://www.heroku.com/)
+- ☁️️ Easily deploy on [Heroku](./Procfile)
+
+- 💪 Good practices from official libs/plugins/repos
 
 - 👍 Always update to latest version of dependencies
