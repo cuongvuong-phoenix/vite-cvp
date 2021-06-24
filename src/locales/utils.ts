@@ -18,16 +18,16 @@ export const DEFAULT_LOCALE = LANGUAGES.find((lang) => lang.default)!.locale;
 /* ----------------------------------------------------------------
 Logic
 ---------------------------------------------------------------- */
-export const setI18nLocale = (i18n: I18n, locale: string) => {
+export function setI18nLocale(i18n: I18n, locale: string) {
   i18n.global.locale.value = locale;
 
   document.querySelector('html')?.setAttribute('lang', locale);
-};
+}
 
-export const loadLocaleMessages = async (i18n: I18n, locale: string) => {
+export async function loadLocaleMessage(i18n: I18n, locale: string) {
   const message = await import(`./translations/${locale}.yaml`);
 
   i18n.global.setLocaleMessage(locale, message.default);
 
   return await nextTick();
-};
+}
