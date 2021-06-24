@@ -64,11 +64,11 @@
     },
   });
 
-  const increase = () => {
+  function increase() {
     storeCounter.increaseCounter(amount.value);
-  };
+  }
 
-  const decrease = () => {
+  function decrease() {
     storeCounter.decreaseCounter(amount.value);
-  };
+  }
 </script>
