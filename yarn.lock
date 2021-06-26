@@ -330,10 +330,10 @@
   resolved "https://registry.yarnpkg.com/@iconify/json-tools/-/json-tools-1.0.10.tgz#d9a7050dbbe8bb29d684d4b3f9446ed2d0bea3cc"
   integrity sha512-LFelJDOLZ6JHlmlAkgrvmcu4hpNPB91KYcr4f60D/exzU1eNOb4/KCVHIydGHIQFaOacIOD+Xy+B7P1z812cZg==
 
-"@iconify/json@^1.1.360":
-  version "1.1.360"
-  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-1.1.360.tgz#e4ab624d914e7047d03adb7d17a3dac18302906f"
-  integrity sha512-kgKZ1nhznoD9w/tRq9mVpKO1d2/ymlTLHhJ/AGspMnSWDkjLYFPSatl4RXf0o0e1H+YWLvJcMd/sTCHTl7TucA==
+"@iconify/json@^1.1.361":
+  version "1.1.361"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-1.1.361.tgz#6222e7971467cc4a793c7e0bf2877b484827ae36"
+  integrity sha512-p7RMNFNI1YLFCJ0Ads6LOtJyLsheYM+XBSrhcTYxjuCmr2dv2j4DFp0Bh3HLwybtdPo3cA7Xo8Wqk8djvoVm/g==
 
 "@intlify/cli@^0.5.0":
   version "0.5.0"
@@ -3583,10 +3583,10 @@ map-obj@^2.0.0:
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-2.0.0.tgz#a65cd29087a92598b8791257a523e021222ac1f9"
   integrity sha1-plzSkIepJZi4eRJXpSPgISIqwfk=
 
-markdown-it-anchor@^8.0.3:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.0.3.tgz#64abd08415568e7e8df79f56475f28749571461c"
-  integrity sha512-YU5kfZDKjqRiY6wySd3ouk6wVmByUczPCeTvKWCl7St/AnYEkiCxj29T1pK0phuvJFZJc1aNVoSFqzZ7I4XB/A==
+markdown-it-anchor@^8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.0.4.tgz#58b8dec4e98c476c59255885aaddae3b9849b0b1"
+  integrity sha512-/WzolvDEyPiLfmvyWirPerHZX41o4ObHhsz4DrYqTvafXie1ItqWlEajiq77qFAibowAXL9UExb1yeICLUT0+w==
 
 markdown-it-attrs@^4.0.0:
   version "4.0.0"
@@ -5997,10 +5997,10 @@ vite-plugin-md@^0.6.7:
     gray-matter "^4.0.3"
     markdown-it "^12.0.6"
 
-vite-ssr@^0.10.4:
-  version "0.10.4"
-  resolved "https://registry.yarnpkg.com/vite-ssr/-/vite-ssr-0.10.4.tgz#429c27df7488e722f31223d33a71b9af45f50e1d"
-  integrity sha512-USp0nhkTxO2OLQn1nFh1eAOIha0xRRcuIyyZFCF/yPBTV88TX8QugBPm58hZiQXiQXbkWbUhMJcOnj8R17OwIQ==
+vite-ssr@^0.10.5:
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/vite-ssr/-/vite-ssr-0.10.5.tgz#1ec45fde0a6ca40f54ca2d377f3c2146ec784738"
+  integrity sha512-AOniXO3BGmgElHSymhCKGIgGP0Jufw/0ZuJv2zHi+AiLPaQ6irLEfuk5aN1Dqa09sJWD6Pu60I+FSm6Oz08ZHA==
   dependencies:
     "@rollup/plugin-replace" "^2.3.3"
     "@vue/server-renderer" "^3.0.0"
