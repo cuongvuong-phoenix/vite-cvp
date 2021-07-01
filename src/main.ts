@@ -13,7 +13,7 @@ import '~/assets/styles/main.css';
 
 const CLIENT = !import.meta.env.SSR;
 
-export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
+export default viteSSR(App, { routes }, (ctx: SSRContext) => {
   const { app, router, initialState } = ctx;
 
   // NProgress.
@@ -34,7 +34,7 @@ export default viteSSR(App, { routes }, async (ctx: SSRContext) => {
   }
 
   // vue-i18n.
-  const i18n = await setupI18n(router);
+  const i18n = setupI18n(router);
 
   // @vueuse/head.
   const head = createHead();

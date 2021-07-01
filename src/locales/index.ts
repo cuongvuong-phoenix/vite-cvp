@@ -30,7 +30,7 @@ function setupRouterForI18n(i18n: I18n, router: Router) {
   });
 }
 
-export async function setupI18n(router: Router) {
+export function setupI18n(router: Router) {
   const i18n = createI18n({
     legacy: false,
     fallbackLocale: DEFAULT_LOCALE,
