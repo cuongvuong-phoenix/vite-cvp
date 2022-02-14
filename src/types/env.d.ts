@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-/// <reference types="vite-plugin-icons/client" />
+/// <reference types="unplugin-icons/types/vue" />
 /// <reference types="@intlify/vite-plugin-vue-i18n/client" />
 
 declare module '*.vue' {
