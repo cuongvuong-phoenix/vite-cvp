@@ -1,30 +1,40 @@
-import path from 'path';
+import * as path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import viteMarkdown from 'vite-plugin-md';
+import components from 'unplugin-vue-components/vite';
+import icons from 'unplugin-icons/vite';
+import iconsResolver from 'unplugin-icons/resolver';
+import vueI18n from '@intlify/vite-plugin-vue-i18n';
+import markdown from 'vite-plugin-md';
 import MarkdownItPrism from 'markdown-it-prism';
 import MarkdownItPrismBacktick from 'markdown-it-prism-backticks';
 import MarkdownItAttrs from 'markdown-it-attrs';
 import MarkdownItAnchor from 'markdown-it-anchor';
 import slugify from 'slugify';
-import viteComponents from 'vite-plugin-components';
-import viteIcons, { ViteIconsResolver } from 'vite-plugin-icons';
-import vueI18n from '@intlify/vite-plugin-vue-i18n';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'src'),
-      // Fix warning: "You are running the esm-bundler build of vue-i18n. It is recommended to configure your bundler to explicitly replace feature flag globals with boolean literals to get proper tree-shaking in the final bundle."
-      'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+      'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
     },
   },
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],
+      reactivityTransform: true,
     }),
-    viteMarkdown({
+    components({
+      dirs: [],
+      resolvers: [iconsResolver()],
+      dts: path.resolve(__dirname, 'src/types/components.d.ts'),
+    }),
+    icons(),
+    vueI18n({
+      include: path.resolve(__dirname, './src/locales/translations/**'),
+    }),
+    markdown({
       headEnabled: true,
       wrapperClasses: 'prose dark:prose-light mx-auto',
       markdownItSetup(md) {
@@ -36,20 +46,12 @@ export default defineConfig({
         });
         md.use(MarkdownItAnchor, {
           slugify: (s) => slugify(s, { lower: true }),
-          permalink: true,
-          permalinkBefore: true,
-          permalinkSymbol: '#',
-          permalinkAttrs: () => ({ 'aria-hidden': true }),
+          permalink: MarkdownItAnchor.permalink.ariaHidden({
+            placement: 'before',
+            symbol: '#',
+          }),
         });
       },
     }),
-    viteComponents({
-      // Disable auto-importing components under `src/components`.
-      // Only enable for `vite-plugin-icons`.
-      dirs: [],
-      customComponentResolvers: ViteIconsResolver(),
-    }),
-    viteIcons(),
-    vueI18n(),
   ],
 });

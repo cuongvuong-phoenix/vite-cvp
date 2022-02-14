@@ -1,17 +1,10 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-    safelist: ['prose', 'dark:prose-light', 'mx-auto'],
-  },
-  darkMode: 'class', // or 'media' or 'class'
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  safelist: ['prose', 'dark:prose-light', 'mx-auto'],
+  darkMode: 'class',
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   theme: {
     extend: {
-      colors,
-
       // Customize from official styles
       // (https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js)
       typography: (theme) => ({
