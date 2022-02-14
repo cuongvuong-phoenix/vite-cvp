@@ -5,7 +5,7 @@ import components from 'unplugin-vue-components/vite';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
 import vueI18n from '@intlify/vite-plugin-vue-i18n';
-import viteMarkdown from 'vite-plugin-md';
+import markdown from 'vite-plugin-md';
 import MarkdownItPrism from 'markdown-it-prism';
 import MarkdownItPrismBacktick from 'markdown-it-prism-backticks';
 import MarkdownItAttrs from 'markdown-it-attrs';
@@ -33,24 +33,24 @@ export default defineConfig({
     vueI18n({
       include: path.resolve(__dirname, './src/locales/translations/**'),
     }),
-    // viteMarkdown({
-    //   headEnabled: true,
-    //   wrapperClasses: 'prose dark:prose-light mx-auto',
-    //   markdownItSetup(md) {
-    //     md.use(MarkdownItPrism, { defaultLanguage: 'markup' });
-    //     md.use(MarkdownItPrismBacktick);
-    //     md.use(MarkdownItAttrs, {
-    //       // Security (https://github.com/arve0/markdown-it-attrs#security).
-    //       allowedAttributes: ['id', 'class'],
-    //     });
-    //     md.use(MarkdownItAnchor, {
-    //       slugify: (s) => slugify(s, { lower: true }),
-    //       permalink: true,
-    //       permalinkBefore: true,
-    //       permalinkSymbol: '#',
-    //       permalinkAttrs: () => ({ 'aria-hidden': true }),
-    //     });
-    //   },
-    // }),
+    markdown({
+      headEnabled: true,
+      wrapperClasses: 'prose dark:prose-light mx-auto',
+      markdownItSetup(md) {
+        md.use(MarkdownItPrism, { defaultLanguage: 'markup' });
+        md.use(MarkdownItPrismBacktick);
+        md.use(MarkdownItAttrs, {
+          // Security (https://github.com/arve0/markdown-it-attrs#security).
+          allowedAttributes: ['id', 'class'],
+        });
+        md.use(MarkdownItAnchor, {
+          slugify: (s) => slugify(s, { lower: true }),
+          permalink: MarkdownItAnchor.permalink.ariaHidden({
+            placement: 'before',
+            symbol: '#',
+          }),
+        });
+      },
+    }),
   ],
 });
