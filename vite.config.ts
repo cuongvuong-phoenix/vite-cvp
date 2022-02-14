@@ -1,24 +1,23 @@
 import * as path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import components from 'unplugin-vue-components/vite';
+import icons from 'unplugin-icons/vite';
+import iconsResolver from 'unplugin-icons/resolver';
+import vueI18n from '@intlify/vite-plugin-vue-i18n';
 import viteMarkdown from 'vite-plugin-md';
 import MarkdownItPrism from 'markdown-it-prism';
 import MarkdownItPrismBacktick from 'markdown-it-prism-backticks';
 import MarkdownItAttrs from 'markdown-it-attrs';
 import MarkdownItAnchor from 'markdown-it-anchor';
 import slugify from 'slugify';
-import components from 'unplugin-vue-components/vite';
-import icons from 'unplugin-icons/vite';
-import iconsResolver from 'unplugin-icons/resolver';
-import vueI18n from '@intlify/vite-plugin-vue-i18n';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'src'),
-      // Fix warning: "You are running the esm-bundler build of vue-i18n. It is recommended to configure your bundler to explicitly replace feature flag globals with boolean literals to get proper tree-shaking in the final bundle."
-      // 'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+      'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
     },
   },
   plugins: [
@@ -31,7 +30,9 @@ export default defineConfig({
       dts: path.resolve(__dirname, 'src/types/components.d.ts'),
     }),
     icons(),
-    // vueI18n(),
+    vueI18n({
+      include: path.resolve(__dirname, './src/locales/translations/**'),
+    }),
     // viteMarkdown({
     //   headEnabled: true,
     //   wrapperClasses: 'prose dark:prose-light mx-auto',
