@@ -1,14 +1,12 @@
-import { h } from 'vue';
-import { type RouteRecordRaw, RouterView } from 'vue-router';
+import { type RouteRecordRaw } from 'vue-router';
+import AnimatedRouterView from '~/components/AnimatedRouterView.vue';
 import Home from '~/pages/Home.vue';
 import NotFound from '~/pages/NotFound.vue';
 
 export const routes: RouteRecordRaw[] = [
   {
     path: '/:locale?/',
-    component: {
-      render: () => h(RouterView),
-    },
+    component: AnimatedRouterView,
     children: [
       {
         path: '',
