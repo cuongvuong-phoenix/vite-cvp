@@ -38,8 +38,6 @@ export default defineConfig({
       headEnabled: true,
       wrapperClasses: 'prose dark:prose-light mx-auto',
       markdownItSetup(md) {
-        md.use(MarkdownItPrism, { defaultLanguage: 'markup' });
-        md.use(MarkdownItPrismBacktick);
         md.use(MarkdownItAttrs, {
           // Security (https://github.com/arve0/markdown-it-attrs#security).
           allowedAttributes: ['id', 'class'],
@@ -51,6 +49,8 @@ export default defineConfig({
             symbol: '#',
           }),
         });
+        md.use(MarkdownItPrism, { defaultLanguage: 'markup' });
+        md.use(MarkdownItPrismBacktick);
       },
     }),
   ],

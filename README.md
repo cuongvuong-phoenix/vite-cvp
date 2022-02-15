@@ -18,7 +18,7 @@
 
 - 👉 (now) [`master`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) ([demo](https://vite-vcp.netlify.app)) - regular **SPA**
 - [`ssr--fastify`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify) ([demo](https://vite-vcp.herokuapp.com)) - **SSR** with [Fastify](https://www.fastify.io/) + deploy on [Heroku](https://www.heroku.com/)
-- [`ssr--netlify-function`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function) ([demo](https://vite-vcp-ssr.netlify.app)) - **SSR** with [Netlify platforms](https://www.netlify.com/products/) (static hosting + functions)
+- ❌ (maintaining) [`ssr--netlify-function`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function) ([demo](https://vite-vcp-ssr.netlify.app)) - **SSR** with [Netlify platforms](https://www.netlify.com/products/) (static hosting + functions)
 
 ---
 
@@ -26,26 +26,23 @@
 
 ## ✨ Features
 
-- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+- ⚡️ [Vue 3](https://vuejs.org/), [Vite 2](https://vitejs.dev/), [ESBuild](https://esbuild.github.io/) - born with fastness
 
 - Vue 3 eco-system
 
-  - 🚀 [Vue Router 4](https://github.com/vuejs/vue-router-next) - the official router for Vue.js
-  - 🗃️ [Pinia](https://pinia.esm.dev) - the Vue Store that you will enjoy using (core of [Vuex 5](https://github.com/vuejs/rfcs/discussions/270) & soon will be merged together!)
-  - 📜 Use the [new `<script setup>` style](https://github.com/vuejs/rfcs/pull/227)
+  - 🚀 [Vue Router](https://router.vuejs.org/) - the official router for Vue.js
+  - 🗃️ [Pinia](https://pinia.vuejs.org/) - the Vue Store that you will enjoy using
 
 - Vue 3 extensions
 
-  - 💡 [VueUse](https://github.com/vueuse/vueuse) - collection of essential Vue Composition Utilities
-  - 🌍 [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization plugin for Vue.js
+  - 💡 [VueUse](https://vueuse.org/) - collection of essential Vue Composition Utilities
+  - 🌍 [Vue I18n](https://vue-i18n.intlify.dev/) - Internationalization plugin for Vue.js
 
 - 🎨 [TailwindCSS](https://tailwindcss.com/) - utility-first CSS framework for rapidly building custom user interfaces
 
-  - 💨 [Tailwind JIT](https://tailwindcss.com/docs/just-in-time-mode) - a faster, more powerful, on-demand engine for Tailwind CSS v2.1+
+- 😃 [Use icons from Iconify's rich icon sets](https://iconify.design/)
 
-- 😃 [Use icons from Iconify's rich icon sets](https://github.com/iconify)
-
-- 📝 [Use Markdown as Vue component](./src/components)
+- 📝 [Use Markdown as Vue component](./src/components/markdown)
 
 - 🛡️ TypeScript support
 
@@ -59,29 +56,28 @@
 
 ## 📦 Pre-packed
 
-### Vite
-
-- [`vite-plugin-md`](https://github.com/antfu/vite-plugin-md)
-- [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components)
-  > _Note:_ Only enable for auto-importing **Iconify** icons via `vite-plugin-icons`. Regular components should be explicitly imported for better IDE support.
-- [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons)
-- [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n)
-
 ### Vue 3
 
-- [Vue Router 4](https://github.com/vuejs/vue-router-next)
-- [Pinia](https://pinia.esm.dev)
-- [VueUse](https://github.com/vueuse/vueuse)
+- [Vue Router](https://router.vuejs.org/)
+- [Pinia](https://pinia.vuejs.org/)
+- [VueUse](https://vueuse.org/)
   - [`@vueuse/head`](https://github.com/vueuse/head)
-- [Vue I18n](https://github.com/intlify/vue-i18n-next)
+- [Vue I18n](https://vue-i18n.intlify.dev/)
+
+### Vite
+
+- [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components)
+  > _Note:_ Only enable for auto-importing **Iconify** icons via `unplugin-icons`. Regular components should be explicitly imported for better IDE support.
+- [`unplugin-icons`](https://github.com/antfu/unplugin-icons)
+- [`vite-plugin-vue-i18n`](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n)
+- [`vite-plugin-md`](https://github.com/antfu/vite-plugin-md)
 
 ### UI
 
 - [TailwindCSS](https://tailwindcss.com/)
-  - [Tailwind JIT](https://tailwindcss.com/docs/just-in-time-mode)
+  - [`@tailwindcss/typography`](https://tailwindcss.com/docs/typography-plugin)
   - [`@tailwindcss/forms`](https://github.com/tailwindlabs/tailwindcss-forms)
-  - [`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography)
-- [Iconify](https://github.com/iconify)
+- [Iconify](https://iconify.design/)
 - [`markdown-it`](https://github.com/markdown-it/markdown-it)
   - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism)
   - [`markdown-it-prism-backticks`](https://github.com/stevejay/markdown-it-prism-backticks)
@@ -96,8 +92,9 @@
 ### Dev tools
 
 - [TypeScript](https://www.typescriptlang.org/)
+- [pnpm](https://pnpm.io/) - fast, disk space efficient package manager
 - [VS Code Extensions](./.vscode/extensions.json)
-  - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Vue 3 with `<script setup>` IDE support
+  - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Explore high-performance tooling for Vue
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
   - [Headwind](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - An opinionated class sorter for Tailwind CSS
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
@@ -116,7 +113,7 @@ If you prefer to do it manually with a cleaner git history
 ```shell
 $ npx degit vuong-cuong-phoenix/vite-vcp my-vite-vcp-app
 $ cd my-vite-vcp-app
-$ yarn install
+$ pnpm install
 ```
 
 ## 🗹 Checklist
@@ -138,7 +135,7 @@ and... enjoy :)
 Just run
 
 ```shell
-$ yarn dev
+$ pnpm dev
 ```
 
 and follow dev-sever logs.
@@ -148,7 +145,7 @@ and follow dev-sever logs.
 To build for production, run
 
 ```shell
-$ yarn build
+$ pnpm build
 ```
 
 and you will see the generated files in `dist` that ready to be served.
@@ -158,7 +155,7 @@ and you will see the generated files in `dist` that ready to be served.
 You can preview your production build by running:
 
 ```shell
-$ yarn serve
+$ pnpm serve
 ```
 
 ### Deploy on Netlify
