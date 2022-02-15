@@ -79,7 +79,7 @@
   - [`@tailwindcss/forms`](https://github.com/tailwindlabs/tailwindcss-forms)
 - [Iconify](https://iconify.design/)
 - [`markdown-it`](https://github.com/markdown-it/markdown-it)
-  - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism)
+  - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism) & [`prismjs`](https://prismjs.com/)
   - [`markdown-it-prism-backticks`](https://github.com/stevejay/markdown-it-prism-backticks)
   - [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs)
   - [`markdown-it-anchor`](https://github.com/valeriangalliat/markdown-it-anchor)
