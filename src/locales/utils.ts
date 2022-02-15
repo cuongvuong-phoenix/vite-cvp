@@ -1,5 +1,5 @@
 import { nextTick } from 'vue';
-import { I18n as baseI18n } from 'vue-i18n';
+import { type I18n as baseI18n } from 'vue-i18n';
 
 export type I18n = baseI18n<{}, {}, {}, false>;
 

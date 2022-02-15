@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n';
-import { Router } from 'vue-router';
-import { I18n, LOCALES, DEFAULT_LOCALE, loadLocaleMessage, setI18nLocale } from '~/locales/utils';
+import { type Router } from 'vue-router';
+import { DEFAULT_LOCALE, type I18n, LOCALES, loadLocaleMessage, setI18nLocale } from '~/locales/utils';
 import { ErrorRouterNameNotProvided } from '~/utils/exceptions';
 
 export * from '~/locales/utils';
@@ -21,7 +21,7 @@ function setupRouterForI18n(i18n: I18n, router: Router) {
       return { name, params: { ...params, locale: DEFAULT_LOCALE }, query, hash };
     }
 
-    // Cancel loading if already loaded.
+    // Only load if not exist.
     if (!i18n.global.availableLocales.includes(locale)) {
       await loadLocaleMessage(i18n, locale);
     }

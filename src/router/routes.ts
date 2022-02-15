@@ -1,5 +1,5 @@
 import { h } from 'vue';
-import { RouteRecordRaw, RouterView } from 'vue-router';
+import { type RouteRecordRaw, RouterView } from 'vue-router';
 import Home from '~/pages/Home.vue';
 import NotFound from '~/pages/NotFound.vue';
 

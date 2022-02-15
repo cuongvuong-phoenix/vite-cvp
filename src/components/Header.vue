@@ -61,7 +61,7 @@
         >
           <ul
             v-show="isLangDropdownMenuOpen"
-            class="absolute py-2 origin-top-left bg-white border border-gray-100 rounded-lg shadow-lg  dark:bg-gray-900 dark:border-gray-700"
+            class="absolute py-2 origin-top-left bg-white border border-gray-100 rounded-lg shadow-lg dark:bg-gray-900 dark:border-gray-700"
           >
             <li v-for="lang in LANGUAGES" :key="lang.locale" class="py-2 -my-2">
               <button
@@ -84,7 +84,7 @@
         :title="isDarkMode ? t('button.turn-off-dark-mode') : t('button.turn-on-dark-mode')"
         type="button"
         class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
-        @click="toggleDarkMode"
+        @click="toggleDarkMode()"
       >
         <i-ion-moon-outline v-if="isDarkMode" />
         <i-ion-sunny-outline v-else />
@@ -95,9 +95,9 @@
 
 <script setup lang="ts">
   import { ref, watch } from 'vue';
-  import { useRouter, RouterLink } from 'vue-router';
+  import { RouterLink, useRouter } from 'vue-router';
   import { useI18n } from 'vue-i18n';
-  import { useDark, useToggle, onClickOutside } from '@vueuse/core';
+  import { onClickOutside, useDark, useToggle } from '@vueuse/core';
   import { LANGUAGES } from '~/locales';
   import { ErrorRouterNameNotProvided } from '~/utils/exceptions';
 

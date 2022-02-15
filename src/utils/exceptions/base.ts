@@ -1,4 +1,3 @@
-// @ts-nocheck
 export class BaseError extends Error {
   readonly name: string;
 
@@ -8,8 +7,8 @@ export class BaseError extends Error {
     Object.setPrototypeOf(this, new.target.prototype); // restore prototype chain
     this.name = name;
 
-    if (Error.captureStackTree) {
-      Error.captureStackTree(this, BaseError);
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, BaseError);
     }
   }
 }
