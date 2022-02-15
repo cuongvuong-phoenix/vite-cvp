@@ -1,7 +1,7 @@
 import { createI18n } from 'vue-i18n';
 import { type Router } from 'vue-router';
 import { DEFAULT_LOCALE, type I18n, LOCALES, loadLocaleMessage, setI18nLocale } from '~/locales/utils';
-import { ErrorRouterNameNotProvided } from '~/utils/exceptions';
+import { ErrorRouterNameNotProvided } from '~/errors';
 
 export * from '~/locales/utils';
 

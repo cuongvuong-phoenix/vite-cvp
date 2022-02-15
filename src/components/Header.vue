@@ -99,7 +99,7 @@
   import { useI18n } from 'vue-i18n';
   import { onClickOutside, useDark, useToggle } from '@vueuse/core';
   import { LANGUAGES } from '~/locales';
-  import { ErrorRouterNameNotProvided } from '~/utils/exceptions';
+  import { ErrorRouterNameNotProvided } from '~/errors';
 
   const router = useRouter();
   const { t, locale } = useI18n();
