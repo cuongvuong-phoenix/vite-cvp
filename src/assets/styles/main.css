@@ -1,3 +1,6 @@
+@import './vendors/tailwind.css';
+@import './vendors/nprogress.css';
+@import './markdown/main.css';
 @import './forms';
 
 :root {

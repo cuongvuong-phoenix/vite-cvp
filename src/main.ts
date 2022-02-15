@@ -5,9 +5,6 @@ import App from '~/App.vue';
 import { router } from '~/router';
 import { store } from '~/store';
 import { setupI18n } from '~/locales';
-import '~/assets/styles/vendors/tailwind.css';
-import '~/assets/styles/vendors/nprogress.css';
-import '~/assets/styles/markdown/main.css';
 import '~/assets/styles/main.css';
 
 const app = createApp(App);
