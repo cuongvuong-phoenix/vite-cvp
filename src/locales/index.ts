@@ -1,7 +1,7 @@
 import { createI18n } from 'vue-i18n';
 import { type Router } from 'vue-router';
 import { DEFAULT_LOCALE, type I18n, LOCALES, loadLocaleMessage, setI18nLocale } from '~/locales/utils';
-import { ErrorRouterNameNotProvided } from '~/errors';
+import { RouteNameNotProvidedError } from '~/errors';
 
 export * from '~/locales/utils';
 
@@ -11,7 +11,7 @@ function setupRouterForI18n(i18n: I18n, router: Router) {
     const { name, params, query, hash, fullPath } = to;
 
     if (!name) {
-      throw new ErrorRouterNameNotProvided(fullPath);
+      throw new RouteNameNotProvidedError(fullPath);
     }
 
     const locale = params.locale as string;

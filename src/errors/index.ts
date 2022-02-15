@@ -1,2 +1,2 @@
 export * from './base';
-export * from './router';
+export * from './RouteNameNotProvided';

@@ -99,7 +99,7 @@
   import { useI18n } from 'vue-i18n';
   import { onClickOutside, useDark, useToggle } from '@vueuse/core';
   import { LANGUAGES } from '~/locales';
-  import { ErrorRouterNameNotProvided } from '~/errors';
+  import { RouteNameNotProvidedError } from '~/errors';
 
   const router = useRouter();
   const { t, locale } = useI18n();
@@ -118,7 +118,7 @@
     const { name, params, query, hash, fullPath } = router.currentRoute.value;
 
     if (!name) {
-      throw new ErrorRouterNameNotProvided(fullPath);
+      throw new RouteNameNotProvidedError(fullPath);
     }
 
     router.push({
