@@ -1,6 +1,10 @@
+[build.environment]
+  # bypass npm auto installing
+  NPM_FLAGS = "--version"
+
 [build]
   publish = "dist/"
-  command = "yarn build"
+  command = "npx pnpm install --store-dir=node_modules/.pnpm-store && npx pnpm build"
 
 [[redirects]]
   from = "/*"
