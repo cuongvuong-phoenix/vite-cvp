@@ -15,6 +15,7 @@ specifiers:
   autoprefixer: ^10.4.2
   eslint: ^8.9.0
   eslint-config-prettier: ^8.3.0
+  markdown-it: ^12.3.2
   markdown-it-anchor: ^8.4.1
   markdown-it-attrs: ^4.1.3
   markdown-it-prism: ^2.2.2
@@ -24,12 +25,13 @@ specifiers:
   postcss: ^8.4.6
   postcss-import: ^14.0.2
   prettier: 2.5.1
+  prismjs: ^1.26.0
   slugify: ^1.6.5
   tailwindcss: ^3.0.22
   typescript: ^4.5.5
   unplugin-icons: ^0.13.1
   unplugin-vue-components: ^0.17.18
-  vite: ^2.8.2
+  vite: ^2.8.3
   vite-plugin-md: ^0.11.8
   vue: ^3.2.31
   vue-i18n: ^9.1.9
@@ -48,30 +50,32 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.16.1_eslint@8.9.0+typescript@4.5.5
   '@iconify/json': 2.1.0
-  '@intlify/vite-plugin-vue-i18n': 3.3.0_vite@2.8.2+vue-i18n@9.1.9
+  '@intlify/vite-plugin-vue-i18n': 3.3.0_vite@2.8.3+vue-i18n@9.1.9
   '@tailwindcss/forms': 0.4.0_tailwindcss@3.0.22
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.22
   '@types/markdown-it': 12.2.3
   '@types/node': 17.0.18
   '@types/nprogress': 0.2.0
-  '@vitejs/plugin-vue': 2.2.0_vite@2.8.2+vue@3.2.31
+  '@vitejs/plugin-vue': 2.2.0_vite@2.8.3+vue@3.2.31
   autoprefixer: 10.4.2_postcss@8.4.6
   eslint: 8.9.0
   eslint-config-prettier: 8.3.0_eslint@8.9.0
-  markdown-it-anchor: 8.4.1_@types+markdown-it@12.2.3
-  markdown-it-attrs: 4.1.3
+  markdown-it: 12.3.2
+  markdown-it-anchor: 8.4.1_d643ca6eb40ae68ab966a77bead78073
+  markdown-it-attrs: 4.1.3_markdown-it@12.3.2
   markdown-it-prism: 2.2.2
-  markdown-it-prism-backticks: 1.3.0
+  markdown-it-prism-backticks: 1.3.0_prismjs@1.26.0
   postcss: 8.4.6
   postcss-import: 14.0.2_postcss@8.4.6
   prettier: 2.5.1
+  prismjs: 1.26.0
   slugify: 1.6.5
   tailwindcss: 3.0.22_autoprefixer@10.4.2
   typescript: 4.5.5
-  unplugin-icons: 0.13.1_vite@2.8.2
-  unplugin-vue-components: 0.17.18_vite@2.8.2+vue@3.2.31
-  vite: 2.8.2
-  vite-plugin-md: 0.11.8_vite@2.8.2
+  unplugin-icons: 0.13.1_vite@2.8.3
+  unplugin-vue-components: 0.17.18_vite@2.8.3+vue@3.2.31
+  vite: 2.8.3
+  vite-plugin-md: 0.11.8_vite@2.8.3
   vue-tsc: 0.31.4_typescript@4.5.5
 
 packages:
@@ -374,7 +378,7 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
-  /@intlify/vite-plugin-vue-i18n/3.3.0_vite@2.8.2+vue-i18n@9.1.9:
+  /@intlify/vite-plugin-vue-i18n/3.3.0_vite@2.8.3+vue-i18n@9.1.9:
     resolution: {integrity: sha512-RxtqVe8ia/5eEH+RFzRKMhO6eyYRGssNpVcaxOoocgKDJuA+1QHF5jZGnioIQpZcIwFxLUlf42C4YdAatIJFEw==}
     engines: {node: '>= 12'}
     peerDependencies:
@@ -393,7 +397,7 @@ packages:
       debug: 4.3.3
       fast-glob: 3.2.11
       source-map: 0.6.1
-      vite: 2.8.2
+      vite: 2.8.3
       vue-i18n: 9.1.9_vue@3.2.31
     transitivePeerDependencies:
       - supports-color
@@ -626,14 +630,14 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitejs/plugin-vue/2.2.0_vite@2.8.2+vue@3.2.31:
+  /@vitejs/plugin-vue/2.2.0_vite@2.8.3+vue@3.2.31:
     resolution: {integrity: sha512-wXigM1EwN2G7rZcwG6kLk9ivvIMhx2363tCEvMBiXcTu5nePM/12hUPVzPb83Uugt6U+zom1gTpJopi/Ow/jwg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.8.2
+      vite: 2.8.3
       vue: 3.2.31
     dev: true
 
@@ -2499,27 +2503,32 @@ packages:
     dependencies:
       sourcemap-codec: 1.4.8
 
-  /markdown-it-anchor/8.4.1_@types+markdown-it@12.2.3:
+  /markdown-it-anchor/8.4.1_d643ca6eb40ae68ab966a77bead78073:
     resolution: {integrity: sha512-sLODeRetZ/61KkKLJElaU3NuU2z7MhXf12Ml1WJMSdwpngeofneCRF+JBbat8HiSqhniOMuTemXMrsI7hA6XyA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
     dependencies:
       '@types/markdown-it': 12.2.3
+      markdown-it: 12.3.2
     dev: true
 
-  /markdown-it-attrs/4.1.3:
+  /markdown-it-attrs/4.1.3_markdown-it@12.3.2:
     resolution: {integrity: sha512-d5yg/lzQV2KFI/4LPsZQB3uxQrf0/l2/RnMPCPm4lYLOZUSmFlpPccyojnzaHkfQpAD8wBHfnfUW0aMhpKOS2g==}
     engines: {node: '>=6'}
     peerDependencies:
       markdown-it: '>= 9.0.0 < 13.0.0'
+    dependencies:
+      markdown-it: 12.3.2
     dev: true
 
-  /markdown-it-prism-backticks/1.3.0:
+  /markdown-it-prism-backticks/1.3.0_prismjs@1.26.0:
     resolution: {integrity: sha512-hxlpKN0MzI7tX4FcBLYNrR2DrgO46NtN/o1TKWa2ohG2Ga8wisGyODOhCkaXLysQCb6Stz1p1G7rIK//l+VGBQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       prismjs: ^1.20.0
+    dependencies:
+      prismjs: 1.26.0
     dev: true
 
   /markdown-it-prism/2.2.2:
@@ -3468,7 +3477,7 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /unplugin-icons/0.13.1_vite@2.8.2:
+  /unplugin-icons/0.13.1_vite@2.8.3:
     resolution: {integrity: sha512-Y7ZOjTUvLdY4qUQNDo4OmkxjCh2coNbcAeWfFW66EZW7cJiBI6vU8j4cBAsyqUEwMdFL3q/kwowCRgD6BAaRyQ==}
     peerDependencies:
       '@svgr/core': '>=5.5.0'
@@ -3491,7 +3500,7 @@ packages:
       debug: 4.3.3
       kolorist: 1.5.1
       local-pkg: 0.4.1
-      unplugin: 0.3.2_vite@2.8.2
+      unplugin: 0.3.2_vite@2.8.3
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -3500,7 +3509,7 @@ packages:
       - webpack
     dev: true
 
-  /unplugin-vue-components/0.17.18_vite@2.8.2+vue@3.2.31:
+  /unplugin-vue-components/0.17.18_vite@2.8.3+vue@3.2.31:
     resolution: {integrity: sha512-4wvJnSShTXCnZpO1G6h0DlHjBXap0JqzFyU84guMT6EH0shUZZ3TAta4pDa8nNeWAtcJVTF9uQswePq1elhpKQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -3522,7 +3531,7 @@ packages:
       magic-string: 0.25.7
       minimatch: 3.1.1
       resolve: 1.22.0
-      unplugin: 0.3.2_vite@2.8.2
+      unplugin: 0.3.2_vite@2.8.3
       vue: 3.2.31
     transitivePeerDependencies:
       - esbuild
@@ -3532,7 +3541,7 @@ packages:
       - webpack
     dev: true
 
-  /unplugin/0.3.2_vite@2.8.2:
+  /unplugin/0.3.2_vite@2.8.3:
     resolution: {integrity: sha512-5d0DMYNKZU+S9eZUiBfw6Co32eRg8myUgBPoWSqG/wDFCUE/WznfSsJnZWi1P9l69x4uLJqt2qVq1xW/AsXFrw==}
     peerDependencies:
       esbuild: '>=0.13'
@@ -3549,7 +3558,7 @@ packages:
       webpack:
         optional: true
     dependencies:
-      vite: 2.8.2
+      vite: 2.8.3
       webpack-virtual-modules: 0.4.3
     dev: true
 
@@ -3579,7 +3588,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-plugin-md/0.11.8_vite@2.8.2:
+  /vite-plugin-md/0.11.8_vite@2.8.3:
     resolution: {integrity: sha512-eFk4Ox8IKuT+7benAcwLvGcYt/T4We2UDmQmxvCrhABJpQSbh44MitD1Wu6w733VKgSZAO7wd8IuoA20yXkXVQ==}
     peerDependencies:
       vite: ^2.0.0
@@ -3589,11 +3598,11 @@ packages:
       '@types/markdown-it': 12.2.3
       gray-matter: 4.0.3
       markdown-it: 12.3.2
-      vite: 2.8.2
+      vite: 2.8.3
     dev: true
 
-  /vite/2.8.2:
-    resolution: {integrity: sha512-zawfykcPVPYva4KusIWORNLr324Qx86/3NpfQSIOJdjnL5pYhwDoImLYMOh4lFLcP/7//tNuWM2vx2F5OSVC9w==}
+  /vite/2.8.3:
+    resolution: {integrity: sha512-967klrEiG7HEsN7fQYYVETs5495Iu6GpI7YyxoO5yVTJCRxjV8HhWgNWKgrbazjoOB9DQuztL53/nUoNqHNsWg==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
