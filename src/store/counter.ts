@@ -8,10 +8,10 @@ export const useStoreCounter = defineStore('couter', {
     };
   },
   actions: {
-    increaseCounter(n: number) {
+    increase(n: number) {
       this.counter += n;
     },
-    decreaseCounter(n: number) {
+    decrease(n: number) {
       this.counter -= n;
     },
     setAmount(amount: number) {
