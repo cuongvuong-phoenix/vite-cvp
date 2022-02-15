@@ -32,7 +32,7 @@ export default defineConfig({
     }),
     icons(),
     vueI18n({
-      include: path.resolve(__dirname, './src/locales/translations/**'),
+      include: path.resolve(__dirname, 'src/locales/translations/**'),
     }),
     markdown({
       headEnabled: true,
