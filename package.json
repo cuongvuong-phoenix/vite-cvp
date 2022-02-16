@@ -4,7 +4,7 @@
     "preinstall": "npx -y only-allow pnpm",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview",
+    "preview": "vite preview",
     "format": "prettier --write .",
     "lint": "eslint ."
   },
