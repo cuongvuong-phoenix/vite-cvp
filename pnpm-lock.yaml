@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@antfu/eslint-config': ^0.16.1
-  '@iconify/json': ^2.1.0
+  '@iconify/json': ^2.1.2
   '@intlify/vite-plugin-vue-i18n': ^3.3.0
   '@tailwindcss/forms': ^0.4.0
   '@tailwindcss/typography': ^0.5.2
@@ -27,7 +27,7 @@ specifiers:
   prettier: 2.5.1
   prismjs: ^1.26.0
   slugify: ^1.6.5
-  tailwindcss: ^3.0.22
+  tailwindcss: ^3.0.23
   typescript: ^4.5.5
   unplugin-icons: ^0.13.1
   unplugin-vue-components: ^0.17.18
@@ -49,10 +49,10 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': 0.16.1_eslint@8.9.0+typescript@4.5.5
-  '@iconify/json': 2.1.0
+  '@iconify/json': 2.1.2
   '@intlify/vite-plugin-vue-i18n': 3.3.0_vite@2.8.3+vue-i18n@9.1.9
-  '@tailwindcss/forms': 0.4.0_tailwindcss@3.0.22
-  '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.22
+  '@tailwindcss/forms': 0.4.0_tailwindcss@3.0.23
+  '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
   '@types/markdown-it': 12.2.3
   '@types/node': 17.0.18
   '@types/nprogress': 0.2.0
@@ -70,7 +70,7 @@ devDependencies:
   prettier: 2.5.1
   prismjs: 1.26.0
   slugify: 1.6.5
-  tailwindcss: 3.0.22_autoprefixer@10.4.2
+  tailwindcss: 3.0.23_autoprefixer@10.4.2
   typescript: 4.5.5
   unplugin-icons: 0.13.1_vite@2.8.3
   unplugin-vue-components: 0.17.18_vite@2.8.3+vue@3.2.31
@@ -274,8 +274,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify/json/2.1.0:
-    resolution: {integrity: sha512-RPiZszQ7uzzZMnI3URJ3Uixgap1AVqUT7aQuxlRczPzj6R8KNG9K2C069M92Q1/OSqkNGN9ObAK0Oijgc9MY5w==}
+  /@iconify/json/2.1.2:
+    resolution: {integrity: sha512-I4JHbMZBAd5ENGyYECUMpTcJMibTKd1ioVCLHDv+TsdSN01OMT4Uq2JLV1tVkolc7QiiomRsSuBBuDinGSgCVg==}
     dependencies:
       '@iconify/types': 1.0.12
       pathe: 0.0.2
@@ -441,16 +441,16 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@tailwindcss/forms/0.4.0_tailwindcss@3.0.22:
+  /@tailwindcss/forms/0.4.0_tailwindcss@3.0.23:
     resolution: {integrity: sha512-DeaQBx6EgEeuZPQACvC+mKneJsD8am1uiJugjgQK1+/Vt+Ai0GpFBC2T2fqnUad71WgOxyrZPE6BG1VaI6YqfQ==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.3
-      tailwindcss: 3.0.22_autoprefixer@10.4.2
+      tailwindcss: 3.0.23_autoprefixer@10.4.2
     dev: true
 
-  /@tailwindcss/typography/0.5.2_tailwindcss@3.0.22:
+  /@tailwindcss/typography/0.5.2_tailwindcss@3.0.23:
     resolution: {integrity: sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -458,7 +458,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.0.22_autoprefixer@10.4.2
+      tailwindcss: 3.0.23_autoprefixer@10.4.2
     dev: true
 
   /@types/json-schema/7.0.9:
@@ -3360,8 +3360,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tailwindcss/3.0.22_autoprefixer@10.4.2:
-    resolution: {integrity: sha512-F8lt74RlNZirnkaSk310+vGQta7c0/hgx7/bqxruM4wS9lp8oqV93lzavajC3VT0Lp4UUtUVIt8ifKcmGzkr0A==}
+  /tailwindcss/3.0.23_autoprefixer@10.4.2:
+    resolution: {integrity: sha512-+OZOV9ubyQ6oI2BXEhzw4HrqvgcARY38xv3zKcjnWtMIZstEsXdI9xftd1iB7+RbOnj2HOEzkA0OyB5BaSxPQA==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
