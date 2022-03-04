@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx,md}'],
   safelist: ['prose', 'dark:prose-invert', 'mx-auto'],
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
