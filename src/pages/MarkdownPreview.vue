@@ -3,7 +3,7 @@
     <div class="text-center">
       <h1 class="text-4xl font-bold">{{ t('nav.markdown-preview') }}</h1>
 
-      <p class="mx-auto mt-8 prose prose-lg dark:prose-light">
+      <p class="mx-auto mt-8 prose prose-lg dark:prose-invert">
         <i18n-t keypath="pages.markdown-preview.intro">
           <a rel="noreferrer" href="https://github.com/cuongvuong-phoenix/vite-cvp" target="_blank" title="GitHub"
             >Vite-CVP</a
@@ -11,7 +11,7 @@
           <br />
           <a
             rel="noreferrer"
-            href="https://tailwindcss-typography.netlify.app/"
+            href="https://tailwindcss-typography.vercel.app/"
             target="_blank"
             title="Tailwind Typography demo"
           >
