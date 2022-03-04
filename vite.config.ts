@@ -36,7 +36,7 @@ export default defineConfig({
     }),
     markdown({
       headEnabled: true,
-      wrapperClasses: 'prose dark:prose-light mx-auto',
+      wrapperClasses: 'prose dark:prose-invert mx-auto',
       markdownItSetup(md) {
         md.use(MarkdownItAttrs, {
           // Security (https://github.com/arve0/markdown-it-attrs#security).
