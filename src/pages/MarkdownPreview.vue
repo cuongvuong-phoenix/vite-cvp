@@ -5,8 +5,8 @@
 
       <p class="mx-auto mt-8 prose prose-lg dark:prose-light">
         <i18n-t keypath="pages.markdown-preview.intro">
-          <a rel="noreferrer" href="https://github.com/vuong-cuong-phoenix/vite-vcp" target="_blank" title="GitHub"
-            >Vite-VCP</a
+          <a rel="noreferrer" href="https://github.com/cuongvuong-phoenix/vite-cvp" target="_blank" title="GitHub"
+            >Vite-CVP</a
           >
           <br />
           <a

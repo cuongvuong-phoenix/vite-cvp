@@ -19,7 +19,7 @@
   /* ----------------------------------------------------------------
   App title
   ---------------------------------------------------------------- */
-  const titleBase = 'Vite-VCP';
+  const titleBase = 'Vite-CVP';
 
   const title = reactive({
     full: titleBase,

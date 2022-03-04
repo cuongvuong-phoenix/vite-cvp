@@ -26,7 +26,7 @@
 
       <a
         rel="noreferrer"
-        href="https://github.com/vuong-cuong-phoenix/vite-vcp"
+        href="https://github.com/cuongvuong-phoenix/vite-cvp"
         target="_blank"
         title="GitHub"
         class="router-link"

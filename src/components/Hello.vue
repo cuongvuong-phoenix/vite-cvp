@@ -54,7 +54,7 @@
   import { useI18n } from 'vue-i18n';
   import { useStoreCounter } from '~/store';
 
-  const { name = 'Vite-VCP' } = defineProps<{
+  const { name = 'Vite-CVP' } = defineProps<{
     name?: string;
   }>();
 

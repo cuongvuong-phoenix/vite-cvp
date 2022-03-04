@@ -1,9 +1,9 @@
 <p align='center'>
-  <img src="./.github/images/ion-ios-bolt.png" alt="Vite-VCP image">
+  <img src="./.github/images/ion-ios-bolt.png" alt="Vite-CVP image">
 </p>
 
 <p align='center'>
-  <b style="font-size: 2rem">Vite-VCP</b>
+  <b style="font-size: 2rem">Vite-CVP</b>
   <br />
   An opinionated Vite Starter Template
   <br />
@@ -16,9 +16,9 @@
 
 🔥 This repo consists 3 kinds of templates corresponding to each branch:
 
-- 👉 (now) [`master`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/master) ([demo](https://vite-vcp.netlify.app)) - regular **SPA**
-- [`ssr--fastify`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--fastify) ([demo](https://vite-vcp.herokuapp.com)) - **SSR** with [Fastify](https://www.fastify.io/) + deploy on [Heroku](https://www.heroku.com/)
-- ❌ (maintaining) [`ssr--netlify-function`](https://github.com/vuong-cuong-phoenix/vite-vcp/tree/ssr--netlify-function) ([demo](https://vite-vcp-ssr.netlify.app)) - **SSR** with [Netlify platforms](https://www.netlify.com/products/) (static hosting + functions)
+- 👉 (now) [`master`](https://github.com/cuongvuong-phoenix/vite-cvp/tree/master) ([demo](https://vite-cvp.netlify.app)) - regular **SPA**
+- [`ssr--fastify`](https://github.com/cuongvuong-phoenix/vite-cvp/tree/ssr--fastify) ([demo](https://vite-cvp.herokuapp.com)) - **SSR** with [Fastify](https://www.fastify.io/) + deploy on [Heroku](https://www.heroku.com/)
+- ❌ (maintaining) [`ssr--netlify-function`](https://github.com/cuongvuong-phoenix/vite-cvp/tree/ssr--netlify-function) ([demo](https://vite-cvp-ssr.netlify.app)) - **SSR** with [Netlify platforms](https://www.netlify.com/products/) (static hosting + functions)
 
 ---
 
@@ -104,16 +104,16 @@
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/vuong-cuong-phoenix/vite-vcp/generate).
+[Create a repo from this template on GitHub](https://github.com/cuongvuong-phoenix/vite-cvp/generate).
 
 ### Clone to local
 
 If you prefer to do it manually with a cleaner git history
 
 ```shell
-$ npx degit vuong-cuong-phoenix/vite-vcp my-vite-vcp-app
-$ cd my-vite-vcp-app
-$ pnpm install
+npx degit cuongvuong-phoenix/vite-cvp my-vite-cvp-app
+cd my-vite-cvp-app
+pnpm install
 ```
 
 ## 🗹 Checklist
@@ -135,7 +135,7 @@ and... enjoy :)
 Just run
 
 ```shell
-$ pnpm dev
+pnpm dev
 ```
 
 and follow dev-sever logs.
@@ -145,7 +145,7 @@ and follow dev-sever logs.
 To build for production, run
 
 ```shell
-$ pnpm build
+pnpm build
 ```
 
 and you will see the generated files in `dist` that ready to be served.
@@ -155,7 +155,7 @@ and you will see the generated files in `dist` that ready to be served.
 You can preview your production build by running:
 
 ```shell
-$ pnpm serve
+pnpm serve
 ```
 
 ### Deploy on Netlify
