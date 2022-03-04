@@ -3,10 +3,11 @@
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:type": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@vueuse/core": "^7.7.0",
