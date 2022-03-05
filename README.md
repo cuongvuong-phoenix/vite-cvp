@@ -1,10 +1,10 @@
-<p align='center'>
+<h1 align="center">Vite-CVP</h1>
+
+<p align="center">
   <img src="./.github/images/ion-ios-bolt.png" alt="Vite-CVP image">
 </p>
 
-<p align='center'>
-  <b style="font-size: 2rem">Vite-CVP</b>
-  <br />
+<p align="center">
   An opinionated Vite Starter Template
   <br />
   Inspired by <a href="https://github.com/antfu/vitesse">Vitesse</a>
