@@ -30,7 +30,7 @@
   watch([() => route.name, () => route.params.locale], ([name, _]) => {
     const titleRoute = t(`nav.${String(name)}`);
 
-    title.full = name === 'home' ? titleBase : `${titleBase} · ${titleRoute}`;
+    title.full = name === 'home' ? titleBase : `${titleRoute} | ${titleBase}`;
     title.short = titleRoute;
   });
 
