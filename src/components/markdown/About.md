@@ -1,4 +1,4 @@
-[Vite-CVP](https://github.com/cuongvuong-phoenix/vite-cvp/tree/master) is an opinionated [Vite](https://vitejs.dev) + [Vue 3](https://v3.vuejs.org/) starter template made by [@cuongvuong-phoenix](https://github.com/cuongvuong-phoenix) (thats why its called _Vite-**CVP**_).
+[Vite-CVP](https://github.com/cuongvuong-phoenix/vite-cvp/tree/master) is an opinionated [Vite](https://vitejs.dev) + [Vue 3](https://v3.vuejs.org/) starter template made by [@cuongvuong-phoenix](https://github.com/cuongvuong-phoenix) (that's why it's called _Vite-**CVP**_).
 
 Inspired from [Vitesse](https://github.com/antfu/vitesse) made by [@antifu](https://github.com/antfu), this template aims to provide a way to quickly create apps with many features pre-packed:
 

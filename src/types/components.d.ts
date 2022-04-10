@@ -15,8 +15,6 @@ declare module '@vue/runtime-core' {
     IIonPlus: typeof import('~icons/ion/plus')['default']
     IIonSunnyOutline: typeof import('~icons/ion/sunny-outline')['default']
     ITeenyiconsMarkdownOutline: typeof import('~icons/teenyicons/markdown-outline')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
   }
 }
 
