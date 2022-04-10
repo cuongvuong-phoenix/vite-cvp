@@ -2,7 +2,7 @@
 // We suggest you to commit this file into source control
 // Read more: https://github.com/vuejs/vue-next/pull/3399
 
-declare module 'vue' {
+declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ICarbonCampsite: typeof import('~icons/carbon/campsite')['default']
     ICodiconGithubAlt: typeof import('~icons/codicon/github-alt')['default']
@@ -15,6 +15,8 @@ declare module 'vue' {
     IIonPlus: typeof import('~icons/ion/plus')['default']
     IIonSunnyOutline: typeof import('~icons/ion/sunny-outline')['default']
     ITeenyiconsMarkdownOutline: typeof import('~icons/teenyicons/markdown-outline')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }
 
