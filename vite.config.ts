@@ -1,4 +1,5 @@
-import * as path from 'path';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import components from 'unplugin-vue-components/vite';
@@ -16,8 +17,8 @@ import slugify from 'slugify';
 export default defineConfig({
   resolve: {
     alias: {
-      '~': path.resolve(__dirname, 'src'),
-      'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
+      '~': resolve(__dirname, 'src'),
+      'vue-i18n': 'vue-i18n/dist/vue-i18n.esm-bundler.js',
     },
   },
   plugins: [
@@ -28,11 +29,11 @@ export default defineConfig({
     components({
       dirs: [],
       resolvers: [iconsResolver()],
-      dts: path.resolve(__dirname, 'src/types/components.d.ts'),
+      dts: resolve(__dirname, 'src/types/components.d.ts'),
     }),
     icons(),
     vueI18n({
-      include: path.resolve(__dirname, 'src/locales/translations/**'),
+      include: resolve(dirname(fileURLToPath(import.meta.url)), 'src/locales/translations/**'),
     }),
     markdown({
       headEnabled: true,
