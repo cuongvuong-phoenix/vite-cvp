@@ -36,7 +36,7 @@
     </nav>
     <!-- END "Navigations" -->
 
-    <div class="flex items-center justify-center mt-4 mb-8 space-x-4">
+    <div class="mt-4 mb-8 flex items-center justify-center space-x-4">
       <!-- "Language Dropdown" -->
       <div
         ref="langDropdownRef"
@@ -48,7 +48,7 @@
         <button
           :title="t('button.change-languages')"
           type="button"
-          class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-full hover:text-amber-500"
         >
           <i-ion-language-outline />
         </button>
@@ -61,12 +61,12 @@
         >
           <ul
             v-show="isLangDropdownMenuOpen"
-            class="absolute py-2 origin-top-left bg-white border border-gray-100 rounded-lg shadow-lg dark:bg-gray-900 dark:border-gray-700"
+            class="absolute origin-top-left rounded-lg border border-gray-100 bg-white py-2 shadow-lg dark:border-gray-700 dark:bg-gray-900"
           >
-            <li v-for="lang in LANGUAGES" :key="lang.locale" class="py-2 -my-2">
+            <li v-for="lang in LANGUAGES" :key="lang.locale" class="-my-2 py-2">
               <button
                 type="button"
-                class="w-full px-3 whitespace-nowrap hover:text-amber-500"
+                class="w-full whitespace-nowrap px-3 hover:text-amber-500"
                 :class="{
                   'text-amber-600': currentLocale === lang.locale,
                 }"
@@ -83,7 +83,7 @@
       <button
         :title="isDarkMode ? t('button.turn-off-dark-mode') : t('button.turn-on-dark-mode')"
         type="button"
-        class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:text-amber-500"
+        class="inline-flex h-8 w-8 items-center justify-center rounded-full hover:text-amber-500"
         @click="toggleDarkMode()"
       >
         <i-ion-moon-outline v-if="isDarkMode" />
@@ -142,7 +142,7 @@
 
 <style lang="postcss" scoped>
   .router-link {
-    @apply inline-flex items-center justify-center w-8 h-8 rounded-full text-xl;
+    @apply inline-flex h-8 w-8 items-center justify-center rounded-full text-xl;
 
     &:hover {
       @apply text-amber-500;

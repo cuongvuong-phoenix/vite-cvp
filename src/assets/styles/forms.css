@@ -2,13 +2,13 @@ a,
 button,
 select,
 input[type='number'] {
-  @apply bg-transparent rounded-lg;
+  @apply rounded-lg bg-transparent;
 
   &:focus {
-    @apply outline-none border-amber-500 ring ring-amber-500/40;
+    @apply border-amber-500 outline-none ring ring-amber-500/40;
   }
 }
 
 input[type='number'] {
-  @apply px-3 py-2 border border-current;
+  @apply border border-current px-3 py-2;
 }

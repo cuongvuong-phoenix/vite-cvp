@@ -14,7 +14,7 @@
             rel="noreferrer"
             href="https://github.com/antfu/vitesse"
             target="_blank"
-            class="inline-flex items-center object-center mt-1 space-x-1 hover:text-amber-600"
+            class="mt-1 inline-flex items-center space-x-1 object-center hover:text-amber-600"
           >
             <i-carbon-campsite />
             Vitesse
@@ -24,22 +24,22 @@
     </div>
 
     <!-- "Counter" -->
-    <div class="flex items-center justify-center mt-12 space-x-4">
+    <div class="mt-12 flex items-center justify-center space-x-4">
       <button
         :title="t('button.decrease-counter', { n: amount })"
         type="button"
-        class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-amber-500"
+        class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-current hover:text-amber-500"
         @click="storeCounter.decrease(amount)"
       >
         <i-ion-minus />
       </button>
 
-      <input v-model.number="amount" :title="t('input.amount')" type="number" class="w-24 text-center rounded-lg" />
+      <input v-model.number="amount" :title="t('input.amount')" type="number" class="w-24 rounded-lg text-center" />
 
       <button
         :title="t('button.increase-counter', { n: amount })"
         type="button"
-        class="inline-flex items-center justify-center w-8 h-8 border border-current rounded-full hover:text-amber-500"
+        class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-current hover:text-amber-500"
         @click="storeCounter.increase(amount)"
       >
         <i-ion-plus />

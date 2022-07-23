@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-4xl font-bold text-center">{{ t('nav.about') }}</h1>
+    <h1 class="text-center text-4xl font-bold">{{ t('nav.about') }}</h1>
 
     <MarkdownAbout class="mt-8" />
   </div>

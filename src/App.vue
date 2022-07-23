@@ -1,5 +1,5 @@
 <template>
-  <div class="container px-10 py-8 mx-auto">
+  <div class="container mx-auto px-10 py-8">
     <Header />
 
     <RouterView />

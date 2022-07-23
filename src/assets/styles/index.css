@@ -32,7 +32,7 @@
 }
 
 html:not(.dark) {
-  @apply text-gray-800 bg-white;
+  @apply bg-white text-gray-800;
 }
 
 html.dark {
@@ -40,5 +40,5 @@ html.dark {
   --scrollbar--thumb: theme('colors.gray.600');
   --scrollbar--thumb-hover: theme('colors.gray.500');
 
-  @apply text-gray-300 bg-gray-900;
+  @apply bg-gray-900 text-gray-300;
 }
