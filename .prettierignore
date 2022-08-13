@@ -37,3 +37,6 @@ dist-ssr
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# Auto-generated files.
+src/types/components.d.ts
