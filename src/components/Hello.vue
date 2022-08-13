@@ -9,16 +9,18 @@
 
       <h3 class="mt-2">
         <i18n-t keypath="msg.2" scope="global">
-          <br />
-          <a
-            rel="noreferrer"
-            href="https://github.com/antfu/vitesse"
-            target="_blank"
-            class="mt-1 inline-flex items-center space-x-1 object-center hover:text-amber-600"
-          >
-            <i-carbon-campsite />
-            Vitesse
-          </a>
+          <template #vitesse>
+            <br />
+            <a
+              rel="noreferrer"
+              href="https://github.com/antfu/vitesse"
+              target="_blank"
+              class="mt-1 inline-flex items-center space-x-1 object-center hover:text-amber-600"
+            >
+              <i-carbon-campsite />
+              Vitesse
+            </a>
+          </template>
         </i18n-t>
       </h3>
     </div>

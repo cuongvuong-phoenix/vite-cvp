@@ -16,7 +16,7 @@ input:
 
 msg:
   1: An opinionated Vite Starter Template
-  2: Inspired by {0}{1}
+  2: Inspired by {vitesse}
 
 pages:
   home:
