@@ -18,7 +18,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '~': resolve(__dirname, 'src'),
-      'vue-i18n': 'vue-i18n/dist/vue-i18n.esm-bundler.js',
     },
   },
   plugins: [
