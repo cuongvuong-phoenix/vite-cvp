@@ -6,7 +6,7 @@ import components from 'unplugin-vue-components/vite';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
 import vueI18n from '@intlify/vite-plugin-vue-i18n';
-import markdown from 'vite-plugin-md';
+import markdown from 'vite-plugin-vue-markdown';
 import MarkdownItPrism from 'markdown-it-prism';
 import MarkdownItPrismBacktick from 'markdown-it-prism-backticks';
 import MarkdownItAttrs from 'markdown-it-attrs';
