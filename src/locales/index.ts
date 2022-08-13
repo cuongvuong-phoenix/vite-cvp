@@ -36,7 +36,7 @@ export function setupI18n(router: Router) {
     fallbackLocale: DEFAULT_LOCALE,
     missingWarn: false,
     fallbackWarn: false,
-  }) as I18n;
+  });
 
   setupRouterForI18n(i18n, router);
 
