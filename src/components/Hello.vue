@@ -8,7 +8,7 @@
       <h3>{{ t('msg.1') }}</h3>
 
       <h3 class="mt-2">
-        <i18n-t keypath="msg.2">
+        <i18n-t keypath="msg.2" scope="global">
           <br />
           <a
             rel="noreferrer"
