@@ -31,7 +31,7 @@
         :title="t('button.decrease-counter', { n: amount })"
         type="button"
         class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-current hover:text-amber-500"
-        @click="storeCounter.decrease(amount)"
+        @click="counterStore.decrease(amount)"
       >
         <i-ion-minus />
       </button>
@@ -42,7 +42,7 @@
         :title="t('button.increase-counter', { n: amount })"
         type="button"
         class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-current hover:text-amber-500"
-        @click="storeCounter.increase(amount)"
+        @click="counterStore.increase(amount)"
       >
         <i-ion-plus />
       </button>
@@ -52,23 +52,15 @@
 </template>
 
 <script setup lang="ts">
-  import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
+  import { storeToRefs } from 'pinia';
   import { useStoreCounter } from '~/store';
 
   const { name = 'Vite-CVP' } = defineProps<{
     name?: string;
   }>();
 
-  const storeCounter = useStoreCounter();
+  const counterStore = useStoreCounter();
+  const { amount } = storeToRefs(counterStore);
   const { t } = useI18n();
-
-  const amount = computed({
-    get() {
-      return storeCounter.amount;
-    },
-    set(val: number) {
-      storeCounter.setAmount(val);
-    },
-  });
 </script>

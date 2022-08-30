@@ -2,7 +2,7 @@
   <div class="text-center">
     <Hello />
 
-    <div class="mt-4">{{ t('pages.home.counter') }}: {{ storeCounter.counter }}</div>
+    <div class="mt-4">{{ t('pages.home.counter') }}: {{ counterStore.counter }}</div>
   </div>
 </template>
 
@@ -11,6 +11,6 @@
   import { useStoreCounter } from '~/store';
   import Hello from '~/components/Hello.vue';
 
-  const storeCounter = useStoreCounter();
+  const counterStore = useStoreCounter();
   const { t } = useI18n();
 </script>
