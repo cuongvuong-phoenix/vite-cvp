@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx,md}'],
   safelist: ['prose', 'dark:prose-invert', 'mx-auto'],
